@@ -1,14 +1,13 @@
 //
-//  AppTemplateTests.swift
+//  ServiceResolverTests.swift
 //  AppTemplateTests
 //
 //  Created by Timothy Rosenvall on 11/24/22.
 //
 
 import XCTest
-@testable import AppTemplate
 
-class AppTemplateTests: XCTestCase {
+class ServiceResolverTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
