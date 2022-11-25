@@ -21,6 +21,11 @@ class LaunchRouter: LaunchWireframe {
     }
 
     // MARK: - LaunchWireframe Functions
+    func routeToSampleModule() {
+        let sampleModule = moduleResolver.resolveSampleModule()
+        sampleModule.modalPresentationStyle = .fullScreen
+        presentingView.present(sampleModule, animated: false)
+    }
 
     // MARK: - Helper Functions
 }

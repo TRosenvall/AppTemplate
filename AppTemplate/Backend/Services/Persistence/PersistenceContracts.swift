@@ -11,6 +11,7 @@ protocol PersistenceBuilding: ServiceBuilding {}
 
 /// This service handles all of the saving and loading of entity data throughout the app.
 protocol PersistenceServing: Service {
+
     // Locally saves the entity data
     func locallySave(_entity: Entity)
 

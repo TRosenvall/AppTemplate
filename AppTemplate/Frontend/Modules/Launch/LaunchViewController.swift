@@ -11,7 +11,7 @@ class LaunchViewController: UIViewController, LaunchView {
 
     // MARK: - Properties
     let theme: LaunchTheme
-    let presenter: LaunchPresenting? = nil
+    var presenter: LaunchPresenting? = nil
 
     // MARK: - Initializers
     public init(theme: LaunchTheme) {
@@ -28,6 +28,11 @@ class LaunchViewController: UIViewController, LaunchView {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = theme.viewBackgroundColor
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter?.viewDidAppear()
     }
 
     // MARK: - UIViewController Functions

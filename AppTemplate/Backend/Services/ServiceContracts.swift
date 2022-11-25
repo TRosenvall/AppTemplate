@@ -12,6 +12,7 @@ import Foundation
 protocol Service {}
 
 protocol ServiceBuilding {
+
     /// Will define the type of service being built.
     associatedtype ServiceType
 

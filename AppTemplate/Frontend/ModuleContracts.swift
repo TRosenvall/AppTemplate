@@ -10,6 +10,7 @@ import UIKit
 protocol Module: UIViewController {}
 
 protocol ModuleBuilding {
+
     /// Will define the type of service being built.
     associatedtype ModuleType
 

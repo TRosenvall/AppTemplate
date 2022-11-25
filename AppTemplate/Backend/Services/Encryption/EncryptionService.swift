@@ -11,6 +11,7 @@ class EncryptionService: EncryptionServing {
 
     // MARK: - Properties
     let persistenceService: PersistenceServing
+    var isOn: Bool = false
 
     // MARK: - Initializers
     init(persistenceService: PersistenceServing) {
@@ -18,12 +19,9 @@ class EncryptionService: EncryptionServing {
     }
 
     // MARK: - PersistenceServing Functions
-    func start() {
+    func toggleState() {
         // TODO
-    }
-
-    func stop() {
-        // TODO
+        isOn = !isOn
     }
 
     func encrypt() {

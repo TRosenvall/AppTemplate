@@ -6,7 +6,7 @@
 //
 
 class LaunchPresenter: LaunchPresenting, LaunchOutput {
-    
+
     // MARK: - Properties
     var view: LaunchView
     var router: LaunchWireframe? = nil
@@ -18,6 +18,9 @@ class LaunchPresenter: LaunchPresenting, LaunchOutput {
     }
 
     // MARK: - LaunchPresenting Functions
+    func viewDidAppear() {
+        router?.routeToSampleModule()
+    }
 
     // MARK: - LaunchOutput Functions
 

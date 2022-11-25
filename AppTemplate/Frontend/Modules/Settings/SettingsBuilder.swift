@@ -41,6 +41,7 @@ class SettingsBuilder: SettingsBuilding {
         // Set the missing parts where needed
         presenter.interactor = interactor
         presenter.router = router
+        view.presenter = presenter
 
         // Return the view
         return view

@@ -6,7 +6,7 @@
 //
 
 class SettingsPresenter: SettingsPresenting, SettingsOutput {
-    
+
     // MARK: - Properties
     var view: SettingsView
     var router: SettingsWireframe? = nil

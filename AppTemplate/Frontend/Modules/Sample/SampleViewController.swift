@@ -11,7 +11,7 @@ class SampleViewController: UIViewController, SampleView {
 
     // MARK: - Properties
     let theme: SampleTheme
-    let presenter: SamplePresenting? = nil
+    var presenter: SamplePresenting? = nil
 
     // MARK: - Initializers
     public init(theme: SampleTheme) {

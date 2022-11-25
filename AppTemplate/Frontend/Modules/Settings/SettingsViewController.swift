@@ -11,7 +11,7 @@ class SettingsViewController: UIViewController, SettingsView {
 
     // MARK: - Properties
     let theme: SettingsTheme
-    let presenter: SettingsPresenting? = nil
+    var presenter: SettingsPresenting? = nil
 
     // MARK: - Initializers
     public init(theme: SettingsTheme) {
