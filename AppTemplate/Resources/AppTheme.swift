@@ -5,4 +5,15 @@
 //  Created by Timothy Rosenvall on 11/24/22.
 //
 
-import Foundation
+import UIKit
+
+class AppTheme {
+
+    // MARK: - Properties
+    let colors: Colors
+
+    // MARK: - Initializer
+    init() {
+        self.colors = Colors()
+    }
+}

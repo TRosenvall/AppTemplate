@@ -10,7 +10,7 @@ import UIKit
 class Colors {
 
     // MARK: - Properties
-    let labelTextColor = UIColor(named: "LabelTextColor")
+    let viewBackgroundColor = UIColor(named: "ViewBackgroundColor")
 
     // MARK: - Initializer
     init() {}

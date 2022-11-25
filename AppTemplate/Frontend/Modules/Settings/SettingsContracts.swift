@@ -5,4 +5,16 @@
 //  Created by Timothy Rosenvall on 11/25/22.
 //
 
-import Foundation
+protocol SettingsBuilding: ModuleBuilding {}
+
+protocol SettingsView: Module {}
+
+protocol SettingsPresenting {}
+
+protocol SettingsInput {}
+
+protocol SettingsModel: Entity {}
+
+protocol SettingsOutput {}
+
+protocol SettingsWireframe {}

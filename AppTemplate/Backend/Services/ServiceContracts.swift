@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+// If the service can be turned on and off (like the networking service or the
+// encryption service), this states are loaded when the app is launched.
+protocol Service {}
+
+protocol ServiceBuilding {
+    /// Will define the type of service being built.
+    associatedtype ServiceType
+
+    /// Builds and returns the service
+    func buildService() -> ServiceType
+}

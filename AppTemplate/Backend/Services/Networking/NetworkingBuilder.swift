@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+class NetworkingBuilder: NetworkingBuilding {
+
+    // MARK: - Properties
+    typealias ServiceType = NetworkingServing
+
+    // MARK: - Initializers
+    init() {}
+
+    // MARK: - NetworkingBuilding Functions
+    func buildService() -> NetworkingServing {
+        NetworkingService()
+    }
+
+    // MARK: - Helper Functions
+}

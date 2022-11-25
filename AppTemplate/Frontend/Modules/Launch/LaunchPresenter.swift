@@ -5,4 +5,21 @@
 //  Created by Timothy Rosenvall on 11/25/22.
 //
 
-import Foundation
+class LaunchPresenter: LaunchPresenting, LaunchOutput {
+    
+    // MARK: - Properties
+    var view: LaunchView
+    var router: LaunchWireframe? = nil
+    var interactor: LaunchInput? = nil
+
+    // MARK: - Initializers
+    init(view: LaunchView) {
+        self.view = view
+    }
+
+    // MARK: - LaunchPresenting Functions
+
+    // MARK: - LaunchOutput Functions
+
+    // MARK: - Helper Functions
+}
