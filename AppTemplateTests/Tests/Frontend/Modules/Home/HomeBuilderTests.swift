@@ -1,5 +1,5 @@
 //
-//  SampleBuilderTests.swift
+//  HomeBuilderTests.swift
 //  AppTemplateTests
 //
 //  Created by Timothy Rosenvall on 11/24/22.
@@ -8,25 +8,25 @@
 import XCTest
 @testable import AppTemplate
 
-class SampleBuilderTests: XCTestCase {
+class HomeBuilderTests: XCTestCase {
 
     var testUtility: TestUtility!
-    var instanceUnderTest: SampleBuilder!
+    var instanceUnderTest: HomeBuilder!
 
     override func setUpWithError() throws {
         testUtility = TestUtility()
-        instanceUnderTest = SampleBuilder(appTheme: testUtility.appTheme,
+        instanceUnderTest = HomeBuilder(appTheme: testUtility.appTheme,
                                           serviceResolver: testUtility.serviceResolver,
                                           moduleResolver: testUtility.moduleResolver)
     }
 
-    func testBuildModule_resolvesSampleView() {
+    func testBuildModule_resolvesHomeView() {
         // Arrange
 
         // Act
-        let sampleModule = instanceUnderTest.buildModule()
+        let homeModule = instanceUnderTest.buildModule()
 
         // Assert
-        XCTAssertTrue(sampleModule is SampleViewController)
+        XCTAssertTrue(homeModule is HomeViewController)
     }
 }

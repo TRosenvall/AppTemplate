@@ -1,5 +1,5 @@
 //
-//  SampleViewController.swift
+//  HomeViewController.swift
 //  AppTemplate
 //
 //  Created by Timothy Rosenvall on 11/24/22.
@@ -7,14 +7,15 @@
 
 import UIKit
 
-class SampleViewController: UIViewController, SampleView {
+class HomeViewController: UIViewController, HomeView {
 
     // MARK: - Properties
-    let theme: SampleTheme
-    var presenter: SamplePresenting? = nil
+    let theme: HomeTheme
+    var constraints: HomeConstraints? = nil
+    var presenter: HomePresenting? = nil
 
     // MARK: - Initializers
-    public init(theme: SampleTheme) {
+    public init(theme: HomeTheme) {
         self.theme = theme
         super.init(nibName: nil, bundle: nil)
     }
@@ -27,12 +28,11 @@ class SampleViewController: UIViewController, SampleView {
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = theme.viewBackgroundColor
     }
 
     // MARK: - UIViewController Functions
 
-    // MARK: - SampleView Functions
+    // MARK: - HomeView Functions
 
     // MARK: - Helper Functions
 }

@@ -1,5 +1,5 @@
 //
-//  SampleTheme.swift
+//  HomeTheme.swift
 //  AppTemplate
 //
 //  Created by Timothy Rosenvall on 11/24/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SampleTheme {
+class HomeTheme {
 
     // MARK: - Properties
     let viewBackgroundColor: UIColor?

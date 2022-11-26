@@ -21,10 +21,11 @@ class LaunchRouter: LaunchWireframe {
     }
 
     // MARK: - LaunchWireframe Functions
-    func routeToSampleModule() {
-        let sampleModule = moduleResolver.resolveSampleModule()
-        sampleModule.modalPresentationStyle = .fullScreen
-        presentingView.present(sampleModule, animated: false)
+    func routeToHomeModule() {
+        let homeView = moduleResolver.resolveHomeModule()
+        let homeModule = UINavigationController(rootViewController: homeView)
+        homeModule.modalPresentationStyle = .fullScreen
+        presentingView.present(homeModule, animated: false)
     }
 
     // MARK: - Helper Functions

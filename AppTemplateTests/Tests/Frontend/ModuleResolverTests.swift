@@ -23,9 +23,9 @@ class ModuleResolverTests: XCTestCase {
         // Arrange
 
         // Act
-        let view = instanceUnderTest.resolveSampleModule()
+        let view = instanceUnderTest.resolveHomeModule()
 
         // Assert
-        XCTAssertTrue(view is SampleViewController)
+        XCTAssertTrue(view is HomeViewController)
     }
 }

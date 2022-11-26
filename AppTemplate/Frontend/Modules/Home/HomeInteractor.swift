@@ -1,24 +1,24 @@
 //
-//  SampleInteractor.swift
+//  HomeInteractor.swift
 //  AppTemplate
 //
 //  Created by Timothy Rosenvall on 11/24/22.
 //
 
-class SampleInteractor: SampleInput {
+class HomeInteractor: HomeInput {
 
     // MARK: - Properties
-    let entity: SampleModel
-    let output: SampleOutput
+    let entity: HomeModel
+    let output: HomeOutput
 
     // MARK: - Initializers
-    init(entity: SampleModel,
-         output: SampleOutput) {
+    init(entity: HomeModel,
+         output: HomeOutput) {
         self.entity = entity
         self.output = output
     }
 
-    // MARK: - SampleInput Functions
+    // MARK: - HomeInput Functions
 
     // MARK: - Helper Functions
 }

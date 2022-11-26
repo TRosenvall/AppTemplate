@@ -7,4 +7,11 @@
 
 @testable import AppTemplate
 
-class NetworkingServiceMockSpy: NetworkingServing {}
+class NetworkingServiceMockSpy: NetworkingServing {
+    var isOn: Bool = false
+
+    var toggleStateCallCount = 0
+    func toggleState() {
+        toggleStateCallCount += 1
+    }
+}

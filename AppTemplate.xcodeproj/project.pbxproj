@@ -12,15 +12,15 @@
 		85831387292F6DA4004977EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85831386292F6DA4004977EA /* Assets.xcassets */; };
 		8583138A292F6DA4004977EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85831388292F6DA4004977EA /* LaunchScreen.storyboard */; };
 		858313AF292F6DE7004977EA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858313AE292F6DE7004977EA /* Colors.xcassets */; };
-		858313B3292F6E7C004977EA /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B2292F6E7C004977EA /* SampleViewController.swift */; };
-		858313B5292F6E8C004977EA /* SamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B4292F6E8C004977EA /* SamplePresenter.swift */; };
-		858313B8292F6EAD004977EA /* SampleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B7292F6EAD004977EA /* SampleInteractor.swift */; };
-		858313BA292F6EB7004977EA /* SampleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B9292F6EB7004977EA /* SampleRouter.swift */; };
-		858313BC292F6EC1004977EA /* SampleContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313BB292F6EC1004977EA /* SampleContracts.swift */; };
-		858313BE292F6ED7004977EA /* SampleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313BD292F6ED7004977EA /* SampleEntity.swift */; };
-		858313C0292F6EEE004977EA /* SampleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313BF292F6EEE004977EA /* SampleBuilder.swift */; };
+		858313B3292F6E7C004977EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B2292F6E7C004977EA /* HomeViewController.swift */; };
+		858313B5292F6E8C004977EA /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B4292F6E8C004977EA /* HomePresenter.swift */; };
+		858313B8292F6EAD004977EA /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B7292F6EAD004977EA /* HomeInteractor.swift */; };
+		858313BA292F6EB7004977EA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B9292F6EB7004977EA /* HomeRouter.swift */; };
+		858313BC292F6EC1004977EA /* HomeContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313BB292F6EC1004977EA /* HomeContracts.swift */; };
+		858313BE292F6ED7004977EA /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313BD292F6ED7004977EA /* HomeEntity.swift */; };
+		858313C0292F6EEE004977EA /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313BF292F6EEE004977EA /* HomeBuilder.swift */; };
 		858313C6292F6F6F004977EA /* ModuleResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313C5292F6F6F004977EA /* ModuleResolver.swift */; };
-		858313CA292F742A004977EA /* SampleTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313C9292F742A004977EA /* SampleTheme.swift */; };
+		858313CA292F742A004977EA /* HomeTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313C9292F742A004977EA /* HomeTheme.swift */; };
 		858313CC292F7445004977EA /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313CB292F7445004977EA /* AppTheme.swift */; };
 		858313CF292F79BF004977EA /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313CE292F79BF004977EA /* PersistenceService.swift */; };
 		858313D2292F79D5004977EA /* PersistenceContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313D1292F79D5004977EA /* PersistenceContracts.swift */; };
@@ -30,13 +30,13 @@
 		858313DD292F8653004977EA /* NetworkingContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313DC292F8653004977EA /* NetworkingContracts.swift */; };
 		858313DF292F8676004977EA /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313DE292F8676004977EA /* NetworkingService.swift */; };
 		858313E1292F8C42004977EA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313E0292F8C42004977EA /* Colors.swift */; };
-		858313F0292F9679004977EA /* SampleViewControllerMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313EF292F9679004977EA /* SampleViewControllerMockSpy.swift */; };
-		858313F2292F96EB004977EA /* SamplePresenterMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313F1292F96EB004977EA /* SamplePresenterMockSpy.swift */; };
-		858313F4292F974D004977EA /* SampleRouterMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313F3292F974D004977EA /* SampleRouterMockSpy.swift */; };
-		858313F6292F9793004977EA /* SampleInteractorMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313F5292F9793004977EA /* SampleInteractorMockSpy.swift */; };
-		858313F8292F97D7004977EA /* SampleEntityMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313F7292F97D6004977EA /* SampleEntityMockSpy.swift */; };
-		858313FA292F98A9004977EA /* SampleBuilderMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313F9292F98A9004977EA /* SampleBuilderMockSpy.swift */; };
-		858313FC292F9E1C004977EA /* SampleBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313FB292F9E1C004977EA /* SampleBuilderTests.swift */; };
+		858313F0292F9679004977EA /* HomeViewControllerMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313EF292F9679004977EA /* HomeViewControllerMockSpy.swift */; };
+		858313F2292F96EB004977EA /* HomePresenterMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313F1292F96EB004977EA /* HomePresenterMockSpy.swift */; };
+		858313F4292F974D004977EA /* HomeRouterMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313F3292F974D004977EA /* HomeRouterMockSpy.swift */; };
+		858313F6292F9793004977EA /* HomeInteractorMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313F5292F9793004977EA /* HomeInteractorMockSpy.swift */; };
+		858313F8292F97D7004977EA /* HomeEntityMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313F7292F97D6004977EA /* HomeEntityMockSpy.swift */; };
+		858313FA292F98A9004977EA /* HomeBuilderMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313F9292F98A9004977EA /* HomeBuilderMockSpy.swift */; };
+		858313FC292F9E1C004977EA /* HomeBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313FB292F9E1C004977EA /* HomeBuilderTests.swift */; };
 		858313FE292FA007004977EA /* TestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313FD292FA007004977EA /* TestUtility.swift */; };
 		85831400292FA14A004977EA /* ServiceResolverMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313FF292FA14A004977EA /* ServiceResolverMockSpy.swift */; };
 		85831406292FA216004977EA /* NetworkingServiceMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831405292FA216004977EA /* NetworkingServiceMockSpy.swift */; };
@@ -65,6 +65,23 @@
 		8583143F29314772004977EA /* LaunchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583143E29314772004977EA /* LaunchInteractor.swift */; };
 		858314412931477B004977EA /* LaunchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314402931477A004977EA /* LaunchEntity.swift */; };
 		8583144329314785004977EA /* LaunchTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583144229314785004977EA /* LaunchTheme.swift */; };
+		85831445293172B4004977EA /* LaunchConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831444293172B4004977EA /* LaunchConstraints.swift */; };
+		858314472931730F004977EA /* SettingsConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314462931730F004977EA /* SettingsConstraints.swift */; };
+		8583144929317319004977EA /* HomeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583144829317319004977EA /* HomeConstraints.swift */; };
+		8583144B2931742A004977EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583144A2931742A004977EA /* Constants.swift */; };
+		8583144E29325656004977EA /* EncryptionServiceMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583144D29325656004977EA /* EncryptionServiceMockSpy.swift */; };
+		8583145229325808004977EA /* SettingsBuilderMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583145129325808004977EA /* SettingsBuilderMockSpy.swift */; };
+		858314542932581B004977EA /* SettingsViewControllerMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314532932581B004977EA /* SettingsViewControllerMockSpy.swift */; };
+		858314562932582A004977EA /* SettingsPresenterMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314552932582A004977EA /* SettingsPresenterMockSpy.swift */; };
+		8583145829325839004977EA /* SettingsRouterMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583145729325839004977EA /* SettingsRouterMockSpy.swift */; };
+		8583145A29325846004977EA /* SettingsInteractorMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583145929325846004977EA /* SettingsInteractorMockSpy.swift */; };
+		8583145C29325854004977EA /* SettingsEntityMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583145B29325854004977EA /* SettingsEntityMockSpy.swift */; };
+		8583145E293259F4004977EA /* LaunchBuilderMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583145D293259F4004977EA /* LaunchBuilderMockSpy.swift */; };
+		8583146029325A03004977EA /* LaunchViewControllerMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583145F29325A03004977EA /* LaunchViewControllerMockSpy.swift */; };
+		8583146229325A16004977EA /* LaunchPresenterMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146129325A16004977EA /* LaunchPresenterMockSpy.swift */; };
+		8583146429325A22004977EA /* LaunchRouterMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146329325A22004977EA /* LaunchRouterMockSpy.swift */; };
+		8583146629325A36004977EA /* LaunchInteractorMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146529325A36004977EA /* LaunchInteractorMockSpy.swift */; };
+		8583146829325A44004977EA /* LaunchEntityMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146729325A44004977EA /* LaunchEntityMockSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,15 +103,15 @@
 		8583138B292F6DA4004977EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85831390292F6DA5004977EA /* AppTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		858313AE292F6DE7004977EA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		858313B2292F6E7C004977EA /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
-		858313B4292F6E8C004977EA /* SamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePresenter.swift; sourceTree = "<group>"; };
-		858313B7292F6EAD004977EA /* SampleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleInteractor.swift; sourceTree = "<group>"; };
-		858313B9292F6EB7004977EA /* SampleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRouter.swift; sourceTree = "<group>"; };
-		858313BB292F6EC1004977EA /* SampleContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleContracts.swift; sourceTree = "<group>"; };
-		858313BD292F6ED7004977EA /* SampleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleEntity.swift; sourceTree = "<group>"; };
-		858313BF292F6EEE004977EA /* SampleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBuilder.swift; sourceTree = "<group>"; };
+		858313B2292F6E7C004977EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		858313B4292F6E8C004977EA /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		858313B7292F6EAD004977EA /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		858313B9292F6EB7004977EA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		858313BB292F6EC1004977EA /* HomeContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContracts.swift; sourceTree = "<group>"; };
+		858313BD292F6ED7004977EA /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		858313BF292F6EEE004977EA /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		858313C5292F6F6F004977EA /* ModuleResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleResolver.swift; sourceTree = "<group>"; };
-		858313C9292F742A004977EA /* SampleTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTheme.swift; sourceTree = "<group>"; };
+		858313C9292F742A004977EA /* HomeTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTheme.swift; sourceTree = "<group>"; };
 		858313CB292F7445004977EA /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		858313CE292F79BF004977EA /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		858313D1292F79D5004977EA /* PersistenceContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceContracts.swift; sourceTree = "<group>"; };
@@ -104,13 +121,13 @@
 		858313DC292F8653004977EA /* NetworkingContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingContracts.swift; sourceTree = "<group>"; };
 		858313DE292F8676004977EA /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		858313E0292F8C42004977EA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		858313EF292F9679004977EA /* SampleViewControllerMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewControllerMockSpy.swift; sourceTree = "<group>"; };
-		858313F1292F96EB004977EA /* SamplePresenterMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePresenterMockSpy.swift; sourceTree = "<group>"; };
-		858313F3292F974D004977EA /* SampleRouterMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRouterMockSpy.swift; sourceTree = "<group>"; };
-		858313F5292F9793004977EA /* SampleInteractorMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleInteractorMockSpy.swift; sourceTree = "<group>"; };
-		858313F7292F97D6004977EA /* SampleEntityMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleEntityMockSpy.swift; sourceTree = "<group>"; };
-		858313F9292F98A9004977EA /* SampleBuilderMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBuilderMockSpy.swift; sourceTree = "<group>"; };
-		858313FB292F9E1C004977EA /* SampleBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBuilderTests.swift; sourceTree = "<group>"; };
+		858313EF292F9679004977EA /* HomeViewControllerMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerMockSpy.swift; sourceTree = "<group>"; };
+		858313F1292F96EB004977EA /* HomePresenterMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterMockSpy.swift; sourceTree = "<group>"; };
+		858313F3292F974D004977EA /* HomeRouterMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterMockSpy.swift; sourceTree = "<group>"; };
+		858313F5292F9793004977EA /* HomeInteractorMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorMockSpy.swift; sourceTree = "<group>"; };
+		858313F7292F97D6004977EA /* HomeEntityMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntityMockSpy.swift; sourceTree = "<group>"; };
+		858313F9292F98A9004977EA /* HomeBuilderMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilderMockSpy.swift; sourceTree = "<group>"; };
+		858313FB292F9E1C004977EA /* HomeBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilderTests.swift; sourceTree = "<group>"; };
 		858313FD292FA007004977EA /* TestUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtility.swift; sourceTree = "<group>"; };
 		858313FF292FA14A004977EA /* ServiceResolverMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResolverMockSpy.swift; sourceTree = "<group>"; };
 		85831405292FA216004977EA /* NetworkingServiceMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServiceMockSpy.swift; sourceTree = "<group>"; };
@@ -139,6 +156,23 @@
 		8583143E29314772004977EA /* LaunchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInteractor.swift; sourceTree = "<group>"; };
 		858314402931477A004977EA /* LaunchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchEntity.swift; sourceTree = "<group>"; };
 		8583144229314785004977EA /* LaunchTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTheme.swift; sourceTree = "<group>"; };
+		85831444293172B4004977EA /* LaunchConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchConstraints.swift; sourceTree = "<group>"; };
+		858314462931730F004977EA /* SettingsConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConstraints.swift; sourceTree = "<group>"; };
+		8583144829317319004977EA /* HomeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstraints.swift; sourceTree = "<group>"; };
+		8583144A2931742A004977EA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8583144D29325656004977EA /* EncryptionServiceMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionServiceMockSpy.swift; sourceTree = "<group>"; };
+		8583145129325808004977EA /* SettingsBuilderMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBuilderMockSpy.swift; sourceTree = "<group>"; };
+		858314532932581B004977EA /* SettingsViewControllerMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerMockSpy.swift; sourceTree = "<group>"; };
+		858314552932582A004977EA /* SettingsPresenterMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenterMockSpy.swift; sourceTree = "<group>"; };
+		8583145729325839004977EA /* SettingsRouterMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouterMockSpy.swift; sourceTree = "<group>"; };
+		8583145929325846004977EA /* SettingsInteractorMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractorMockSpy.swift; sourceTree = "<group>"; };
+		8583145B29325854004977EA /* SettingsEntityMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEntityMockSpy.swift; sourceTree = "<group>"; };
+		8583145D293259F4004977EA /* LaunchBuilderMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBuilderMockSpy.swift; sourceTree = "<group>"; };
+		8583145F29325A03004977EA /* LaunchViewControllerMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewControllerMockSpy.swift; sourceTree = "<group>"; };
+		8583146129325A16004977EA /* LaunchPresenterMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenterMockSpy.swift; sourceTree = "<group>"; };
+		8583146329325A22004977EA /* LaunchRouterMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouterMockSpy.swift; sourceTree = "<group>"; };
+		8583146529325A36004977EA /* LaunchInteractorMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInteractorMockSpy.swift; sourceTree = "<group>"; };
+		8583146729325A44004977EA /* LaunchEntityMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchEntityMockSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +250,7 @@
 			children = (
 				8583142029314386004977EA /* Launch */,
 				8583142129314394004977EA /* Settings */,
-				858313B6292F6E9B004977EA /* Sample */,
+				858313B6292F6E9B004977EA /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -233,20 +267,21 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		858313B6292F6E9B004977EA /* Sample */ = {
+		858313B6292F6E9B004977EA /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				858313C1292F6F1C004977EA /* Views */,
-				858313BB292F6EC1004977EA /* SampleContracts.swift */,
-				858313BF292F6EEE004977EA /* SampleBuilder.swift */,
-				858313B2292F6E7C004977EA /* SampleViewController.swift */,
-				858313B4292F6E8C004977EA /* SamplePresenter.swift */,
-				858313B9292F6EB7004977EA /* SampleRouter.swift */,
-				858313B7292F6EAD004977EA /* SampleInteractor.swift */,
-				858313BD292F6ED7004977EA /* SampleEntity.swift */,
-				858313C9292F742A004977EA /* SampleTheme.swift */,
+				858313BB292F6EC1004977EA /* HomeContracts.swift */,
+				858313BF292F6EEE004977EA /* HomeBuilder.swift */,
+				8583144829317319004977EA /* HomeConstraints.swift */,
+				858313B2292F6E7C004977EA /* HomeViewController.swift */,
+				858313B4292F6E8C004977EA /* HomePresenter.swift */,
+				858313B9292F6EB7004977EA /* HomeRouter.swift */,
+				858313B7292F6EAD004977EA /* HomeInteractor.swift */,
+				858313BD292F6ED7004977EA /* HomeEntity.swift */,
+				858313C9292F742A004977EA /* HomeTheme.swift */,
 			);
-			path = Sample;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		858313C1292F6F1C004977EA /* Views */ = {
@@ -259,6 +294,7 @@
 		858313C2292F6F30004977EA /* SharedViews */ = {
 			isa = PBXGroup;
 			children = (
+				8583144A2931742A004977EA /* Constants.swift */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -350,6 +386,7 @@
 			children = (
 				85831401292FA1DE004977EA /* Networking */,
 				85831402292FA1F0004977EA /* Persistence */,
+				8583144C2932563F004977EA /* Encryption */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -366,22 +403,24 @@
 		858313EB292F957C004977EA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				858313EE292F95F7004977EA /* Sample */,
+				8583144F293257D5004977EA /* Launch */,
+				85831450293257DB004977EA /* Settings */,
+				858313EE292F95F7004977EA /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		858313EE292F95F7004977EA /* Sample */ = {
+		858313EE292F95F7004977EA /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				858313F9292F98A9004977EA /* SampleBuilderMockSpy.swift */,
-				858313EF292F9679004977EA /* SampleViewControllerMockSpy.swift */,
-				858313F1292F96EB004977EA /* SamplePresenterMockSpy.swift */,
-				858313F3292F974D004977EA /* SampleRouterMockSpy.swift */,
-				858313F5292F9793004977EA /* SampleInteractorMockSpy.swift */,
-				858313F7292F97D6004977EA /* SampleEntityMockSpy.swift */,
+				858313F9292F98A9004977EA /* HomeBuilderMockSpy.swift */,
+				858313EF292F9679004977EA /* HomeViewControllerMockSpy.swift */,
+				858313F1292F96EB004977EA /* HomePresenterMockSpy.swift */,
+				858313F3292F974D004977EA /* HomeRouterMockSpy.swift */,
+				858313F5292F9793004977EA /* HomeInteractorMockSpy.swift */,
+				858313F7292F97D6004977EA /* HomeEntityMockSpy.swift */,
 			);
-			path = Sample;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		85831401292FA1DE004977EA /* Networking */ = {
@@ -430,17 +469,17 @@
 		85831410292FA5D2004977EA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				85831411292FA5DD004977EA /* Sample */,
+				85831411292FA5DD004977EA /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		85831411292FA5DD004977EA /* Sample */ = {
+		85831411292FA5DD004977EA /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				858313FB292F9E1C004977EA /* SampleBuilderTests.swift */,
+				858313FB292F9E1C004977EA /* HomeBuilderTests.swift */,
 			);
-			path = Sample;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		85831412292FA616004977EA /* Services */ = {
@@ -466,6 +505,7 @@
 				8583143329314737004977EA /* Views */,
 				8583143429314742004977EA /* LaunchContracts.swift */,
 				858314362931474B004977EA /* LaunchBuilder.swift */,
+				85831444293172B4004977EA /* LaunchConstraints.swift */,
 				8583143829314754004977EA /* LaunchViewController.swift */,
 				8583143A2931475F004977EA /* LaunchPresenter.swift */,
 				8583143C29314767004977EA /* LaunchRouter.swift */,
@@ -482,6 +522,7 @@
 				85831428293143D0004977EA /* Views */,
 				85831422293143B0004977EA /* SettingsContracts.swift */,
 				85831424293143BF004977EA /* SettingsBuilder.swift */,
+				858314462931730F004977EA /* SettingsConstraints.swift */,
 				85831426293143CA004977EA /* SettingsViewController.swift */,
 				85831429293143EA004977EA /* SettingsPresenter.swift */,
 				8583142B293143F2004977EA /* SettingsRouter.swift */,
@@ -504,6 +545,40 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8583144C2932563F004977EA /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				8583144D29325656004977EA /* EncryptionServiceMockSpy.swift */,
+			);
+			path = Encryption;
+			sourceTree = "<group>";
+		};
+		8583144F293257D5004977EA /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				8583145D293259F4004977EA /* LaunchBuilderMockSpy.swift */,
+				8583145F29325A03004977EA /* LaunchViewControllerMockSpy.swift */,
+				8583146129325A16004977EA /* LaunchPresenterMockSpy.swift */,
+				8583146329325A22004977EA /* LaunchRouterMockSpy.swift */,
+				8583146529325A36004977EA /* LaunchInteractorMockSpy.swift */,
+				8583146729325A44004977EA /* LaunchEntityMockSpy.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		85831450293257DB004977EA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8583145129325808004977EA /* SettingsBuilderMockSpy.swift */,
+				858314532932581B004977EA /* SettingsViewControllerMockSpy.swift */,
+				858314552932582A004977EA /* SettingsPresenterMockSpy.swift */,
+				8583145729325839004977EA /* SettingsRouterMockSpy.swift */,
+				8583145929325846004977EA /* SettingsInteractorMockSpy.swift */,
+				8583145B29325854004977EA /* SettingsEntityMockSpy.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -609,22 +684,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				858314172930FF76004977EA /* EncryptionContracts.swift in Sources */,
+				8583144B2931742A004977EA /* Constants.swift in Sources */,
 				8583143B2931475F004977EA /* LaunchPresenter.swift in Sources */,
-				858313BA292F6EB7004977EA /* SampleRouter.swift in Sources */,
+				858313BA292F6EB7004977EA /* HomeRouter.swift in Sources */,
 				8583137E292F6D9F004977EA /* AppDelegate.swift in Sources */,
 				85831380292F6D9F004977EA /* SceneDelegate.swift in Sources */,
 				858313D6292F7DDC004977EA /* ServiceContracts.swift in Sources */,
-				858313CA292F742A004977EA /* SampleTheme.swift in Sources */,
+				858313CA292F742A004977EA /* HomeTheme.swift in Sources */,
 				858313E1292F8C42004977EA /* Colors.swift in Sources */,
 				8583143929314754004977EA /* LaunchViewController.swift in Sources */,
-				858313C0292F6EEE004977EA /* SampleBuilder.swift in Sources */,
+				858313C0292F6EEE004977EA /* HomeBuilder.swift in Sources */,
 				858313CF292F79BF004977EA /* PersistenceService.swift in Sources */,
 				8583142C293143F2004977EA /* SettingsRouter.swift in Sources */,
-				858313B8292F6EAD004977EA /* SampleInteractor.swift in Sources */,
+				8583144929317319004977EA /* HomeConstraints.swift in Sources */,
+				858313B8292F6EAD004977EA /* HomeInteractor.swift in Sources */,
 				858314322931440A004977EA /* SettingsTheme.swift in Sources */,
 				858313D2292F79D5004977EA /* PersistenceContracts.swift in Sources */,
 				8583143F29314772004977EA /* LaunchInteractor.swift in Sources */,
-				858313BE292F6ED7004977EA /* SampleEntity.swift in Sources */,
+				858313BE292F6ED7004977EA /* HomeEntity.swift in Sources */,
 				8583141D29310375004977EA /* EncryptionBuilder.swift in Sources */,
 				8583142A293143EA004977EA /* SettingsPresenter.swift in Sources */,
 				858314192930FF89004977EA /* EncryptionService.swift in Sources */,
@@ -633,22 +710,24 @@
 				85831425293143BF004977EA /* SettingsBuilder.swift in Sources */,
 				8583144329314785004977EA /* LaunchTheme.swift in Sources */,
 				8583141F2931037E004977EA /* NetworkingBuilder.swift in Sources */,
-				858313B5292F6E8C004977EA /* SamplePresenter.swift in Sources */,
+				858313B5292F6E8C004977EA /* HomePresenter.swift in Sources */,
 				858313D4292F7D11004977EA /* ServiceResolver.swift in Sources */,
 				8583141B29310369004977EA /* PersistenceBuilder.swift in Sources */,
-				858313BC292F6EC1004977EA /* SampleContracts.swift in Sources */,
+				858313BC292F6EC1004977EA /* HomeContracts.swift in Sources */,
 				858313CC292F7445004977EA /* AppTheme.swift in Sources */,
 				85831423293143B0004977EA /* SettingsContracts.swift in Sources */,
 				8583143529314742004977EA /* LaunchContracts.swift in Sources */,
-				858313B3292F6E7C004977EA /* SampleViewController.swift in Sources */,
+				858313B3292F6E7C004977EA /* HomeViewController.swift in Sources */,
 				85831427293143CA004977EA /* SettingsViewController.swift in Sources */,
 				858313DF292F8676004977EA /* NetworkingService.swift in Sources */,
 				858313DA292F80C2004977EA /* ModuleContracts.swift in Sources */,
 				8583143029314403004977EA /* SettingsEntity.swift in Sources */,
+				858314472931730F004977EA /* SettingsConstraints.swift in Sources */,
 				858314372931474B004977EA /* LaunchBuilder.swift in Sources */,
 				858313C6292F6F6F004977EA /* ModuleResolver.swift in Sources */,
 				858313DD292F8653004977EA /* NetworkingContracts.swift in Sources */,
 				8583143D29314767004977EA /* LaunchRouter.swift in Sources */,
+				85831445293172B4004977EA /* LaunchConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,18 +737,31 @@
 			files = (
 				85831406292FA216004977EA /* NetworkingServiceMockSpy.swift in Sources */,
 				858313FE292FA007004977EA /* TestUtility.swift in Sources */,
-				858313FC292F9E1C004977EA /* SampleBuilderTests.swift in Sources */,
-				858313FA292F98A9004977EA /* SampleBuilderMockSpy.swift in Sources */,
+				8583146829325A44004977EA /* LaunchEntityMockSpy.swift in Sources */,
+				858313FC292F9E1C004977EA /* HomeBuilderTests.swift in Sources */,
+				858313FA292F98A9004977EA /* HomeBuilderMockSpy.swift in Sources */,
 				8583140C292FA4AD004977EA /* ModuleResolverTests.swift in Sources */,
-				858313F8292F97D7004977EA /* SampleEntityMockSpy.swift in Sources */,
-				858313F4292F974D004977EA /* SampleRouterMockSpy.swift in Sources */,
+				8583145229325808004977EA /* SettingsBuilderMockSpy.swift in Sources */,
+				858314542932581B004977EA /* SettingsViewControllerMockSpy.swift in Sources */,
+				858313F8292F97D7004977EA /* HomeEntityMockSpy.swift in Sources */,
+				8583146629325A36004977EA /* LaunchInteractorMockSpy.swift in Sources */,
+				8583146429325A22004977EA /* LaunchRouterMockSpy.swift in Sources */,
+				858313F4292F974D004977EA /* HomeRouterMockSpy.swift in Sources */,
 				85831400292FA14A004977EA /* ServiceResolverMockSpy.swift in Sources */,
-				858313F0292F9679004977EA /* SampleViewControllerMockSpy.swift in Sources */,
+				858313F0292F9679004977EA /* HomeViewControllerMockSpy.swift in Sources */,
 				8583140A292FA324004977EA /* ModuleResolverMockSpy.swift in Sources */,
-				858313F2292F96EB004977EA /* SamplePresenterMockSpy.swift in Sources */,
+				8583146029325A03004977EA /* LaunchViewControllerMockSpy.swift in Sources */,
+				858313F2292F96EB004977EA /* HomePresenterMockSpy.swift in Sources */,
+				8583145C29325854004977EA /* SettingsEntityMockSpy.swift in Sources */,
 				85831414292FA62B004977EA /* ServiceResolverTests.swift in Sources */,
-				858313F6292F9793004977EA /* SampleInteractorMockSpy.swift in Sources */,
+				8583146229325A16004977EA /* LaunchPresenterMockSpy.swift in Sources */,
+				8583144E29325656004977EA /* EncryptionServiceMockSpy.swift in Sources */,
+				8583145829325839004977EA /* SettingsRouterMockSpy.swift in Sources */,
+				8583145A29325846004977EA /* SettingsInteractorMockSpy.swift in Sources */,
+				858313F6292F9793004977EA /* HomeInteractorMockSpy.swift in Sources */,
+				858314562932582A004977EA /* SettingsPresenterMockSpy.swift in Sources */,
 				85831408292FA25F004977EA /* PersistenceServiceMockSpy.swift in Sources */,
+				8583145E293259F4004977EA /* LaunchBuilderMockSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

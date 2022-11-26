@@ -1,5 +1,5 @@
 //
-//  SampleRouter.swift
+//  HomeRouter.swift
 //  AppTemplate
 //
 //  Created by Timothy Rosenvall on 11/24/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SampleRouter: SampleWireframe {
+class HomeRouter: HomeWireframe {
 
     // MARK: - Properties
     let presentingView: UIViewController
@@ -20,7 +20,7 @@ class SampleRouter: SampleWireframe {
         self.moduleResolver = moduleResolver
     }
 
-    // MARK: - SampleWireframe Functions
+    // MARK: - HomeWireframe Functions
 
     // MARK: - Helper Functions
 }

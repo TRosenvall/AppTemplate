@@ -9,7 +9,9 @@ import UIKit
 
 // Unlike services, which all sit in the back doing their thing, we want to load these only as needed.
 protocol ModuleResolving {
-    func resolveSampleModule() -> SampleView
+    func resolveLaunchModule() -> LaunchView
+    func resolveSettingsModule() -> SettingsView
+    func resolveHomeModule() -> HomeView
 }
 
 class ModuleResolver: ModuleResolving {
@@ -46,13 +48,13 @@ class ModuleResolver: ModuleResolving {
         return settingsModule
     }
 
-    func resolveSampleModule() -> SampleView {
-        let sampleBuilder = SampleBuilder(appTheme: appTheme,
+    func resolveHomeModule() -> HomeView {
+        let homeBuilder = HomeBuilder(appTheme: appTheme,
                                           serviceResolver: serviceResolver,
                                           moduleResolver: self)
-        let sampleModule = sampleBuilder.buildModule()
-        activeModule = sampleModule
-        return sampleModule
+        let homeModule = homeBuilder.buildModule()
+        activeModule = homeModule
+        return homeModule
     }
 
     // MARK: - Helper Functions

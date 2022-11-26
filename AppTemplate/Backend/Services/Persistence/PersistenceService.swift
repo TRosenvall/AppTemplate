@@ -27,7 +27,7 @@ class PersistenceService: PersistenceServing {
         // TODO
     }
 
-    func locallyload(_entity: Entity) {
+    func locallyLoad(_entity: Entity) {
         // TODO
     }
 

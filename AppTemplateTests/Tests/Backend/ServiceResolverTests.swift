@@ -22,7 +22,7 @@ class ServiceResolverTests: XCTestCase {
         // Arrange
 
         // Act
-        let networkingService = instanceUnderTest.resolveNetworkingService()
+        let networkingService = ServiceResolver.resolveNetworkingService()
 
         // Assert
         XCTAssertTrue(networkingService is NetworkingService)
@@ -32,7 +32,8 @@ class ServiceResolverTests: XCTestCase {
         // Arrange
 
         // Act
-        let persistenceService = instanceUnderTest.resolvePersistenceService()
+        let networkingService = ServiceResolver.resolveNetworkingService()
+        let persistenceService = ServiceResolver.resolvePersistenceService(networkingService: networkingService)
 
         // Assert
         XCTAssertTrue(persistenceService is PersistenceService)

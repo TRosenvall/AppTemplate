@@ -16,7 +16,9 @@ class TestUtility {
 
     // MARK: - Themes
     lazy var appTheme = AppTheme()
-    lazy var sampleTheme: SampleTheme = SampleTheme(base: appTheme)
+    lazy var launchTheme = LaunchTheme(base: appTheme)
+    lazy var settingsTheme = SettingsTheme(base: appTheme)
+    lazy var homeTheme = HomeTheme(base: appTheme)
 
     // MARK: - Initializer
     init() {}

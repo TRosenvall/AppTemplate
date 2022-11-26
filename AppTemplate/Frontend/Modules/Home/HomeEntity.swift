@@ -1,11 +1,11 @@
 //
-//  SampleEntity.swift
+//  HomeEntity.swift
 //  AppTemplate
 //
 //  Created by Timothy Rosenvall on 11/24/22.
 //
 
-class SampleEntity: SampleModel {
+class HomeEntity: HomeModel {
 
     // MARK: - Properties
     let persistenceService: PersistenceServing
@@ -15,7 +15,7 @@ class SampleEntity: SampleModel {
         self.persistenceService = persistenceService
     }
 
-    // MARK: - SampleModel Functions
+    // MARK: - HomeModel Functions
 
     // MARK: - Helper Functions
 }

@@ -1,14 +1,14 @@
 //
-//  SampleBuilder.swift
+//  HomeBuilder.swift
 //  AppTemplate
 //
 //  Created by Timothy Rosenvall on 11/24/22.
 //
 
-class SampleBuilder: SampleBuilding {
+class HomeBuilder: HomeBuilding {
 
     // MARK: - Properties
-    typealias ModuleType = SampleView
+    typealias ModuleType = HomeView
 
     let appTheme: AppTheme
     let serviceResolver: ServiceResolving
@@ -23,24 +23,26 @@ class SampleBuilder: SampleBuilding {
         self.moduleResolver = moduleResolver
     }
 
-    // MARK: - SampleBuilding Functions
-    func buildModule() -> SampleView {
+    // MARK: - HomeBuilding Functions
+    func buildModule() -> HomeView {
         // Get needed properties
-        let sampleTheme = SampleTheme(base: appTheme)
+        let homeTheme = HomeTheme(base: appTheme)
         let persistenceService = serviceResolver.services.persistence
 
         // Build module parts
-        let entity = SampleEntity(persistenceService: persistenceService)
-        let view = SampleViewController(theme: sampleTheme)
-        let presenter = SamplePresenter(view: view)
-        let interactor = SampleInteractor(entity: entity,
-                                          output: presenter as SampleOutput)
-        let router = SampleRouter(presentingView: view,
+        let entity = HomeEntity(persistenceService: persistenceService)
+        let view = HomeViewController(theme: homeTheme)
+        let constraints = HomeConstraints(view: view)
+        let presenter = HomePresenter(view: view)
+        let interactor = HomeInteractor(entity: entity,
+                                          output: presenter as HomeOutput)
+        let router = HomeRouter(presentingView: view,
                                   moduleResolver: moduleResolver)
 
         // Set the missing parts where needed
         presenter.interactor = interactor
         presenter.router = router
+        view.constraints = constraints
         view.presenter = presenter
 
         // Return the view

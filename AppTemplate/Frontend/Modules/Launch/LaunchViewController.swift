@@ -11,6 +11,7 @@ class LaunchViewController: UIViewController, LaunchView {
 
     // MARK: - Properties
     let theme: LaunchTheme
+    var constraints: LaunchConstraints? = nil
     var presenter: LaunchPresenting? = nil
 
     // MARK: - Initializers

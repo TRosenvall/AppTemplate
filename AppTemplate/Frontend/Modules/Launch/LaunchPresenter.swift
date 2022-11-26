@@ -19,7 +19,7 @@ class LaunchPresenter: LaunchPresenting, LaunchOutput {
 
     // MARK: - LaunchPresenting Functions
     func viewDidAppear() {
-        router?.routeToSampleModule()
+        router?.routeToHomeModule()
     }
 
     // MARK: - LaunchOutput Functions

@@ -19,7 +19,7 @@ protocol PersistenceServing: Service {
     func cloudSave(_entity: Entity)
 
     // Loads the local data when module is loaded
-    func locallyload(_entity: Entity)
+    func locallyLoad(_entity: Entity)
 
     // Loads the cloud data if cloud saves are enabled and module is loaded.
     func cloudLoad(_entity: Entity)
