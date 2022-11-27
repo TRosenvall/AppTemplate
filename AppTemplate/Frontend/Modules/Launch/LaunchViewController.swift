@@ -10,13 +10,11 @@ import UIKit
 class LaunchViewController: UIViewController, LaunchView {
 
     // MARK: - Properties
-    let theme: LaunchTheme
     var constraints: LaunchConstraints? = nil
     var presenter: LaunchPresenting? = nil
 
     // MARK: - Initializers
-    public init(theme: LaunchTheme) {
-        self.theme = theme
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -28,7 +26,6 @@ class LaunchViewController: UIViewController, LaunchView {
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = theme.viewBackgroundColor
     }
 
     override func viewDidAppear(_ animated: Bool) {

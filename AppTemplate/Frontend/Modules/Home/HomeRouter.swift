@@ -21,6 +21,10 @@ class HomeRouter: HomeWireframe {
     }
 
     // MARK: - HomeWireframe Functions
+    func routeToSettingsModule() {
+        let settingsModule = moduleResolver.resolveSettingsModule()
+        presentingView.navigationController?.pushViewController(settingsModule, animated: true)
+    }
 
     // MARK: - Helper Functions
 }

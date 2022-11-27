@@ -49,7 +49,7 @@ class HomeViewController: UIViewController, HomeView {
 
     // MARK: - HomeView Functions
     @objc func settingsButtonTapped(sender: UIBarButtonItem) {
-        print("Testing")
+        presenter?.settingsButtonTapped()
     }
 
     @objc func placeholderBarButtonItem(sender: UIBarButtonItem) {}

@@ -9,7 +9,7 @@
 protocol SettingsBuilding: ModuleBuilding {}
 
 ///Responsible for building out and setting up the views on the view controller.
-protocol SettingsConstraining {}
+protocol SettingsConstraining: Constraining {}
 
 ///Responsible for displaying information to and getting input from the user.
 protocol SettingsView: Module {}

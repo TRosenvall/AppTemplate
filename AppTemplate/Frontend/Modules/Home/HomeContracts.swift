@@ -20,7 +20,9 @@ protocol HomeView: Module {
 }
 
 ///Responsible for telling the view what to display and giving user input to the input file.
-protocol HomePresenting {}
+protocol HomePresenting {
+    func settingsButtonTapped()
+}
 
 ///Responsible for digesting user input and sending responses to the output.
 protocol HomeInput {}
@@ -32,4 +34,6 @@ protocol HomeModel: Entity {}
 protocol HomeOutput {}
 
 ///Responsible for navigating between the screens on the app as related to this module specifically.
-protocol HomeWireframe {}
+protocol HomeWireframe {
+    func routeToSettingsModule()
+}

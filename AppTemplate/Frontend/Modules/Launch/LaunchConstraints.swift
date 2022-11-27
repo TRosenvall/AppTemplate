@@ -10,10 +10,13 @@ import UIKit
 class LaunchConstraints: LaunchConstraining {
 
     // MARK: - Properties
+    var theme: LaunchTheme
     var viewController: LaunchView
 
     // MARK: - Initializers
-    init(view: LaunchView) {
+    init(theme: LaunchTheme,
+         view: LaunchView) {
+        self.theme = theme
         self.viewController = view
     }
 

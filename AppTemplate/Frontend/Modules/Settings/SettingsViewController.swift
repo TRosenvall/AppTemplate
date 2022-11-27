@@ -10,13 +10,11 @@ import UIKit
 class SettingsViewController: UIViewController, SettingsView {
 
     // MARK: - Properties
-    let theme: SettingsTheme
     var constraints: SettingsConstraints? = nil
     var presenter: SettingsPresenting? = nil
 
     // MARK: - Initializers
-    public init(theme: SettingsTheme) {
-        self.theme = theme
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -28,7 +26,9 @@ class SettingsViewController: UIViewController, SettingsView {
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = theme.viewBackgroundColor
+        DispatchQueue.main.async {
+            self.constraints?.build()
+        }
     }
 
     // MARK: - UIViewController Functions

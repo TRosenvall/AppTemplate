@@ -6,7 +6,7 @@
 //
 
 class HomePresenter: HomePresenting, HomeOutput {
-    
+
     // MARK: - Properties
     var view: HomeView
     var router: HomeWireframe? = nil
@@ -18,6 +18,9 @@ class HomePresenter: HomePresenting, HomeOutput {
     }
 
     // MARK: - HomePresenting Functions
+    func settingsButtonTapped() {
+        router?.routeToSettingsModule()
+    }
 
     // MARK: - HomeOutput Functions
 
