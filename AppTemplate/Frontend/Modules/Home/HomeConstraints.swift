@@ -10,17 +10,42 @@ import UIKit
 class HomeConstraints: HomeConstraining {
 
     // MARK: - Properties
+    var theme: HomeTheme
     var viewController: HomeView
 
+    // MARK: - Constraints
+
     // MARK: - Initializers
-    init(view: HomeView) {
+    init(theme: HomeTheme,
+         view: HomeView) {
+        self.theme = theme
         self.viewController = view
     }
 
     // MARK: - HomeConstraining Functions
-    func setupViews() {
-        viewController.view.backgroundColor = .blue
+    func build() {
+        // Get root view for view controller
+        let rootView = viewController.view
+
+        // Get all interactibles for the view controller
+        let interactibles = getInteractibles()
+
+        // Create remaining Views
+
+        // Constrain Views
+
+        // Format Views
+        viewController.navigationItem.leftBarButtonItem = interactibles.settingsBarButtonItem
+        viewController.navigationItem.rightBarButtonItem = interactibles.placeholderBarButtonItem
+        rootView?.backgroundColor = theme.viewBackgroundColor
     }
 
     // MARK: - Helper Functions
+    private func getInteractibles() -> (settingsBarButtonItem: UIBarButtonItem,
+                                        placeholderBarButtonItem: UIBarButtonItem) {
+        let settingsBarButtonItem = viewController.settingsBarButtonItem
+        let placeholderBarButtonItem = viewController.placeholderBarButtonItem
+        return (settingsBarButtonItem: settingsBarButtonItem,
+                placeholderBarButtonItem: placeholderBarButtonItem)
+    }
 }

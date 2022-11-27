@@ -9,6 +9,12 @@ import UIKit
 
 protocol Module: UIViewController {}
 
+protocol Constraining {
+
+    /// Builds out the views of the view controller
+    func build()
+}
+
 protocol ModuleBuilding {
 
     /// Will define the type of service being built.

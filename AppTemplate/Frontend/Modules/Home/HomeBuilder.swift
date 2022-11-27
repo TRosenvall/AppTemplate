@@ -31,8 +31,8 @@ class HomeBuilder: HomeBuilding {
 
         // Build module parts
         let entity = HomeEntity(persistenceService: persistenceService)
-        let view = HomeViewController(theme: homeTheme)
-        let constraints = HomeConstraints(view: view)
+        let view = HomeViewController()
+        let constraints = HomeConstraints(theme: homeTheme, view: view)
         let presenter = HomePresenter(view: view)
         let interactor = HomeInteractor(entity: entity,
                                           output: presenter as HomeOutput)
