@@ -10,22 +10,8 @@ import UIKit
 class HomeViewController: UIViewController, HomeView {
 
     // MARK: - Properties
-    var constraints: HomeConstraints? = nil
+    var constraints: HomeConstraining? = nil
     var presenter: HomePresenting? = nil
-
-    // MARK: - Interactables - Anything that requires a `#selector()` should go here.
-    lazy var settingsBarButtonItem: UIBarButtonItem = UIBarButtonItem(
-        image: UIImage(systemName: "gear.circle"),
-        style: .plain,
-        target: self,
-        action: #selector(settingsButtonTapped(sender:))
-    )
-    lazy var placeholderBarButtonItem: UIBarButtonItem = UIBarButtonItem(
-        title: "",
-        style: .plain,
-        target: self,
-        action: #selector(settingsButtonTapped(sender:))
-    )
 
     // MARK: - Initializers
     public init() {
@@ -40,19 +26,17 @@ class HomeViewController: UIViewController, HomeView {
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
-            self.constraints?.build()
-        }
+        self.constraints?.build()
     }
 
     // MARK: - UIViewController Functions
 
     // MARK: - HomeView Functions
-    @objc func settingsButtonTapped(sender: UIBarButtonItem) {
+    func settingsBarButtonItemTapped() {
         presenter?.settingsButtonTapped()
     }
 
-    @objc func placeholderBarButtonItem(sender: UIBarButtonItem) {}
+    func placeholderBarButtonItemTapped() {}
 
     // MARK: - Helper Functions
 }

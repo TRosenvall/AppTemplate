@@ -5,19 +5,25 @@
 //  Created by Timothy Rosenvall on 11/25/22.
 //
 
+import UIKit
+
 class SettingsPresenter: SettingsPresenting, SettingsOutput {
 
     // MARK: - Properties
-    var view: SettingsView
+    var viewController: SettingsView
+    var animator: SettingsAnimating? = nil
     var router: SettingsWireframe? = nil
     var interactor: SettingsInput? = nil
 
     // MARK: - Initializers
-    init(view: SettingsView) {
-        self.view = view
+    init(viewController: SettingsView) {
+        self.viewController = viewController
     }
 
     // MARK: - SettingsPresenting Functions
+    func backButtonTapped() {
+        router?.routeBack()
+    }
 
     // MARK: - SettingsOutput Functions
 

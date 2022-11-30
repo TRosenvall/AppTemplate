@@ -7,4 +7,6 @@
 
 import UIKit
 
-struct Constants {}
+struct Constants {
+    static let screenSize = UIScreen.main.bounds
+}

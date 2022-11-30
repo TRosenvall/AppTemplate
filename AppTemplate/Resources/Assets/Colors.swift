@@ -11,6 +11,7 @@ class Colors {
 
     // MARK: - Properties
     let viewBackgroundColor = UIColor(named: "ViewBackgroundColor")
+    let navBarViewColor = UIColor(named: "NavBarViewColor")
 
     // MARK: - Initializer
     init() {}

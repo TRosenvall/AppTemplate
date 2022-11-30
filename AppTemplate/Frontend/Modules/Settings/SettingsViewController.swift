@@ -10,7 +10,7 @@ import UIKit
 class SettingsViewController: UIViewController, SettingsView {
 
     // MARK: - Properties
-    var constraints: SettingsConstraints? = nil
+    var constraints: SettingsConstraining? = nil
     var presenter: SettingsPresenting? = nil
 
     // MARK: - Initializers
@@ -26,14 +26,19 @@ class SettingsViewController: UIViewController, SettingsView {
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
-            self.constraints?.build()
-        }
+        self.constraints?.build()
     }
 
     // MARK: - UIViewController Functions
 
     // MARK: - SettingsView Functions
+    func backBarButtonItemTapped() {
+        presenter?.backButtonTapped()
+    }
+
+    func placeholderBarButtonItemTapped() {
+        // no-op
+    }
 
     // MARK: - Helper Functions
 }

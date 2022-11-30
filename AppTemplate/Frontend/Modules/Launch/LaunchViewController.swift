@@ -10,7 +10,7 @@ import UIKit
 class LaunchViewController: UIViewController, LaunchView {
 
     // MARK: - Properties
-    var constraints: LaunchConstraints? = nil
+    var constraints: LaunchConstraining? = nil
     var presenter: LaunchPresenting? = nil
 
     // MARK: - Initializers

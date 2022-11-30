@@ -13,10 +13,14 @@ protocol HomeBuilding: ModuleBuilding {}
 ///Responsible for building out and setting up the views on the view controller.
 protocol HomeConstraining: Constraining {}
 
+///Responsible for any animations pertaining to the Home Module
+protocol HomeAnimating {}
+
 ///Responsible for displaying information to and getting input from the user.
 protocol HomeView: Module {
-    var settingsBarButtonItem: UIBarButtonItem { get }
-    var placeholderBarButtonItem: UIBarButtonItem { get }
+    func settingsBarButtonItemTapped()
+
+    func placeholderBarButtonItemTapped()
 }
 
 ///Responsible for telling the view what to display and giving user input to the input file.

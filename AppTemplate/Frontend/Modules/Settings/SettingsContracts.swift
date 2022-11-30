@@ -5,17 +5,28 @@
 //  Created by Timothy Rosenvall on 11/25/22.
 //
 
+import UIKit
+
 ///Responsible for creating and assembling all the parts of the module.
 protocol SettingsBuilding: ModuleBuilding {}
 
 ///Responsible for building out and setting up the views on the view controller.
 protocol SettingsConstraining: Constraining {}
 
+///Responsible for any animations pertaining to the Settings Module
+protocol SettingsAnimating {}
+
 ///Responsible for displaying information to and getting input from the user.
-protocol SettingsView: Module {}
+protocol SettingsView: Module {
+    func backBarButtonItemTapped()
+
+    func placeholderBarButtonItemTapped()
+}
 
 ///Responsible for telling the view what to display and giving user input to the input file.
-protocol SettingsPresenting {}
+protocol SettingsPresenting {
+    func backButtonTapped()
+}
 
 ///Responsible for digesting user input and sending responses to the output.
 protocol SettingsInput {}
@@ -27,4 +38,6 @@ protocol SettingsModel: Entity {}
 protocol SettingsOutput {}
 
 ///Responsible for navigating between the screens on the app as related to this module specifically.
-protocol SettingsWireframe {}
+protocol SettingsWireframe {
+    func routeBack()
+}

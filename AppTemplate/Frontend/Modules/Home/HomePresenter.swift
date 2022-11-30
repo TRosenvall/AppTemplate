@@ -5,16 +5,19 @@
 //  Created by Timothy Rosenvall on 11/24/22.
 //
 
+import UIKit
+
 class HomePresenter: HomePresenting, HomeOutput {
 
     // MARK: - Properties
-    var view: HomeView
+    var viewController: HomeView
+    var animator: HomeAnimating? = nil
     var router: HomeWireframe? = nil
     var interactor: HomeInput? = nil
 
     // MARK: - Initializers
-    init(view: HomeView) {
-        self.view = view
+    init(viewController: HomeView) {
+        self.viewController = viewController
     }
 
     // MARK: - HomePresenting Functions

@@ -15,12 +15,13 @@ class LaunchConstraints: LaunchConstraining {
 
     // MARK: - Initializers
     init(theme: LaunchTheme,
-         view: LaunchView) {
+         viewController: LaunchView) {
         self.theme = theme
-        self.viewController = view
+        self.viewController = viewController
     }
 
     // MARK: - LaunchConstraining Functions
+    func build() {}
 
     // MARK: - Helper Functions
 }

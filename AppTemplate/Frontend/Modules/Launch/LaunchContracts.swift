@@ -5,13 +5,18 @@
 //  Created by Timothy Rosenvall on 11/25/22.
 //
 
+import UIKit
+
 ///This module is exists to act as a buffer between the main app and the app opening. Any necessary functions
 ///for the app to run properly can be loaded in hear. Also, it let's us have a much more robust splash screen :)
 ///Responsible for creating and assembling all the parts of the module.
 protocol LaunchBuilding: ModuleBuilding {}
 
 ///Responsible for building out and setting up the views on the view controller.
-protocol LaunchConstraining {}
+protocol LaunchConstraining: Constraining {}
+
+///Responsible for any animations pertaining to the Launch Module
+protocol LaunchAnimating {}
 
 ///Responsible for displaying information to and getting input from the user.
 protocol LaunchView: Module {}
@@ -20,7 +25,7 @@ protocol LaunchView: Module {}
 protocol LaunchPresenting {
 
     ///Runs at the end of the LaunchView `viewDidLoad()`. The Launch module will route immediately to the
-    ///Sample Module.
+    ///Home Module.
     func viewDidAppear()
 }
 

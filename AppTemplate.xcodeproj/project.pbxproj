@@ -82,6 +82,10 @@
 		8583146429325A22004977EA /* LaunchRouterMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146329325A22004977EA /* LaunchRouterMockSpy.swift */; };
 		8583146629325A36004977EA /* LaunchInteractorMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146529325A36004977EA /* LaunchInteractorMockSpy.swift */; };
 		8583146829325A44004977EA /* LaunchEntityMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146729325A44004977EA /* LaunchEntityMockSpy.swift */; };
+		8583146A29367D08004977EA /* HomeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146929367D08004977EA /* HomeAnimator.swift */; };
+		8583146C29367DA1004977EA /* SettingsAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146B29367DA1004977EA /* SettingsAnimator.swift */; };
+		8583146E29367E1B004977EA /* LaunchAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146D29367E1B004977EA /* LaunchAnimator.swift */; };
+		8583147129380699004977EA /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583147029380699004977EA /* UINavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +177,10 @@
 		8583146329325A22004977EA /* LaunchRouterMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouterMockSpy.swift; sourceTree = "<group>"; };
 		8583146529325A36004977EA /* LaunchInteractorMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInteractorMockSpy.swift; sourceTree = "<group>"; };
 		8583146729325A44004977EA /* LaunchEntityMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchEntityMockSpy.swift; sourceTree = "<group>"; };
+		8583146929367D08004977EA /* HomeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnimator.swift; sourceTree = "<group>"; };
+		8583146B29367DA1004977EA /* SettingsAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAnimator.swift; sourceTree = "<group>"; };
+		8583146D29367E1B004977EA /* LaunchAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAnimator.swift; sourceTree = "<group>"; };
+		8583147029380699004977EA /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +282,7 @@
 				858313BB292F6EC1004977EA /* HomeContracts.swift */,
 				858313BF292F6EEE004977EA /* HomeBuilder.swift */,
 				8583144829317319004977EA /* HomeConstraints.swift */,
+				8583146929367D08004977EA /* HomeAnimator.swift */,
 				858313B2292F6E7C004977EA /* HomeViewController.swift */,
 				858313B4292F6E8C004977EA /* HomePresenter.swift */,
 				858313B9292F6EB7004977EA /* HomeRouter.swift */,
@@ -306,6 +315,7 @@
 				858313C5292F6F6F004977EA /* ModuleResolver.swift */,
 				858313B0292F6E48004977EA /* Modules */,
 				858313C2292F6F30004977EA /* SharedViews */,
+				8583146F2938067E004977EA /* Extensions */,
 			);
 			path = Frontend;
 			sourceTree = "<group>";
@@ -506,6 +516,7 @@
 				8583143429314742004977EA /* LaunchContracts.swift */,
 				858314362931474B004977EA /* LaunchBuilder.swift */,
 				85831444293172B4004977EA /* LaunchConstraints.swift */,
+				8583146D29367E1B004977EA /* LaunchAnimator.swift */,
 				8583143829314754004977EA /* LaunchViewController.swift */,
 				8583143A2931475F004977EA /* LaunchPresenter.swift */,
 				8583143C29314767004977EA /* LaunchRouter.swift */,
@@ -523,6 +534,7 @@
 				85831422293143B0004977EA /* SettingsContracts.swift */,
 				85831424293143BF004977EA /* SettingsBuilder.swift */,
 				858314462931730F004977EA /* SettingsConstraints.swift */,
+				8583146B29367DA1004977EA /* SettingsAnimator.swift */,
 				85831426293143CA004977EA /* SettingsViewController.swift */,
 				85831429293143EA004977EA /* SettingsPresenter.swift */,
 				8583142B293143F2004977EA /* SettingsRouter.swift */,
@@ -579,6 +591,14 @@
 				8583145B29325854004977EA /* SettingsEntityMockSpy.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		8583146F2938067E004977EA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8583147029380699004977EA /* UINavigationController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -689,6 +709,7 @@
 				858313BA292F6EB7004977EA /* HomeRouter.swift in Sources */,
 				8583137E292F6D9F004977EA /* AppDelegate.swift in Sources */,
 				85831380292F6D9F004977EA /* SceneDelegate.swift in Sources */,
+				8583147129380699004977EA /* UINavigationController.swift in Sources */,
 				858313D6292F7DDC004977EA /* ServiceContracts.swift in Sources */,
 				858313CA292F742A004977EA /* HomeTheme.swift in Sources */,
 				858313E1292F8C42004977EA /* Colors.swift in Sources */,
@@ -705,7 +726,9 @@
 				8583141D29310375004977EA /* EncryptionBuilder.swift in Sources */,
 				8583142A293143EA004977EA /* SettingsPresenter.swift in Sources */,
 				858314192930FF89004977EA /* EncryptionService.swift in Sources */,
+				8583146C29367DA1004977EA /* SettingsAnimator.swift in Sources */,
 				8583142E293143FB004977EA /* SettingsInteractor.swift in Sources */,
+				8583146A29367D08004977EA /* HomeAnimator.swift in Sources */,
 				858314412931477B004977EA /* LaunchEntity.swift in Sources */,
 				85831425293143BF004977EA /* SettingsBuilder.swift in Sources */,
 				8583144329314785004977EA /* LaunchTheme.swift in Sources */,
@@ -718,6 +741,7 @@
 				85831423293143B0004977EA /* SettingsContracts.swift in Sources */,
 				8583143529314742004977EA /* LaunchContracts.swift in Sources */,
 				858313B3292F6E7C004977EA /* HomeViewController.swift in Sources */,
+				8583146E29367E1B004977EA /* LaunchAnimator.swift in Sources */,
 				85831427293143CA004977EA /* SettingsViewController.swift in Sources */,
 				858313DF292F8676004977EA /* NetworkingService.swift in Sources */,
 				858313DA292F80C2004977EA /* ModuleContracts.swift in Sources */,

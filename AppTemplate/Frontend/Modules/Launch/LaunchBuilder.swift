@@ -32,15 +32,18 @@ class LaunchBuilder: LaunchBuilding {
         // Build module parts
         let entity = LaunchEntity(persistenceService: persistenceService)
         let view = LaunchViewController()
+        let presenter = LaunchPresenter(viewController: view)
         let constraints = LaunchConstraints(theme: launchTheme,
-                                            view: view)
-        let presenter = LaunchPresenter(view: view)
+                                            viewController: view)
+        let animator = LaunchAnimator(constraints: constraints,
+                                      output: presenter)
         let interactor = LaunchInteractor(entity: entity,
-                                          output: presenter as LaunchOutput)
+                                          output: presenter)
         let router = LaunchRouter(presentingView: view,
                                   moduleResolver: moduleResolver)
 
         // Set the missing parts where needed
+        presenter.animator = animator
         presenter.interactor = interactor
         presenter.router = router
         view.constraints = constraints

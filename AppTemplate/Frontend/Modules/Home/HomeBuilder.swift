@@ -32,15 +32,18 @@ class HomeBuilder: HomeBuilding {
         // Build module parts
         let entity = HomeEntity(persistenceService: persistenceService)
         let view = HomeViewController()
+        let presenter = HomePresenter(viewController: view)
         let constraints = HomeConstraints(theme: homeTheme,
-                                          view: view)
-        let presenter = HomePresenter(view: view)
+                                          viewController: view)
+        let animator = HomeAnimator(constraints: constraints,
+                                    output: presenter)
         let interactor = HomeInteractor(entity: entity,
-                                          output: presenter as HomeOutput)
+                                          output: presenter)
         let router = HomeRouter(presentingView: view,
                                   moduleResolver: moduleResolver)
 
         // Set the missing parts where needed
+        presenter.animator = animator
         presenter.interactor = interactor
         presenter.router = router
         view.constraints = constraints

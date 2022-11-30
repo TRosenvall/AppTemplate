@@ -8,13 +8,14 @@
 class LaunchPresenter: LaunchPresenting, LaunchOutput {
 
     // MARK: - Properties
-    var view: LaunchView
+    var viewController: LaunchView
+    var animator: LaunchAnimating? = nil
     var router: LaunchWireframe? = nil
     var interactor: LaunchInput? = nil
 
     // MARK: - Initializers
-    init(view: LaunchView) {
-        self.view = view
+    init(viewController: LaunchView) {
+        self.viewController = viewController
     }
 
     // MARK: - LaunchPresenting Functions

@@ -32,15 +32,18 @@ class SettingsBuilder: SettingsBuilding {
         // Build module parts
         let entity = SettingsEntity(persistenceService: persistenceService)
         let view = SettingsViewController()
+        let presenter = SettingsPresenter(viewController: view)
         let constraints = SettingsConstraints(theme: settingsTheme,
-                                              view: view)
-        let presenter = SettingsPresenter(view: view)
+                                              viewController: view)
+        let animator = SettingsAnimator(constraints: constraints,
+                                        output: presenter)
         let interactor = SettingsInteractor(entity: entity,
-                                            output: presenter as SettingsOutput)
+                                            output: presenter)
         let router = SettingsRouter(presentingView: view,
                                     moduleResolver: moduleResolver)
 
         // Set the missing parts where needed
+        presenter.animator = animator
         presenter.interactor = interactor
         presenter.router = router
         view.constraints = constraints

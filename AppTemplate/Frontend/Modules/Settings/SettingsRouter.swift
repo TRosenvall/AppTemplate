@@ -21,6 +21,9 @@ class SettingsRouter: SettingsWireframe {
     }
 
     // MARK: - SettingsWireframe Functions
+    func routeBack() {
+        presentingView.navigationController?.popToLeft()
+    }
 
     // MARK: - Helper Functions
 }
