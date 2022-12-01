@@ -13,10 +13,17 @@ import UIKit
 protocol LaunchBuilding: ModuleBuilding {}
 
 ///Responsible for building out and setting up the views on the view controller.
-protocol LaunchConstraining: Constraining {}
+protocol LaunchConstraining: Constraining {
+    var views: (rootView: UIView,
+                logoImageView: UIImageView) { get set }
+}
 
 ///Responsible for any animations pertaining to the Launch Module
-protocol LaunchAnimating {}
+protocol LaunchAnimating {
+    var didFinishLoading: Bool { get set }
+
+    func animateViewDidAppear(completion: ((Bool) -> Void)?)
+}
 
 ///Responsible for displaying information to and getting input from the user.
 protocol LaunchView: Module {}
@@ -30,13 +37,17 @@ protocol LaunchPresenting {
 }
 
 ///Responsible for digesting user input and sending responses to the output.
-protocol LaunchInput {}
+protocol LaunchInput {
+    func loadSettings()
+}
 
 ///Responsible for handling anything that might need to be persisted for this module.
 protocol LaunchModel: Entity {}
 
 ///Responsible for providing feedback to the user or telling the router to route away if necessary.
-protocol LaunchOutput {}
+protocol LaunchOutput {
+    func didFinishLoading()
+}
 
 ///Responsible for navigating between the screens on the app as related to this module specifically.
 protocol LaunchWireframe {

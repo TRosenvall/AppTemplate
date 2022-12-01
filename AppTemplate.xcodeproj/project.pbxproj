@@ -86,6 +86,9 @@
 		8583146C29367DA1004977EA /* SettingsAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146B29367DA1004977EA /* SettingsAnimator.swift */; };
 		8583146E29367E1B004977EA /* LaunchAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583146D29367E1B004977EA /* LaunchAnimator.swift */; };
 		8583147129380699004977EA /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583147029380699004977EA /* UINavigationController.swift */; };
+		858314732938208E004977EA /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314722938208E004977EA /* UIView.swift */; };
+		8583147529382297004977EA /* Exponentiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583147429382297004977EA /* Exponentiation.swift */; };
+		858314772938493C004977EA /* UIViewKeyframeAnimationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314762938493C004977EA /* UIViewKeyframeAnimationOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +184,9 @@
 		8583146B29367DA1004977EA /* SettingsAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAnimator.swift; sourceTree = "<group>"; };
 		8583146D29367E1B004977EA /* LaunchAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAnimator.swift; sourceTree = "<group>"; };
 		8583147029380699004977EA /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		858314722938208E004977EA /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8583147429382297004977EA /* Exponentiation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exponentiation.swift; sourceTree = "<group>"; };
+		858314762938493C004977EA /* UIViewKeyframeAnimationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewKeyframeAnimationOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -596,7 +602,10 @@
 		8583146F2938067E004977EA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				858314762938493C004977EA /* UIViewKeyframeAnimationOptions.swift */,
 				8583147029380699004977EA /* UINavigationController.swift */,
+				858314722938208E004977EA /* UIView.swift */,
+				8583147429382297004977EA /* Exponentiation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -707,6 +716,7 @@
 				8583144B2931742A004977EA /* Constants.swift in Sources */,
 				8583143B2931475F004977EA /* LaunchPresenter.swift in Sources */,
 				858313BA292F6EB7004977EA /* HomeRouter.swift in Sources */,
+				858314772938493C004977EA /* UIViewKeyframeAnimationOptions.swift in Sources */,
 				8583137E292F6D9F004977EA /* AppDelegate.swift in Sources */,
 				85831380292F6D9F004977EA /* SceneDelegate.swift in Sources */,
 				8583147129380699004977EA /* UINavigationController.swift in Sources */,
@@ -723,6 +733,7 @@
 				858313D2292F79D5004977EA /* PersistenceContracts.swift in Sources */,
 				8583143F29314772004977EA /* LaunchInteractor.swift in Sources */,
 				858313BE292F6ED7004977EA /* HomeEntity.swift in Sources */,
+				858314732938208E004977EA /* UIView.swift in Sources */,
 				8583141D29310375004977EA /* EncryptionBuilder.swift in Sources */,
 				8583142A293143EA004977EA /* SettingsPresenter.swift in Sources */,
 				858314192930FF89004977EA /* EncryptionService.swift in Sources */,
@@ -750,6 +761,7 @@
 				858314372931474B004977EA /* LaunchBuilder.swift in Sources */,
 				858313C6292F6F6F004977EA /* ModuleResolver.swift in Sources */,
 				858313DD292F8653004977EA /* NetworkingContracts.swift in Sources */,
+				8583147529382297004977EA /* Exponentiation.swift in Sources */,
 				8583143D29314767004977EA /* LaunchRouter.swift in Sources */,
 				85831445293172B4004977EA /* LaunchConstraints.swift in Sources */,
 			);

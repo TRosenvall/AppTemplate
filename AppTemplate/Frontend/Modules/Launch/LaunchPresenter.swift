@@ -20,10 +20,19 @@ class LaunchPresenter: LaunchPresenting, LaunchOutput {
 
     // MARK: - LaunchPresenting Functions
     func viewDidAppear() {
-        router?.routeToHomeModule()
+        self.interactor?.loadSettings()
+
+        animator?.animateViewDidAppear() { didFinishLoading in
+            if didFinishLoading {
+                self.router?.routeToHomeModule()
+            }
+        }
     }
 
     // MARK: - LaunchOutput Functions
+    func didFinishLoading() {
+        animator?.didFinishLoading = true
+    }
 
     // MARK: - Helper Functions
 }

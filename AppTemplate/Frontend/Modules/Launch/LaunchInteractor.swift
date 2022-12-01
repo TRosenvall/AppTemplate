@@ -19,6 +19,12 @@ class LaunchInteractor: LaunchInput {
     }
 
     // MARK: - LaunchInput Functions
+    func loadSettings() {
+        Task {
+            // Load services settings and other data as needed
+            output.didFinishLoading()
+        }
+    }
 
     // MARK: - Helper Functions
 }

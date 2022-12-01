@@ -24,8 +24,9 @@ class LaunchRouter: LaunchWireframe {
     func routeToHomeModule() {
         let homeView = moduleResolver.resolveHomeModule()
         let homeModule = UINavigationController(rootViewController: homeView)
-        homeModule.modalPresentationStyle = .fullScreen
-        presentingView.present(homeModule, animated: false)
+        homeModule.modalPresentationStyle = .overFullScreen
+        homeModule.modalTransitionStyle = .crossDissolve
+        presentingView.present(homeModule, animated: true)
     }
 
     // MARK: - Helper Functions

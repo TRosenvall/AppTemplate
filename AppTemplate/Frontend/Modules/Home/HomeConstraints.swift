@@ -39,8 +39,7 @@ class HomeConstraints: HomeConstraining {
 
     // LogoImageView Constraints
     lazy var defaultLogoImageViewCenterYAnchor = views.logoImageView.centerYAnchor.constraint(
-        equalTo: views.rootView.safeAreaLayoutGuide.centerYAnchor,
-        constant: -11
+        equalTo: views.rootView.safeAreaLayoutGuide.centerYAnchor
     )
     lazy var defaultLogoImageViewHeightAnchor = views.logoImageView.heightAnchor.constraint(
         equalTo: views.logoImageView.widthAnchor
