@@ -12,12 +12,6 @@ import UIKit
 ///Responsible for creating and assembling all the parts of the module.
 protocol LaunchBuilding: ModuleBuilding {}
 
-///Responsible for building out and setting up the views on the view controller.
-protocol LaunchConstraining: Constraining {
-    var views: (rootView: UIView,
-                logoImageView: UIImageView) { get set }
-}
-
 ///Responsible for any animations pertaining to the Launch Module
 protocol LaunchAnimating {
     var didFinishLoading: Bool { get set }
@@ -26,7 +20,9 @@ protocol LaunchAnimating {
 }
 
 ///Responsible for displaying information to and getting input from the user.
-protocol LaunchView: Module {}
+protocol LaunchView: Module {
+    var logoImageView: UIImageView! { get }
+}
 
 ///Responsible for telling the view what to display and giving user input to the input file.
 protocol LaunchPresenting {

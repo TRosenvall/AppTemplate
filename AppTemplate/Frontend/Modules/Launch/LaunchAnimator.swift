@@ -10,21 +10,21 @@ import UIKit
 class LaunchAnimator: LaunchAnimating {
 
     // MARK: - Properties
-    let constraints: LaunchConstraining
+    let viewController: LaunchView
     let output: LaunchOutput
 
     var didFinishLoading = false
 
     // MARK: - Initializers
-    init(constraints: LaunchConstraining,
+    init(viewController: LaunchView,
          output: LaunchOutput) {
-        self.constraints = constraints
+        self.viewController = viewController
         self.output = output
     }
 
     // MARK: - LaunchAnimating Functions
     func animateViewDidAppear(completion: ((Bool) -> Void)?) {
-        let logoImageView = self.constraints.views.logoImageView
+        guard let logoImageView = self.viewController.logoImageView else { return }
         let scalingFactor = logoImageView.frame.width / logoImageView.getHypotenuse()
 
         // Shrink the logo to it's scaled size so it fits on the screen while rotating.
@@ -43,7 +43,7 @@ class LaunchAnimator: LaunchAnimating {
     }
 
     func animateLoading(completion: ((Bool) -> Void)?) {
-        let logoImageView = self.constraints.views.logoImageView
+        guard let logoImageView = self.viewController.logoImageView else { return }
         let scalingFactor = logoImageView.frame.width / logoImageView.getHypotenuse()
         let duration = 1.5
 
@@ -56,7 +56,8 @@ class LaunchAnimator: LaunchAnimating {
                 UIView.addKeyframe(withRelativeStartTime: 0.25 * Double(i),
                                    relativeDuration: 0.25) {
                     let angle = CGFloat.pi / 2 * CGFloat(i + 1)
-                    logoImageView.transform = .init(rotationAngle: angle).scaledBy(x: scalingFactor, y: scalingFactor)
+                    logoImageView.transform = .init(rotationAngle: angle)
+                                              .scaledBy(x: scalingFactor, y: scalingFactor)
                 }
             }
         }) { _ in
@@ -69,7 +70,7 @@ class LaunchAnimator: LaunchAnimating {
     }
 
     func animateDidFinishLoading(completion: ((Bool) -> Void)?) {
-        let logoImageView = self.constraints.views.logoImageView
+        let logoImageView = self.viewController.logoImageView
 
         // Shrink the logo to it's scaled size so it fits on the screen while rotating.
         UIView.animateKeyframes(withDuration: 0.2,
@@ -78,8 +79,8 @@ class LaunchAnimator: LaunchAnimating {
 
             UIView.addKeyframe(withRelativeStartTime: 0,
                                relativeDuration: 1) {
-                logoImageView.transform = .init(scaleX: 1, y: 1)
-                logoImageView.alpha = 0.44
+                logoImageView?.transform = .init(scaleX: 1, y: 1)
+                logoImageView?.alpha = 0.44
             }
 
         }, completion: completion)

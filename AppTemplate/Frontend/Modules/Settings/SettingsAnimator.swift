@@ -10,13 +10,13 @@ import UIKit
 class SettingsAnimator: SettingsAnimating {
 
     // MARK: - Properties
-    let constraints: SettingsConstraining
+    let viewController: SettingsView
     let output: SettingsOutput
 
     // MARK: - Initializers
-    init(constraints: SettingsConstraining,
+    init(viewController: SettingsView,
          output: SettingsOutput) {
-        self.constraints = constraints
+        self.viewController = viewController
         self.output = output
     }
 

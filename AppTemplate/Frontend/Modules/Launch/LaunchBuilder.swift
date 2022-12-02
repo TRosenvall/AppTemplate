@@ -31,11 +31,9 @@ class LaunchBuilder: LaunchBuilding {
 
         // Build module parts
         let entity = LaunchEntity(persistenceService: persistenceService)
-        let view = LaunchViewController()
+        let view = LaunchViewController(theme: launchTheme)
         let presenter = LaunchPresenter(viewController: view)
-        let constraints = LaunchConstraints(theme: launchTheme,
-                                            viewController: view)
-        let animator = LaunchAnimator(constraints: constraints,
+        let animator = LaunchAnimator(viewController: view,
                                       output: presenter)
         let interactor = LaunchInteractor(entity: entity,
                                           output: presenter)
@@ -46,7 +44,6 @@ class LaunchBuilder: LaunchBuilding {
         presenter.animator = animator
         presenter.interactor = interactor
         presenter.router = router
-        view.constraints = constraints
         view.presenter = presenter
 
         // Return the view

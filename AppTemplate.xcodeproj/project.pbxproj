@@ -12,7 +12,6 @@
 		85831387292F6DA4004977EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85831386292F6DA4004977EA /* Assets.xcassets */; };
 		8583138A292F6DA4004977EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85831388292F6DA4004977EA /* LaunchScreen.storyboard */; };
 		858313AF292F6DE7004977EA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858313AE292F6DE7004977EA /* Colors.xcassets */; };
-		858313B3292F6E7C004977EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B2292F6E7C004977EA /* HomeViewController.swift */; };
 		858313B5292F6E8C004977EA /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B4292F6E8C004977EA /* HomePresenter.swift */; };
 		858313B8292F6EAD004977EA /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B7292F6EAD004977EA /* HomeInteractor.swift */; };
 		858313BA292F6EB7004977EA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B9292F6EB7004977EA /* HomeRouter.swift */; };
@@ -51,7 +50,6 @@
 		8583141F2931037E004977EA /* NetworkingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583141E2931037E004977EA /* NetworkingBuilder.swift */; };
 		85831423293143B0004977EA /* SettingsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831422293143B0004977EA /* SettingsContracts.swift */; };
 		85831425293143BF004977EA /* SettingsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831424293143BF004977EA /* SettingsBuilder.swift */; };
-		85831427293143CA004977EA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831426293143CA004977EA /* SettingsViewController.swift */; };
 		8583142A293143EA004977EA /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831429293143EA004977EA /* SettingsPresenter.swift */; };
 		8583142C293143F2004977EA /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583142B293143F2004977EA /* SettingsRouter.swift */; };
 		8583142E293143FB004977EA /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583142D293143FB004977EA /* SettingsInteractor.swift */; };
@@ -59,15 +57,11 @@
 		858314322931440A004977EA /* SettingsTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314312931440A004977EA /* SettingsTheme.swift */; };
 		8583143529314742004977EA /* LaunchContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583143429314742004977EA /* LaunchContracts.swift */; };
 		858314372931474B004977EA /* LaunchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314362931474B004977EA /* LaunchBuilder.swift */; };
-		8583143929314754004977EA /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583143829314754004977EA /* LaunchViewController.swift */; };
 		8583143B2931475F004977EA /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583143A2931475F004977EA /* LaunchPresenter.swift */; };
 		8583143D29314767004977EA /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583143C29314767004977EA /* LaunchRouter.swift */; };
 		8583143F29314772004977EA /* LaunchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583143E29314772004977EA /* LaunchInteractor.swift */; };
 		858314412931477B004977EA /* LaunchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314402931477A004977EA /* LaunchEntity.swift */; };
 		8583144329314785004977EA /* LaunchTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583144229314785004977EA /* LaunchTheme.swift */; };
-		85831445293172B4004977EA /* LaunchConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831444293172B4004977EA /* LaunchConstraints.swift */; };
-		858314472931730F004977EA /* SettingsConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314462931730F004977EA /* SettingsConstraints.swift */; };
-		8583144929317319004977EA /* HomeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583144829317319004977EA /* HomeConstraints.swift */; };
 		8583144B2931742A004977EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583144A2931742A004977EA /* Constants.swift */; };
 		8583144E29325656004977EA /* EncryptionServiceMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583144D29325656004977EA /* EncryptionServiceMockSpy.swift */; };
 		8583145229325808004977EA /* SettingsBuilderMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583145129325808004977EA /* SettingsBuilderMockSpy.swift */; };
@@ -88,7 +82,12 @@
 		8583147129380699004977EA /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583147029380699004977EA /* UINavigationController.swift */; };
 		858314732938208E004977EA /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314722938208E004977EA /* UIView.swift */; };
 		8583147529382297004977EA /* Exponentiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583147429382297004977EA /* Exponentiation.swift */; };
-		858314772938493C004977EA /* UIViewKeyframeAnimationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314762938493C004977EA /* UIViewKeyframeAnimationOptions.swift */; };
+		8583147A29392DB8004977EA /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583147829392DB8004977EA /* LaunchViewController.swift */; };
+		8583147B29392DB8004977EA /* LaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8583147929392DB8004977EA /* LaunchViewController.xib */; };
+		8583147E29393213004977EA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583147C29393213004977EA /* SettingsViewController.swift */; };
+		8583147F29393213004977EA /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8583147D29393213004977EA /* SettingsViewController.xib */; };
+		858314822939370B004977EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314802939370B004977EA /* HomeViewController.swift */; };
+		858314832939370B004977EA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 858314812939370B004977EA /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +109,6 @@
 		8583138B292F6DA4004977EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85831390292F6DA5004977EA /* AppTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		858313AE292F6DE7004977EA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		858313B2292F6E7C004977EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		858313B4292F6E8C004977EA /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		858313B7292F6EAD004977EA /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		858313B9292F6EB7004977EA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 		8583141E2931037E004977EA /* NetworkingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBuilder.swift; sourceTree = "<group>"; };
 		85831422293143B0004977EA /* SettingsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContracts.swift; sourceTree = "<group>"; };
 		85831424293143BF004977EA /* SettingsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBuilder.swift; sourceTree = "<group>"; };
-		85831426293143CA004977EA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		85831429293143EA004977EA /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		8583142B293143F2004977EA /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
 		8583142D293143FB004977EA /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
@@ -157,15 +154,11 @@
 		858314312931440A004977EA /* SettingsTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTheme.swift; sourceTree = "<group>"; };
 		8583143429314742004977EA /* LaunchContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchContracts.swift; sourceTree = "<group>"; };
 		858314362931474B004977EA /* LaunchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBuilder.swift; sourceTree = "<group>"; };
-		8583143829314754004977EA /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		8583143A2931475F004977EA /* LaunchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
 		8583143C29314767004977EA /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
 		8583143E29314772004977EA /* LaunchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInteractor.swift; sourceTree = "<group>"; };
 		858314402931477A004977EA /* LaunchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchEntity.swift; sourceTree = "<group>"; };
 		8583144229314785004977EA /* LaunchTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTheme.swift; sourceTree = "<group>"; };
-		85831444293172B4004977EA /* LaunchConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchConstraints.swift; sourceTree = "<group>"; };
-		858314462931730F004977EA /* SettingsConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConstraints.swift; sourceTree = "<group>"; };
-		8583144829317319004977EA /* HomeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstraints.swift; sourceTree = "<group>"; };
 		8583144A2931742A004977EA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8583144D29325656004977EA /* EncryptionServiceMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionServiceMockSpy.swift; sourceTree = "<group>"; };
 		8583145129325808004977EA /* SettingsBuilderMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBuilderMockSpy.swift; sourceTree = "<group>"; };
@@ -186,7 +179,12 @@
 		8583147029380699004977EA /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		858314722938208E004977EA /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8583147429382297004977EA /* Exponentiation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exponentiation.swift; sourceTree = "<group>"; };
-		858314762938493C004977EA /* UIViewKeyframeAnimationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewKeyframeAnimationOptions.swift; sourceTree = "<group>"; };
+		8583147829392DB8004977EA /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		8583147929392DB8004977EA /* LaunchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchViewController.xib; sourceTree = "<group>"; };
+		8583147C29393213004977EA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8583147D29393213004977EA /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		858314802939370B004977EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		858314812939370B004977EA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,14 +285,14 @@
 				858313C1292F6F1C004977EA /* Views */,
 				858313BB292F6EC1004977EA /* HomeContracts.swift */,
 				858313BF292F6EEE004977EA /* HomeBuilder.swift */,
-				8583144829317319004977EA /* HomeConstraints.swift */,
 				8583146929367D08004977EA /* HomeAnimator.swift */,
-				858313B2292F6E7C004977EA /* HomeViewController.swift */,
+				858314802939370B004977EA /* HomeViewController.swift */,
 				858313B4292F6E8C004977EA /* HomePresenter.swift */,
 				858313B9292F6EB7004977EA /* HomeRouter.swift */,
 				858313B7292F6EAD004977EA /* HomeInteractor.swift */,
 				858313BD292F6ED7004977EA /* HomeEntity.swift */,
 				858313C9292F742A004977EA /* HomeTheme.swift */,
+				858314812939370B004977EA /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -521,14 +519,14 @@
 				8583143329314737004977EA /* Views */,
 				8583143429314742004977EA /* LaunchContracts.swift */,
 				858314362931474B004977EA /* LaunchBuilder.swift */,
-				85831444293172B4004977EA /* LaunchConstraints.swift */,
 				8583146D29367E1B004977EA /* LaunchAnimator.swift */,
-				8583143829314754004977EA /* LaunchViewController.swift */,
+				8583147829392DB8004977EA /* LaunchViewController.swift */,
 				8583143A2931475F004977EA /* LaunchPresenter.swift */,
 				8583143C29314767004977EA /* LaunchRouter.swift */,
 				8583143E29314772004977EA /* LaunchInteractor.swift */,
 				858314402931477A004977EA /* LaunchEntity.swift */,
 				8583144229314785004977EA /* LaunchTheme.swift */,
+				8583147929392DB8004977EA /* LaunchViewController.xib */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -539,14 +537,14 @@
 				85831428293143D0004977EA /* Views */,
 				85831422293143B0004977EA /* SettingsContracts.swift */,
 				85831424293143BF004977EA /* SettingsBuilder.swift */,
-				858314462931730F004977EA /* SettingsConstraints.swift */,
 				8583146B29367DA1004977EA /* SettingsAnimator.swift */,
-				85831426293143CA004977EA /* SettingsViewController.swift */,
+				8583147C29393213004977EA /* SettingsViewController.swift */,
 				85831429293143EA004977EA /* SettingsPresenter.swift */,
 				8583142B293143F2004977EA /* SettingsRouter.swift */,
 				8583142D293143FB004977EA /* SettingsInteractor.swift */,
 				8583142F29314403004977EA /* SettingsEntity.swift */,
 				858314312931440A004977EA /* SettingsTheme.swift */,
+				8583147D29393213004977EA /* SettingsViewController.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -602,7 +600,6 @@
 		8583146F2938067E004977EA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				858314762938493C004977EA /* UIViewKeyframeAnimationOptions.swift */,
 				8583147029380699004977EA /* UINavigationController.swift */,
 				858314722938208E004977EA /* UIView.swift */,
 				8583147429382297004977EA /* Exponentiation.swift */,
@@ -695,6 +692,9 @@
 				858313AF292F6DE7004977EA /* Colors.xcassets in Resources */,
 				8583138A292F6DA4004977EA /* LaunchScreen.storyboard in Resources */,
 				85831387292F6DA4004977EA /* Assets.xcassets in Resources */,
+				8583147B29392DB8004977EA /* LaunchViewController.xib in Resources */,
+				8583147F29393213004977EA /* SettingsViewController.xib in Resources */,
+				858314832939370B004977EA /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,18 +716,15 @@
 				8583144B2931742A004977EA /* Constants.swift in Sources */,
 				8583143B2931475F004977EA /* LaunchPresenter.swift in Sources */,
 				858313BA292F6EB7004977EA /* HomeRouter.swift in Sources */,
-				858314772938493C004977EA /* UIViewKeyframeAnimationOptions.swift in Sources */,
 				8583137E292F6D9F004977EA /* AppDelegate.swift in Sources */,
 				85831380292F6D9F004977EA /* SceneDelegate.swift in Sources */,
 				8583147129380699004977EA /* UINavigationController.swift in Sources */,
 				858313D6292F7DDC004977EA /* ServiceContracts.swift in Sources */,
 				858313CA292F742A004977EA /* HomeTheme.swift in Sources */,
 				858313E1292F8C42004977EA /* Colors.swift in Sources */,
-				8583143929314754004977EA /* LaunchViewController.swift in Sources */,
 				858313C0292F6EEE004977EA /* HomeBuilder.swift in Sources */,
 				858313CF292F79BF004977EA /* PersistenceService.swift in Sources */,
 				8583142C293143F2004977EA /* SettingsRouter.swift in Sources */,
-				8583144929317319004977EA /* HomeConstraints.swift in Sources */,
 				858313B8292F6EAD004977EA /* HomeInteractor.swift in Sources */,
 				858314322931440A004977EA /* SettingsTheme.swift in Sources */,
 				858313D2292F79D5004977EA /* PersistenceContracts.swift in Sources */,
@@ -739,10 +736,12 @@
 				858314192930FF89004977EA /* EncryptionService.swift in Sources */,
 				8583146C29367DA1004977EA /* SettingsAnimator.swift in Sources */,
 				8583142E293143FB004977EA /* SettingsInteractor.swift in Sources */,
+				858314822939370B004977EA /* HomeViewController.swift in Sources */,
 				8583146A29367D08004977EA /* HomeAnimator.swift in Sources */,
 				858314412931477B004977EA /* LaunchEntity.swift in Sources */,
 				85831425293143BF004977EA /* SettingsBuilder.swift in Sources */,
 				8583144329314785004977EA /* LaunchTheme.swift in Sources */,
+				8583147E29393213004977EA /* SettingsViewController.swift in Sources */,
 				8583141F2931037E004977EA /* NetworkingBuilder.swift in Sources */,
 				858313B5292F6E8C004977EA /* HomePresenter.swift in Sources */,
 				858313D4292F7D11004977EA /* ServiceResolver.swift in Sources */,
@@ -751,19 +750,16 @@
 				858313CC292F7445004977EA /* AppTheme.swift in Sources */,
 				85831423293143B0004977EA /* SettingsContracts.swift in Sources */,
 				8583143529314742004977EA /* LaunchContracts.swift in Sources */,
-				858313B3292F6E7C004977EA /* HomeViewController.swift in Sources */,
+				8583147A29392DB8004977EA /* LaunchViewController.swift in Sources */,
 				8583146E29367E1B004977EA /* LaunchAnimator.swift in Sources */,
-				85831427293143CA004977EA /* SettingsViewController.swift in Sources */,
 				858313DF292F8676004977EA /* NetworkingService.swift in Sources */,
 				858313DA292F80C2004977EA /* ModuleContracts.swift in Sources */,
 				8583143029314403004977EA /* SettingsEntity.swift in Sources */,
-				858314472931730F004977EA /* SettingsConstraints.swift in Sources */,
 				858314372931474B004977EA /* LaunchBuilder.swift in Sources */,
 				858313C6292F6F6F004977EA /* ModuleResolver.swift in Sources */,
 				858313DD292F8653004977EA /* NetworkingContracts.swift in Sources */,
 				8583147529382297004977EA /* Exponentiation.swift in Sources */,
 				8583143D29314767004977EA /* LaunchRouter.swift in Sources */,
-				85831445293172B4004977EA /* LaunchConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

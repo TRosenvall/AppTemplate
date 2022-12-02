@@ -10,9 +10,6 @@ import UIKit
 ///Responsible for creating and assembling all the parts of the module.
 protocol SettingsBuilding: ModuleBuilding {}
 
-///Responsible for building out and setting up the views on the view controller.
-protocol SettingsConstraining: Constraining {}
-
 ///Responsible for any animations pertaining to the Settings Module
 protocol SettingsAnimating {}
 

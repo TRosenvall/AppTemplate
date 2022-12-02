@@ -10,13 +10,13 @@ import UIKit
 class HomeAnimator: HomeAnimating {
 
     // MARK: - Properties
-    let constraints: HomeConstraining
+    let viewController: HomeView
     let output: HomeOutput
 
     // MARK: - Initializers
-    init(constraints: HomeConstraining,
+    init(viewController: HomeView,
          output: HomeOutput) {
-        self.constraints = constraints
+        self.viewController = viewController
         self.output = output
     }
 

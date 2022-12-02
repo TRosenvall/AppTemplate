@@ -10,9 +10,6 @@ import UIKit
 ///Responsible for creating and assembling all the parts of the module.
 protocol HomeBuilding: ModuleBuilding {}
 
-///Responsible for building out and setting up the views on the view controller.
-protocol HomeConstraining: Constraining {}
-
 ///Responsible for any animations pertaining to the Home Module
 protocol HomeAnimating {}
 
