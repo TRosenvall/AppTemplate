@@ -30,13 +30,14 @@ class HomeBuilder: HomeBuilding {
         let persistenceService = serviceResolver.services.persistence
 
         // Build module parts
-        let entity = HomeEntity(persistenceService: persistenceService)
+        let entity = HomeEntity()
         let view = HomeViewController(theme: homeTheme)
         let presenter = HomePresenter(viewController: view)
         let animator = HomeAnimator(viewController: view,
                                     output: presenter)
-        let interactor = HomeInteractor(entity: entity,
-                                          output: presenter)
+        let interactor = HomeInteractor(persistenceService: persistenceService,
+                                        entity: entity,
+                                        output: presenter)
         let router = HomeRouter(presentingView: view,
                                   moduleResolver: moduleResolver)
 

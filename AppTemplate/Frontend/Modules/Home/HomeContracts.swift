@@ -28,6 +28,9 @@ protocol HomePresenting {
 ///Responsible for digesting user input and sending responses to the output.
 protocol HomeInput {}
 
+///Responsible for handle entity controlling
+protocol HomeModelController: EntityController {}
+
 ///Responsible for handling anything that might need to be persisted for this module.
 protocol HomeModel: Entity {}
 

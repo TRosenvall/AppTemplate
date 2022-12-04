@@ -8,14 +8,7 @@
 class LaunchEntity: LaunchModel {
 
     // MARK: - Properties
-    let persistenceService: PersistenceServing
 
     // MARK: - Initializers
-    init(persistenceService: PersistenceServing) {
-        self.persistenceService = persistenceService
-    }
-
-    // MARK: - LaunchModel Functions
-
-    // MARK: - Helper Functions
+    init() {}
 }

@@ -88,6 +88,13 @@
 		8583147F29393213004977EA /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8583147D29393213004977EA /* SettingsViewController.xib */; };
 		858314822939370B004977EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314802939370B004977EA /* HomeViewController.swift */; };
 		858314832939370B004977EA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 858314812939370B004977EA /* HomeViewController.xib */; };
+		85831486293A8747004977EA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831484293A8747004977EA /* SettingsTableViewCell.swift */; };
+		85831487293A8747004977EA /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85831485293A8747004977EA /* SettingsTableViewCell.xib */; };
+		85831489293BF8ED004977EA /* ActiveDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831488293BF8ED004977EA /* ActiveDatastore.swift */; };
+		8583148B293C0274004977EA /* NetworkingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583148A293C0273004977EA /* NetworkingEntity.swift */; };
+		8583148D293C057D004977EA /* EncryptionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583148C293C057C004977EA /* EncryptionEntity.swift */; };
+		8583148F293C05A8004977EA /* PersistenceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583148E293C05A8004977EA /* PersistenceEntity.swift */; };
+		85831492293D46C6004977EA /* SharedContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831491293D46C6004977EA /* SharedContracts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +192,13 @@
 		8583147D29393213004977EA /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		858314802939370B004977EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		858314812939370B004977EA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		85831484293A8747004977EA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		85831485293A8747004977EA /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		85831488293BF8ED004977EA /* ActiveDatastore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDatastore.swift; sourceTree = "<group>"; };
+		8583148A293C0273004977EA /* NetworkingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEntity.swift; sourceTree = "<group>"; };
+		8583148C293C057C004977EA /* EncryptionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionEntity.swift; sourceTree = "<group>"; };
+		8583148E293C05A8004977EA /* PersistenceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceEntity.swift; sourceTree = "<group>"; };
+		85831491293D46C6004977EA /* SharedContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedContracts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,9 +260,9 @@
 		858313AD292F6DBF004977EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				85831490293D46B4004977EA /* Shared */,
 				858313C8292F71C9004977EA /* Strings */,
 				858313E2292F9432004977EA /* Assets */,
-				858313CB292F7445004977EA /* AppTheme.swift */,
 				8583137D292F6D9F004977EA /* AppDelegate.swift */,
 				8583137F292F6D9F004977EA /* SceneDelegate.swift */,
 				85831388292F6DA4004977EA /* LaunchScreen.storyboard */,
@@ -319,7 +333,6 @@
 				858313C5292F6F6F004977EA /* ModuleResolver.swift */,
 				858313B0292F6E48004977EA /* Modules */,
 				858313C2292F6F30004977EA /* SharedViews */,
-				8583146F2938067E004977EA /* Extensions */,
 			);
 			path = Frontend;
 			sourceTree = "<group>";
@@ -345,6 +358,8 @@
 				858313D1292F79D5004977EA /* PersistenceContracts.swift */,
 				8583141A29310369004977EA /* PersistenceBuilder.swift */,
 				858313CE292F79BF004977EA /* PersistenceService.swift */,
+				8583148E293C05A8004977EA /* PersistenceEntity.swift */,
+				85831488293BF8ED004977EA /* ActiveDatastore.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -355,6 +370,7 @@
 				858313DC292F8653004977EA /* NetworkingContracts.swift */,
 				8583141E2931037E004977EA /* NetworkingBuilder.swift */,
 				858313DE292F8676004977EA /* NetworkingService.swift */,
+				8583148A293C0273004977EA /* NetworkingEntity.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -509,6 +525,7 @@
 				858314162930FF75004977EA /* EncryptionContracts.swift */,
 				8583141C29310375004977EA /* EncryptionBuilder.swift */,
 				858314182930FF89004977EA /* EncryptionService.swift */,
+				8583148C293C057C004977EA /* EncryptionEntity.swift */,
 			);
 			path = Encryption;
 			sourceTree = "<group>";
@@ -552,6 +569,8 @@
 		85831428293143D0004977EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				85831484293A8747004977EA /* SettingsTableViewCell.swift */,
+				85831485293A8747004977EA /* SettingsTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -605,6 +624,16 @@
 				8583147429382297004977EA /* Exponentiation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		85831490293D46B4004977EA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8583146F2938067E004977EA /* Extensions */,
+				858313CB292F7445004977EA /* AppTheme.swift */,
+				85831491293D46C6004977EA /* SharedContracts.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -689,6 +718,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85831487293A8747004977EA /* SettingsTableViewCell.xib in Resources */,
 				858313AF292F6DE7004977EA /* Colors.xcassets in Resources */,
 				8583138A292F6DA4004977EA /* LaunchScreen.storyboard in Resources */,
 				85831387292F6DA4004977EA /* Assets.xcassets in Resources */,
@@ -715,7 +745,10 @@
 				858314172930FF76004977EA /* EncryptionContracts.swift in Sources */,
 				8583144B2931742A004977EA /* Constants.swift in Sources */,
 				8583143B2931475F004977EA /* LaunchPresenter.swift in Sources */,
+				85831489293BF8ED004977EA /* ActiveDatastore.swift in Sources */,
 				858313BA292F6EB7004977EA /* HomeRouter.swift in Sources */,
+				8583148F293C05A8004977EA /* PersistenceEntity.swift in Sources */,
+				85831486293A8747004977EA /* SettingsTableViewCell.swift in Sources */,
 				8583137E292F6D9F004977EA /* AppDelegate.swift in Sources */,
 				85831380292F6D9F004977EA /* SceneDelegate.swift in Sources */,
 				8583147129380699004977EA /* UINavigationController.swift in Sources */,
@@ -733,11 +766,14 @@
 				858314732938208E004977EA /* UIView.swift in Sources */,
 				8583141D29310375004977EA /* EncryptionBuilder.swift in Sources */,
 				8583142A293143EA004977EA /* SettingsPresenter.swift in Sources */,
+				8583148B293C0274004977EA /* NetworkingEntity.swift in Sources */,
 				858314192930FF89004977EA /* EncryptionService.swift in Sources */,
 				8583146C29367DA1004977EA /* SettingsAnimator.swift in Sources */,
 				8583142E293143FB004977EA /* SettingsInteractor.swift in Sources */,
+				85831492293D46C6004977EA /* SharedContracts.swift in Sources */,
 				858314822939370B004977EA /* HomeViewController.swift in Sources */,
 				8583146A29367D08004977EA /* HomeAnimator.swift in Sources */,
+				8583148D293C057D004977EA /* EncryptionEntity.swift in Sources */,
 				858314412931477B004977EA /* LaunchEntity.swift in Sources */,
 				85831425293143BF004977EA /* SettingsBuilder.swift in Sources */,
 				8583144329314785004977EA /* LaunchTheme.swift in Sources */,

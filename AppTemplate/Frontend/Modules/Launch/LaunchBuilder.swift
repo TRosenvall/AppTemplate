@@ -30,12 +30,13 @@ class LaunchBuilder: LaunchBuilding {
         let persistenceService = serviceResolver.services.persistence
 
         // Build module parts
-        let entity = LaunchEntity(persistenceService: persistenceService)
+        let entity = LaunchEntity()
         let view = LaunchViewController(theme: launchTheme)
         let presenter = LaunchPresenter(viewController: view)
         let animator = LaunchAnimator(viewController: view,
                                       output: presenter)
-        let interactor = LaunchInteractor(entity: entity,
+        let interactor = LaunchInteractor(persistenceService: persistenceService,
+                                          entity: entity,
                                           output: presenter)
         let router = LaunchRouter(presentingView: view,
                                   moduleResolver: moduleResolver)

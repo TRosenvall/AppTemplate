@@ -10,10 +10,12 @@ import Foundation
 class NetworkingService: NetworkingServing {
 
     // MARK: - Properties
-    var isOn: Bool = false
+    let entity: NetworkingEntity
 
     // MARK: - Initializers
-    init() {}
+    init(entity: NetworkingEntity) {
+        self.entity = entity
+    }
 
     // MARK: - PersistenceServing Functions
     func toggleState() {

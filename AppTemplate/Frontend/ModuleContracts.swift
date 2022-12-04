@@ -24,5 +24,3 @@ protocol ModuleBuilding {
     func buildModule() -> ModuleType
 }
 
-protocol Entity {}
-

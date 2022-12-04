@@ -14,6 +14,12 @@ protocol ModuleResolving {
     func resolveHomeModule() -> HomeView
 }
 
+public enum ModuleType {
+    case LaunchModule
+    case HomeModule
+    case SettingsModule
+}
+
 class ModuleResolver: ModuleResolving {
 
     // MARK: - Properties
@@ -21,6 +27,8 @@ class ModuleResolver: ModuleResolving {
     let appTheme: AppTheme
 
     var activeModule: Module? = nil
+
+    var linkedToModules: [ModuleType] = []
 
     // MARK: - Initializers
     init(appTheme: AppTheme,
@@ -36,6 +44,7 @@ class ModuleResolver: ModuleResolving {
                                           moduleResolver: self)
         let launchModule = launchBuilder.buildModule()
         activeModule = launchModule
+        linkedToModules = [.HomeModule]
         return launchModule
     }
 
@@ -45,6 +54,7 @@ class ModuleResolver: ModuleResolving {
                                               moduleResolver: self)
         let settingsModule = settingsBuilder.buildModule()
         activeModule = settingsModule
+        linkedToModules = [.HomeModule]
         return settingsModule
     }
 
@@ -54,6 +64,7 @@ class ModuleResolver: ModuleResolving {
                                           moduleResolver: self)
         let homeModule = homeBuilder.buildModule()
         activeModule = homeModule
+        linkedToModules = [.SettingsModule]
         return homeModule
     }
 

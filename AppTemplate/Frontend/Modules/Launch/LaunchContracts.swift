@@ -37,6 +37,9 @@ protocol LaunchInput {
     func loadSettings()
 }
 
+///Responsible for handle entity controlling
+protocol LaunchModelController: EntityController {}
+
 ///Responsible for handling anything that might need to be persisted for this module.
 protocol LaunchModel: Entity {}
 

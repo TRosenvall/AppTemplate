@@ -30,12 +30,13 @@ class SettingsBuilder: SettingsBuilding {
         let persistenceService = serviceResolver.services.persistence
 
         // Build module parts
-        let entity = SettingsEntity(persistenceService: persistenceService)
+        let entity = SettingsEntity()
         let view = SettingsViewController(theme: settingsTheme)
         let presenter = SettingsPresenter(viewController: view)
         let animator = SettingsAnimator(viewController: view,
                                         output: presenter)
-        let interactor = SettingsInteractor(entity: entity,
+        let interactor = SettingsInteractor(persistenceService: persistenceService,
+                                            entity: entity,
                                             output: presenter)
         let router = SettingsRouter(presentingView: view,
                                     moduleResolver: moduleResolver)
