@@ -22,7 +22,11 @@ class HomePresenter: HomePresenting, HomeOutput {
 
     // MARK: - HomePresenting Functions
     func settingsButtonTapped() {
-        router?.routeToSettingsModule()
+        do {
+            try router?.routeToSettingsModule()
+        } catch {
+            //TODO: - Error Handling
+        }
     }
 
     // MARK: - HomeOutput Functions

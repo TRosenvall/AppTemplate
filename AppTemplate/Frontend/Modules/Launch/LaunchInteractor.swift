@@ -5,19 +5,16 @@
 //  Created by Timothy Rosenvall on 11/25/22.
 //
 
-class LaunchInteractor: LaunchInput, LaunchModelController {
+class LaunchInteractor: LaunchInput {
 
     // MARK: - Properties
-    let persistenceService: PersistenceServing
-    let entity: LaunchModel
+    let entityController: any ModelControlling
     let output: LaunchOutput
 
     // MARK: - Initializers
-    init(persistenceService: PersistenceServing,
-         entity: LaunchModel,
+    init(entityController: any ModelControlling,
          output: LaunchOutput) {
-        self.persistenceService = persistenceService
-        self.entity = entity
+        self.entityController = entityController
         self.output = output
     }
 
@@ -28,11 +25,6 @@ class LaunchInteractor: LaunchInput, LaunchModelController {
             output.didFinishLoading()
         }
     }
-
-    // MARK: - LaunchModelController Functions
-    func save(entity: Entity) {}
-    
-    func load(entity: Entity) {}
 
     // MARK: - Helper Functions
 }

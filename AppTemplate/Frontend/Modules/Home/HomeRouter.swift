@@ -21,9 +21,11 @@ class HomeRouter: HomeWireframe {
     }
 
     // MARK: - HomeWireframe Functions
-    func routeToSettingsModule() {
-        let settingsModule = moduleResolver.resolveSettingsModule()
-        presentingView.navigationController?.pushFromLeft(controller: settingsModule)
+    func routeToSettingsModule() throws {
+        Task {
+            let settingsModule = try await moduleResolver.resolveSettingsModule()
+            await presentingView.navigationController?.pushFromLeft(controller: settingsModule)
+        }
     }
 
     // MARK: - Helper Functions

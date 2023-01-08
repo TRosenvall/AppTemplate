@@ -7,13 +7,11 @@
 
 import UIKit
 
-protocol Module: UIViewController {}
-
-protocol Constraining {
-
-    /// Builds out the views of the view controller
-    func build()
+protocol Module: UIViewController {
+    func set(_ presenter: any ModulePresenting) async
 }
+
+///-------
 
 protocol ModuleBuilding {
 
@@ -21,6 +19,27 @@ protocol ModuleBuilding {
     associatedtype ModuleType
 
     /// Builds and returns the module's viewController
-    func buildModule() -> ModuleType
+    func buildModule(listener: ServiceDelegate) async throws -> ModuleType
 }
 
+///------
+
+protocol ModuleAnimating {}
+
+///------
+
+protocol ModulePresenting {}
+
+///------
+
+protocol ModuleInput {
+    var entityController: any ModelControlling { get }
+}
+
+///------
+
+protocol ModuleOutput {}
+
+///------
+
+protocol ModuleWireframe {}

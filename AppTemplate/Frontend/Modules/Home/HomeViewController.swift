@@ -33,6 +33,10 @@ class HomeViewController: UIViewController, HomeView {
     // MARK: - UIViewController Functions
 
     // MARK: - HomeView Functions
+    func set(_ presenter: ModulePresenting) async {
+        self.presenter = presenter as? HomePresenting
+    }
+
     @objc func settingsBarButtonItemTapped() {
         presenter?.settingsButtonTapped()
     }

@@ -10,16 +10,24 @@ import Foundation
 class NetworkingService: NetworkingServing {
 
     // MARK: - Properties
-    let entity: NetworkingEntity
+    var entityController: (any ModelControlling)?
 
     // MARK: - Initializers
-    init(entity: NetworkingEntity) {
-        self.entity = entity
+    init() {}
+
+    func buildEntity(delegate: ServiceResolvingDelegate, listener: ServiceDelegate?) throws {
+        Task {
+            self.entityController = try await EntityController<NetworkingVariables, UtilityType.Service>(delegate: delegate,
+                                                                                                         listener: listener,
+                                                                                                         utility: .Networking)
+        }
     }
 
-    // MARK: - PersistenceServing Functions
+    // MARK: - NetworkingServing Functions
+
+    // MARK: - NetworkingModelController Functions
     func toggleState() {
-        isOn = !isOn
+
     }
 
     // MARK: - Helper Functions

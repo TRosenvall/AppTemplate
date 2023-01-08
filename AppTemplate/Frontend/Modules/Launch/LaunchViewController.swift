@@ -42,6 +42,9 @@ class LaunchViewController: UIViewController, LaunchView {
     // MARK: - UIViewController Functions
 
     // MARK: - LaunchView Functions
+    func set(_ presenter: any ModulePresenting) async {
+        self.presenter = presenter as? LaunchPresenting
+    }
 
     // MARK: - Helper Functions
 }

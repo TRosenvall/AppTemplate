@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8579B5442950A0ED00C63103 /* HomeNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B5432950A0EC00C63103 /* HomeNamespace.swift */; };
+		8579B5462950A19200C63103 /* SettingsNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B5452950A19200C63103 /* SettingsNamespace.swift */; };
+		8579B5482950A1C900C63103 /* LaunchNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B5472950A1C900C63103 /* LaunchNamespace.swift */; };
+		8579B54B2950A21600C63103 /* PersistenceNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B54A2950A21600C63103 /* PersistenceNamespace.swift */; };
+		8579B54D2950A27900C63103 /* CodingNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B54C2950A27900C63103 /* CodingNamespace.swift */; };
+		8579B54F2950A29B00C63103 /* EncryptionNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B54E2950A29B00C63103 /* EncryptionNamespace.swift */; };
+		8579B5512950A2C200C63103 /* DataRoutingNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B5502950A2C200C63103 /* DataRoutingNamespace.swift */; };
+		8579B5532950A2E300C63103 /* NetworkingNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B5522950A2E300C63103 /* NetworkingNamespace.swift */; };
+		8579B5552951510B00C63103 /* Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8579B5542951510B00C63103 /* Readme.rtf */; };
 		8583137E292F6D9F004977EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583137D292F6D9F004977EA /* AppDelegate.swift */; };
 		85831380292F6D9F004977EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583137F292F6D9F004977EA /* SceneDelegate.swift */; };
 		85831387292F6DA4004977EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85831386292F6DA4004977EA /* Assets.xcassets */; };
@@ -16,7 +25,6 @@
 		858313B8292F6EAD004977EA /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B7292F6EAD004977EA /* HomeInteractor.swift */; };
 		858313BA292F6EB7004977EA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313B9292F6EB7004977EA /* HomeRouter.swift */; };
 		858313BC292F6EC1004977EA /* HomeContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313BB292F6EC1004977EA /* HomeContracts.swift */; };
-		858313BE292F6ED7004977EA /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313BD292F6ED7004977EA /* HomeEntity.swift */; };
 		858313C0292F6EEE004977EA /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313BF292F6EEE004977EA /* HomeBuilder.swift */; };
 		858313C6292F6F6F004977EA /* ModuleResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313C5292F6F6F004977EA /* ModuleResolver.swift */; };
 		858313CA292F742A004977EA /* HomeTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858313C9292F742A004977EA /* HomeTheme.swift */; };
@@ -45,22 +53,17 @@
 		85831414292FA62B004977EA /* ServiceResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831413292FA62B004977EA /* ServiceResolverTests.swift */; };
 		858314172930FF76004977EA /* EncryptionContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314162930FF75004977EA /* EncryptionContracts.swift */; };
 		858314192930FF89004977EA /* EncryptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314182930FF89004977EA /* EncryptionService.swift */; };
-		8583141B29310369004977EA /* PersistenceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583141A29310369004977EA /* PersistenceBuilder.swift */; };
-		8583141D29310375004977EA /* EncryptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583141C29310375004977EA /* EncryptionBuilder.swift */; };
-		8583141F2931037E004977EA /* NetworkingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583141E2931037E004977EA /* NetworkingBuilder.swift */; };
 		85831423293143B0004977EA /* SettingsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831422293143B0004977EA /* SettingsContracts.swift */; };
 		85831425293143BF004977EA /* SettingsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831424293143BF004977EA /* SettingsBuilder.swift */; };
 		8583142A293143EA004977EA /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831429293143EA004977EA /* SettingsPresenter.swift */; };
 		8583142C293143F2004977EA /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583142B293143F2004977EA /* SettingsRouter.swift */; };
 		8583142E293143FB004977EA /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583142D293143FB004977EA /* SettingsInteractor.swift */; };
-		8583143029314403004977EA /* SettingsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583142F29314403004977EA /* SettingsEntity.swift */; };
 		858314322931440A004977EA /* SettingsTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314312931440A004977EA /* SettingsTheme.swift */; };
 		8583143529314742004977EA /* LaunchContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583143429314742004977EA /* LaunchContracts.swift */; };
 		858314372931474B004977EA /* LaunchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314362931474B004977EA /* LaunchBuilder.swift */; };
 		8583143B2931475F004977EA /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583143A2931475F004977EA /* LaunchPresenter.swift */; };
 		8583143D29314767004977EA /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583143C29314767004977EA /* LaunchRouter.swift */; };
 		8583143F29314772004977EA /* LaunchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583143E29314772004977EA /* LaunchInteractor.swift */; };
-		858314412931477B004977EA /* LaunchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858314402931477A004977EA /* LaunchEntity.swift */; };
 		8583144329314785004977EA /* LaunchTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583144229314785004977EA /* LaunchTheme.swift */; };
 		8583144B2931742A004977EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583144A2931742A004977EA /* Constants.swift */; };
 		8583144E29325656004977EA /* EncryptionServiceMockSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583144D29325656004977EA /* EncryptionServiceMockSpy.swift */; };
@@ -90,11 +93,15 @@
 		858314832939370B004977EA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 858314812939370B004977EA /* HomeViewController.xib */; };
 		85831486293A8747004977EA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831484293A8747004977EA /* SettingsTableViewCell.swift */; };
 		85831487293A8747004977EA /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85831485293A8747004977EA /* SettingsTableViewCell.xib */; };
-		85831489293BF8ED004977EA /* ActiveDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831488293BF8ED004977EA /* ActiveDatastore.swift */; };
-		8583148B293C0274004977EA /* NetworkingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583148A293C0273004977EA /* NetworkingEntity.swift */; };
-		8583148D293C057D004977EA /* EncryptionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583148C293C057C004977EA /* EncryptionEntity.swift */; };
-		8583148F293C05A8004977EA /* PersistenceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583148E293C05A8004977EA /* PersistenceEntity.swift */; };
-		85831492293D46C6004977EA /* SharedContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831491293D46C6004977EA /* SharedContracts.swift */; };
+		85831492293D46C6004977EA /* AppTemplateContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831491293D46C6004977EA /* AppTemplateContracts.swift */; };
+		85BEB56E294B1C1900F98F89 /* CodingContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BEB56D294B1C1900F98F89 /* CodingContracts.swift */; };
+		85BEB572294B1C3300F98F89 /* CodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BEB571294B1C3300F98F89 /* CodingService.swift */; };
+		85BEB580294B1DBA00F98F89 /* AppTemplateNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BEB57F294B1DBA00F98F89 /* AppTemplateNamespace.swift */; };
+		85C0A9CD2945D771002A5E83 /* SymetricKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0A9CC2945D771002A5E83 /* SymetricKey.swift */; };
+		85D04C392958205000873D36 /* DataRoutingContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D04C382958205000873D36 /* DataRoutingContracts.swift */; };
+		85D04C3B2958EC7100873D36 /* ServiceNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D04C3A2958EC7100873D36 /* ServiceNamespace.swift */; };
+		85D04C3D295908FC00873D36 /* ModuleNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D04C3C295908FC00873D36 /* ModuleNamespace.swift */; };
+		85D543EF2941639200AF27FF /* DataRoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D543EE2941639200AF27FF /* DataRoutingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +115,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8579B5432950A0EC00C63103 /* HomeNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNamespace.swift; sourceTree = "<group>"; };
+		8579B5452950A19200C63103 /* SettingsNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNamespace.swift; sourceTree = "<group>"; };
+		8579B5472950A1C900C63103 /* LaunchNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchNamespace.swift; sourceTree = "<group>"; };
+		8579B54A2950A21600C63103 /* PersistenceNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceNamespace.swift; sourceTree = "<group>"; };
+		8579B54C2950A27900C63103 /* CodingNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingNamespace.swift; sourceTree = "<group>"; };
+		8579B54E2950A29B00C63103 /* EncryptionNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionNamespace.swift; sourceTree = "<group>"; };
+		8579B5502950A2C200C63103 /* DataRoutingNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRoutingNamespace.swift; sourceTree = "<group>"; };
+		8579B5522950A2E300C63103 /* NetworkingNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingNamespace.swift; sourceTree = "<group>"; };
+		8579B5542951510B00C63103 /* Readme.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Readme.rtf; sourceTree = "<group>"; };
 		8583137A292F6D9F004977EA /* AppTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8583137D292F6D9F004977EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8583137F292F6D9F004977EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,7 +136,6 @@
 		858313B7292F6EAD004977EA /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		858313B9292F6EB7004977EA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		858313BB292F6EC1004977EA /* HomeContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContracts.swift; sourceTree = "<group>"; };
-		858313BD292F6ED7004977EA /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		858313BF292F6EEE004977EA /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		858313C5292F6F6F004977EA /* ModuleResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleResolver.swift; sourceTree = "<group>"; };
 		858313C9292F742A004977EA /* HomeTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTheme.swift; sourceTree = "<group>"; };
@@ -149,22 +164,17 @@
 		85831413292FA62B004977EA /* ServiceResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResolverTests.swift; sourceTree = "<group>"; };
 		858314162930FF75004977EA /* EncryptionContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionContracts.swift; sourceTree = "<group>"; };
 		858314182930FF89004977EA /* EncryptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionService.swift; sourceTree = "<group>"; };
-		8583141A29310369004977EA /* PersistenceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceBuilder.swift; sourceTree = "<group>"; };
-		8583141C29310375004977EA /* EncryptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionBuilder.swift; sourceTree = "<group>"; };
-		8583141E2931037E004977EA /* NetworkingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBuilder.swift; sourceTree = "<group>"; };
 		85831422293143B0004977EA /* SettingsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContracts.swift; sourceTree = "<group>"; };
 		85831424293143BF004977EA /* SettingsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBuilder.swift; sourceTree = "<group>"; };
 		85831429293143EA004977EA /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		8583142B293143F2004977EA /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
 		8583142D293143FB004977EA /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
-		8583142F29314403004977EA /* SettingsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEntity.swift; sourceTree = "<group>"; };
 		858314312931440A004977EA /* SettingsTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTheme.swift; sourceTree = "<group>"; };
 		8583143429314742004977EA /* LaunchContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchContracts.swift; sourceTree = "<group>"; };
 		858314362931474B004977EA /* LaunchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBuilder.swift; sourceTree = "<group>"; };
 		8583143A2931475F004977EA /* LaunchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
 		8583143C29314767004977EA /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
 		8583143E29314772004977EA /* LaunchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInteractor.swift; sourceTree = "<group>"; };
-		858314402931477A004977EA /* LaunchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchEntity.swift; sourceTree = "<group>"; };
 		8583144229314785004977EA /* LaunchTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTheme.swift; sourceTree = "<group>"; };
 		8583144A2931742A004977EA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8583144D29325656004977EA /* EncryptionServiceMockSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionServiceMockSpy.swift; sourceTree = "<group>"; };
@@ -194,11 +204,15 @@
 		858314812939370B004977EA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		85831484293A8747004977EA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		85831485293A8747004977EA /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
-		85831488293BF8ED004977EA /* ActiveDatastore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDatastore.swift; sourceTree = "<group>"; };
-		8583148A293C0273004977EA /* NetworkingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEntity.swift; sourceTree = "<group>"; };
-		8583148C293C057C004977EA /* EncryptionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionEntity.swift; sourceTree = "<group>"; };
-		8583148E293C05A8004977EA /* PersistenceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceEntity.swift; sourceTree = "<group>"; };
-		85831491293D46C6004977EA /* SharedContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedContracts.swift; sourceTree = "<group>"; };
+		85831491293D46C6004977EA /* AppTemplateContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTemplateContracts.swift; sourceTree = "<group>"; };
+		85BEB56D294B1C1900F98F89 /* CodingContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingContracts.swift; sourceTree = "<group>"; };
+		85BEB571294B1C3300F98F89 /* CodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingService.swift; sourceTree = "<group>"; };
+		85BEB57F294B1DBA00F98F89 /* AppTemplateNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTemplateNamespace.swift; sourceTree = "<group>"; };
+		85C0A9CC2945D771002A5E83 /* SymetricKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymetricKey.swift; sourceTree = "<group>"; };
+		85D04C382958205000873D36 /* DataRoutingContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRoutingContracts.swift; sourceTree = "<group>"; };
+		85D04C3A2958EC7100873D36 /* ServiceNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceNamespace.swift; sourceTree = "<group>"; };
+		85D04C3C295908FC00873D36 /* ModuleNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleNamespace.swift; sourceTree = "<group>"; };
+		85D543EE2941639200AF27FF /* DataRoutingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRoutingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				858313AD292F6DBF004977EA /* Resources */,
+				85831490293D46B4004977EA /* Shared */,
 				858313C7292F6F86004977EA /* Backend */,
 				858313C4292F6F50004977EA /* Frontend */,
 			);
@@ -260,13 +275,11 @@
 		858313AD292F6DBF004977EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				85831490293D46B4004977EA /* Shared */,
 				858313C8292F71C9004977EA /* Strings */,
 				858313E2292F9432004977EA /* Assets */,
-				8583137D292F6D9F004977EA /* AppDelegate.swift */,
-				8583137F292F6D9F004977EA /* SceneDelegate.swift */,
 				85831388292F6DA4004977EA /* LaunchScreen.storyboard */,
 				8583138B292F6DA4004977EA /* Info.plist */,
+				8579B5542951510B00C63103 /* Readme.rtf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -284,11 +297,11 @@
 		858313B1292F6E50004977EA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				858313D5292F7DDC004977EA /* ServiceContracts.swift */,
-				858313D3292F7D11004977EA /* ServiceResolver.swift */,
-				858313DB292F8638004977EA /* Networking */,
-				858314152930FF49004977EA /* Encryption */,
 				858313CD292F79AF004977EA /* Persistence */,
+				85BEB56C294B1BF000F98F89 /* Coding */,
+				858314152930FF49004977EA /* Encryption */,
+				85D543E92941634000AF27FF /* DataRouting */,
+				858313DB292F8638004977EA /* Networking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -298,13 +311,13 @@
 			children = (
 				858313C1292F6F1C004977EA /* Views */,
 				858313BB292F6EC1004977EA /* HomeContracts.swift */,
+				8579B5432950A0EC00C63103 /* HomeNamespace.swift */,
 				858313BF292F6EEE004977EA /* HomeBuilder.swift */,
 				8583146929367D08004977EA /* HomeAnimator.swift */,
 				858314802939370B004977EA /* HomeViewController.swift */,
 				858313B4292F6E8C004977EA /* HomePresenter.swift */,
 				858313B9292F6EB7004977EA /* HomeRouter.swift */,
 				858313B7292F6EAD004977EA /* HomeInteractor.swift */,
-				858313BD292F6ED7004977EA /* HomeEntity.swift */,
 				858313C9292F742A004977EA /* HomeTheme.swift */,
 				858314812939370B004977EA /* HomeViewController.xib */,
 			);
@@ -321,7 +334,6 @@
 		858313C2292F6F30004977EA /* SharedViews */ = {
 			isa = PBXGroup;
 			children = (
-				8583144A2931742A004977EA /* Constants.swift */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -330,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				858313D9292F80C2004977EA /* ModuleContracts.swift */,
+				85D04C3C295908FC00873D36 /* ModuleNamespace.swift */,
 				858313C5292F6F6F004977EA /* ModuleResolver.swift */,
 				858313B0292F6E48004977EA /* Modules */,
 				858313C2292F6F30004977EA /* SharedViews */,
@@ -340,6 +353,9 @@
 		858313C7292F6F86004977EA /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				858313D5292F7DDC004977EA /* ServiceContracts.swift */,
+				85D04C3A2958EC7100873D36 /* ServiceNamespace.swift */,
+				858313D3292F7D11004977EA /* ServiceResolver.swift */,
 				858313B1292F6E50004977EA /* Services */,
 			);
 			path = Backend;
@@ -356,10 +372,8 @@
 			isa = PBXGroup;
 			children = (
 				858313D1292F79D5004977EA /* PersistenceContracts.swift */,
-				8583141A29310369004977EA /* PersistenceBuilder.swift */,
+				8579B54A2950A21600C63103 /* PersistenceNamespace.swift */,
 				858313CE292F79BF004977EA /* PersistenceService.swift */,
-				8583148E293C05A8004977EA /* PersistenceEntity.swift */,
-				85831488293BF8ED004977EA /* ActiveDatastore.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -368,9 +382,8 @@
 			isa = PBXGroup;
 			children = (
 				858313DC292F8653004977EA /* NetworkingContracts.swift */,
-				8583141E2931037E004977EA /* NetworkingBuilder.swift */,
+				8579B5522950A2E300C63103 /* NetworkingNamespace.swift */,
 				858313DE292F8676004977EA /* NetworkingService.swift */,
-				8583148A293C0273004977EA /* NetworkingEntity.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -523,9 +536,8 @@
 			isa = PBXGroup;
 			children = (
 				858314162930FF75004977EA /* EncryptionContracts.swift */,
-				8583141C29310375004977EA /* EncryptionBuilder.swift */,
+				8579B54E2950A29B00C63103 /* EncryptionNamespace.swift */,
 				858314182930FF89004977EA /* EncryptionService.swift */,
-				8583148C293C057C004977EA /* EncryptionEntity.swift */,
 			);
 			path = Encryption;
 			sourceTree = "<group>";
@@ -535,13 +547,13 @@
 			children = (
 				8583143329314737004977EA /* Views */,
 				8583143429314742004977EA /* LaunchContracts.swift */,
+				8579B5472950A1C900C63103 /* LaunchNamespace.swift */,
 				858314362931474B004977EA /* LaunchBuilder.swift */,
 				8583146D29367E1B004977EA /* LaunchAnimator.swift */,
 				8583147829392DB8004977EA /* LaunchViewController.swift */,
 				8583143A2931475F004977EA /* LaunchPresenter.swift */,
 				8583143C29314767004977EA /* LaunchRouter.swift */,
 				8583143E29314772004977EA /* LaunchInteractor.swift */,
-				858314402931477A004977EA /* LaunchEntity.swift */,
 				8583144229314785004977EA /* LaunchTheme.swift */,
 				8583147929392DB8004977EA /* LaunchViewController.xib */,
 			);
@@ -553,13 +565,13 @@
 			children = (
 				85831428293143D0004977EA /* Views */,
 				85831422293143B0004977EA /* SettingsContracts.swift */,
+				8579B5452950A19200C63103 /* SettingsNamespace.swift */,
 				85831424293143BF004977EA /* SettingsBuilder.swift */,
 				8583146B29367DA1004977EA /* SettingsAnimator.swift */,
 				8583147C29393213004977EA /* SettingsViewController.swift */,
 				85831429293143EA004977EA /* SettingsPresenter.swift */,
 				8583142B293143F2004977EA /* SettingsRouter.swift */,
 				8583142D293143FB004977EA /* SettingsInteractor.swift */,
-				8583142F29314403004977EA /* SettingsEntity.swift */,
 				858314312931440A004977EA /* SettingsTheme.swift */,
 				8583147D29393213004977EA /* SettingsViewController.xib */,
 			);
@@ -622,6 +634,7 @@
 				8583147029380699004977EA /* UINavigationController.swift */,
 				858314722938208E004977EA /* UIView.swift */,
 				8583147429382297004977EA /* Exponentiation.swift */,
+				85C0A9CC2945D771002A5E83 /* SymetricKey.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -630,10 +643,34 @@
 			isa = PBXGroup;
 			children = (
 				8583146F2938067E004977EA /* Extensions */,
+				85831491293D46C6004977EA /* AppTemplateContracts.swift */,
+				85BEB57F294B1DBA00F98F89 /* AppTemplateNamespace.swift */,
+				8583137D292F6D9F004977EA /* AppDelegate.swift */,
+				8583137F292F6D9F004977EA /* SceneDelegate.swift */,
 				858313CB292F7445004977EA /* AppTheme.swift */,
-				85831491293D46C6004977EA /* SharedContracts.swift */,
+				8583144A2931742A004977EA /* Constants.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		85BEB56C294B1BF000F98F89 /* Coding */ = {
+			isa = PBXGroup;
+			children = (
+				85BEB56D294B1C1900F98F89 /* CodingContracts.swift */,
+				8579B54C2950A27900C63103 /* CodingNamespace.swift */,
+				85BEB571294B1C3300F98F89 /* CodingService.swift */,
+			);
+			path = Coding;
+			sourceTree = "<group>";
+		};
+		85D543E92941634000AF27FF /* DataRouting */ = {
+			isa = PBXGroup;
+			children = (
+				85D04C382958205000873D36 /* DataRoutingContracts.swift */,
+				8579B5502950A2C200C63103 /* DataRoutingNamespace.swift */,
+				85D543EE2941639200AF27FF /* DataRoutingService.swift */,
+			);
+			path = DataRouting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -720,6 +757,7 @@
 			files = (
 				85831487293A8747004977EA /* SettingsTableViewCell.xib in Resources */,
 				858313AF292F6DE7004977EA /* Colors.xcassets in Resources */,
+				8579B5552951510B00C63103 /* Readme.rtf in Resources */,
 				8583138A292F6DA4004977EA /* LaunchScreen.storyboard in Resources */,
 				85831387292F6DA4004977EA /* Assets.xcassets in Resources */,
 				8583147B29392DB8004977EA /* LaunchViewController.xib in Resources */,
@@ -742,14 +780,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8579B5512950A2C200C63103 /* DataRoutingNamespace.swift in Sources */,
 				858314172930FF76004977EA /* EncryptionContracts.swift in Sources */,
 				8583144B2931742A004977EA /* Constants.swift in Sources */,
 				8583143B2931475F004977EA /* LaunchPresenter.swift in Sources */,
-				85831489293BF8ED004977EA /* ActiveDatastore.swift in Sources */,
+				8579B5462950A19200C63103 /* SettingsNamespace.swift in Sources */,
 				858313BA292F6EB7004977EA /* HomeRouter.swift in Sources */,
-				8583148F293C05A8004977EA /* PersistenceEntity.swift in Sources */,
 				85831486293A8747004977EA /* SettingsTableViewCell.swift in Sources */,
 				8583137E292F6D9F004977EA /* AppDelegate.swift in Sources */,
+				8579B5482950A1C900C63103 /* LaunchNamespace.swift in Sources */,
 				85831380292F6D9F004977EA /* SceneDelegate.swift in Sources */,
 				8583147129380699004977EA /* UINavigationController.swift in Sources */,
 				858313D6292F7DDC004977EA /* ServiceContracts.swift in Sources */,
@@ -757,40 +796,45 @@
 				858313E1292F8C42004977EA /* Colors.swift in Sources */,
 				858313C0292F6EEE004977EA /* HomeBuilder.swift in Sources */,
 				858313CF292F79BF004977EA /* PersistenceService.swift in Sources */,
+				8579B54B2950A21600C63103 /* PersistenceNamespace.swift in Sources */,
 				8583142C293143F2004977EA /* SettingsRouter.swift in Sources */,
 				858313B8292F6EAD004977EA /* HomeInteractor.swift in Sources */,
 				858314322931440A004977EA /* SettingsTheme.swift in Sources */,
 				858313D2292F79D5004977EA /* PersistenceContracts.swift in Sources */,
 				8583143F29314772004977EA /* LaunchInteractor.swift in Sources */,
-				858313BE292F6ED7004977EA /* HomeEntity.swift in Sources */,
+				85BEB580294B1DBA00F98F89 /* AppTemplateNamespace.swift in Sources */,
 				858314732938208E004977EA /* UIView.swift in Sources */,
-				8583141D29310375004977EA /* EncryptionBuilder.swift in Sources */,
+				8579B54D2950A27900C63103 /* CodingNamespace.swift in Sources */,
+				85D04C392958205000873D36 /* DataRoutingContracts.swift in Sources */,
 				8583142A293143EA004977EA /* SettingsPresenter.swift in Sources */,
-				8583148B293C0274004977EA /* NetworkingEntity.swift in Sources */,
+				85C0A9CD2945D771002A5E83 /* SymetricKey.swift in Sources */,
+				85D543EF2941639200AF27FF /* DataRoutingService.swift in Sources */,
 				858314192930FF89004977EA /* EncryptionService.swift in Sources */,
+				85BEB572294B1C3300F98F89 /* CodingService.swift in Sources */,
 				8583146C29367DA1004977EA /* SettingsAnimator.swift in Sources */,
 				8583142E293143FB004977EA /* SettingsInteractor.swift in Sources */,
-				85831492293D46C6004977EA /* SharedContracts.swift in Sources */,
+				85831492293D46C6004977EA /* AppTemplateContracts.swift in Sources */,
 				858314822939370B004977EA /* HomeViewController.swift in Sources */,
 				8583146A29367D08004977EA /* HomeAnimator.swift in Sources */,
-				8583148D293C057D004977EA /* EncryptionEntity.swift in Sources */,
-				858314412931477B004977EA /* LaunchEntity.swift in Sources */,
+				85D04C3D295908FC00873D36 /* ModuleNamespace.swift in Sources */,
 				85831425293143BF004977EA /* SettingsBuilder.swift in Sources */,
+				8579B54F2950A29B00C63103 /* EncryptionNamespace.swift in Sources */,
 				8583144329314785004977EA /* LaunchTheme.swift in Sources */,
+				85D04C3B2958EC7100873D36 /* ServiceNamespace.swift in Sources */,
 				8583147E29393213004977EA /* SettingsViewController.swift in Sources */,
-				8583141F2931037E004977EA /* NetworkingBuilder.swift in Sources */,
 				858313B5292F6E8C004977EA /* HomePresenter.swift in Sources */,
 				858313D4292F7D11004977EA /* ServiceResolver.swift in Sources */,
-				8583141B29310369004977EA /* PersistenceBuilder.swift in Sources */,
 				858313BC292F6EC1004977EA /* HomeContracts.swift in Sources */,
 				858313CC292F7445004977EA /* AppTheme.swift in Sources */,
+				85BEB56E294B1C1900F98F89 /* CodingContracts.swift in Sources */,
 				85831423293143B0004977EA /* SettingsContracts.swift in Sources */,
 				8583143529314742004977EA /* LaunchContracts.swift in Sources */,
+				8579B5442950A0ED00C63103 /* HomeNamespace.swift in Sources */,
 				8583147A29392DB8004977EA /* LaunchViewController.swift in Sources */,
 				8583146E29367E1B004977EA /* LaunchAnimator.swift in Sources */,
 				858313DF292F8676004977EA /* NetworkingService.swift in Sources */,
 				858313DA292F80C2004977EA /* ModuleContracts.swift in Sources */,
-				8583143029314403004977EA /* SettingsEntity.swift in Sources */,
+				8579B5532950A2E300C63103 /* NetworkingNamespace.swift in Sources */,
 				858314372931474B004977EA /* LaunchBuilder.swift in Sources */,
 				858313C6292F6F6F004977EA /* ModuleResolver.swift in Sources */,
 				858313DD292F8653004977EA /* NetworkingContracts.swift in Sources */,

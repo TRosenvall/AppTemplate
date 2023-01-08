@@ -9,62 +9,53 @@ import UIKit
 
 // Unlike services, which all sit in the back doing their thing, we want to load these only as needed.
 protocol ModuleResolving {
-    func resolveLaunchModule() -> LaunchView
-    func resolveSettingsModule() -> SettingsView
-    func resolveHomeModule() -> HomeView
-}
-
-public enum ModuleType {
-    case LaunchModule
-    case HomeModule
-    case SettingsModule
+    func resolveLaunchModule() async throws -> LaunchView
+    func resolveSettingsModule() async throws -> SettingsView
+    func resolveHomeModule() async throws -> HomeView
 }
 
 class ModuleResolver: ModuleResolving {
 
     // MARK: - Properties
-    let serviceResolver: ServiceResolving
     let appTheme: AppTheme
 
     var activeModule: Module? = nil
 
-    var linkedToModules: [ModuleType] = []
+    var linkedToModules: [UtilityType.Module] = []
 
     // MARK: - Initializers
-    init(appTheme: AppTheme,
-         serviceResolver: ServiceResolving) {
+    init(appTheme: AppTheme) {
         self.appTheme = appTheme
-        self.serviceResolver = serviceResolver
     }
 
     // MARK: - ModuleResolving Functions
-    func resolveLaunchModule() -> LaunchView {
+    func resolveLaunchModule() async throws -> LaunchView {
+        let listener = ServiceResolver.shared
         let launchBuilder = LaunchBuilder(appTheme: appTheme,
-                                          serviceResolver: serviceResolver,
                                           moduleResolver: self)
-        let launchModule = launchBuilder.buildModule()
+        let launchModule = try await launchBuilder.buildModule(listener: listener)
         activeModule = launchModule
-        linkedToModules = [.HomeModule]
+        linkedToModules = [.Home]
         return launchModule
     }
 
-    func resolveSettingsModule() -> SettingsView {
+    func resolveSettingsModule() async throws -> SettingsView {
+        let listener = ServiceResolver.shared
         let settingsBuilder = SettingsBuilder(appTheme: appTheme,
-                                              serviceResolver: serviceResolver,
                                               moduleResolver: self)
-        let settingsModule = settingsBuilder.buildModule()
+        let settingsModule = try await settingsBuilder.buildModule(listener: listener)
         activeModule = settingsModule
-        linkedToModules = [.HomeModule]
+        linkedToModules = [.Home]
         return settingsModule
     }
 
-    func resolveHomeModule() -> HomeView {
+    func resolveHomeModule() async throws -> HomeView {
+        let listener = ServiceResolver.shared
         let homeBuilder = HomeBuilder(appTheme: appTheme,
-                                          serviceResolver: serviceResolver,
                                           moduleResolver: self)
-        let homeModule = homeBuilder.buildModule()
+        let homeModule = try await homeBuilder.buildModule(listener: listener)
         activeModule = homeModule
-        linkedToModules = [.SettingsModule]
+        linkedToModules = [.Settings]
         return homeModule
     }
 

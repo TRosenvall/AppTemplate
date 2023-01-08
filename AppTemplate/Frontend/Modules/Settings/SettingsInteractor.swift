@@ -5,29 +5,23 @@
 //  Created by Timothy Rosenvall on 11/25/22.
 //
 
-class SettingsInteractor: SettingsInput, SettingsModelController {
+class SettingsInteractor: SettingsInput {
     
 
     // MARK: - Properties
-    let persistenceService: PersistenceServing
-    let entity: SettingsModel
+    let entityController: any ModelControlling
     let output: SettingsOutput
 
     // MARK: - Initializers
-    init(persistenceService: PersistenceServing,
-         entity: SettingsModel,
+    init(entityController: any ModelControlling,
          output: SettingsOutput) {
-        self.persistenceService = persistenceService
-        self.entity = entity
+        self.entityController = entityController
         self.output = output
     }
 
     // MARK: - SettingsInput Functions
 
     // MARK: - SettingsModelController Functions
-    func save(entity: Entity) {}
-    
-    func load(entity: Entity) {}
 
     // MARK: - Helper Functions
 }

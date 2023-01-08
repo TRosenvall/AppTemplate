@@ -8,6 +8,14 @@
 import UIKit
 
 extension UINavigationController {
+    func setModal(presentationStyle: UIModalPresentationStyle) async {
+        self.modalPresentationStyle = presentationStyle
+    }
+
+    func setModal(transitionStyle: UIModalTransitionStyle) async {
+        self.modalTransitionStyle = transitionStyle
+    }
+
     func pushFromLeft(controller: UIViewController) {
         guard let window = view.window else {
             print("pushFromLeft() failed")

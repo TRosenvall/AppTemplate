@@ -10,30 +10,62 @@ import Foundation
 class PersistenceService: PersistenceServing {
 
     // MARK: - Properties
-    let networkingService: NetworkingServing
-    let encryptionService: EncryptionServing? = nil
+    var networkingService: NetworkingServing?
+
+    var entityController: (any ModelControlling)?
 
     // MARK: - Initializers
-    init(networkingService: NetworkingServing) {
-        self.networkingService = networkingService
-    }
+    init() {}
 
+    func buildEntity(delegate: ServiceResolvingDelegate, listener: ServiceDelegate?) throws {
+        Task {
+            self.entityController = try await EntityController<PersistenceVariables, UtilityType.Service>(delegate: delegate,
+                                                                                                          listener: listener,
+                                                                                                          utility: .Persistence)
+        }
+    }
+    
     // MARK: - PersistenceServing Functions
-    func locallySave(_entity: Entity) {
-        // TODO
+    func save(_ entityData: Data?, for utility: Utility) async throws {
+        try locallySave(entityData, for: utility)
+        let entityController = self.entityController as? EntityController<PersistenceVariables, UtilityType.Service>
+        if let isCloudBackupEnabled: Bool = try await entityController?.retrieveData(for: .isCloudBackupEnabled),
+           isCloudBackupEnabled {
+            try self.cloudSave(entityData, for: utility)
+        }
     }
 
-    func cloudSave(_entity: Entity) {
-        // TODO
+    ///Attempt to retrieve models from device. If none are found, push new or empty model instead.
+    internal func locallyLoad(_ utility: Utility) throws -> Data? {
+        var fileURL = try FileManager.default.url(for: .applicationSupportDirectory,
+                                                   in: .userDomainMask,
+                                                   appropriateFor: nil,
+                                                   create: false)
+        fileURL.appendPathComponent(Constants.appName)
+        fileURL.appendPathComponent("\(utility).json")
+        return try? Data(contentsOf: fileURL)
     }
 
-    func locallyLoad(_entity: Entity) {
+    internal func locallySave(_ data: Data?, for utility: Utility) throws {
+        var fileURL = try FileManager.default.url(for: .applicationSupportDirectory,
+                                                   in: .userDomainMask,
+                                                   appropriateFor: nil,
+                                                   create: false)
+        fileURL.appendPathComponent(Constants.appName)
+        fileURL.appendPathComponent("\(utility).json")
+        try? data?.write(to: fileURL)
+    }
+    
+    internal func cloudSave(_ data: Data?, for utility: Utility) throws {
         // TODO
+    }
+    
+    internal func cloudLoad(_ utility: Utility) -> Data? {
+        // TODO
+        return Data()
     }
 
-    func cloudLoad(_entity: Entity) {
-        // TODO
-    }
+    // MARK: - PersistenceModelController Functions
 
     // MARK: - Helper Functions
 }

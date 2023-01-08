@@ -9,29 +9,29 @@
 
 class PersistenceServiceMockSpy: PersistenceServing {
     var locallySaveCallCount = 0
-    var locallySaveArg: Entity?
-    func locallySave(_entity: Entity) {
+    var locallySaveArg: Model?
+    func locallySave(_entity: Model) {
         locallySaveCallCount += 1
         locallySaveArg = _entity
     }
 
     var cloudSaveCallCount = 0
-    var cloudSaveArg: Entity?
-    func cloudSave(_entity: Entity) {
+    var cloudSaveArg: Model?
+    func cloudSave(_entity: Model) {
         cloudSaveCallCount += 1
         cloudSaveArg = _entity
     }
 
     var locallyLoadCallCount = 0
-    var locallyLoadArg: Entity?
-    func locallyLoad(_entity: Entity) {
+    var locallyLoadArg: Model?
+    func locallyLoad(_entity: Model) {
         locallyLoadCallCount += 0
         locallyLoadArg = _entity
     }
 
     var cloudLoadCallCount = 0
-    var cloudLoadArg: Entity?
-    func cloudLoad(_entity: Entity) {
+    var cloudLoadArg: Model?
+    func cloudLoad(_entity: Model) {
         cloudLoadCallCount += 1
         cloudLoadArg = _entity
     }

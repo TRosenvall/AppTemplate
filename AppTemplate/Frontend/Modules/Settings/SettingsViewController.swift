@@ -38,6 +38,10 @@ class SettingsViewController: UIViewController, SettingsView {
     // MARK: - UIViewController Functions
 
     // MARK: - SettingsView Functions
+    func set(_ presenter: ModulePresenting) async {
+        self.presenter = presenter as? SettingsPresenting
+    }
+
     @objc func backBarButtonItemTapped() {
         presenter?.backButtonTapped()
     }

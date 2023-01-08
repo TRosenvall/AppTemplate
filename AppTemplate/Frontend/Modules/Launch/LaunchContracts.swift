@@ -13,7 +13,7 @@ import UIKit
 protocol LaunchBuilding: ModuleBuilding {}
 
 ///Responsible for any animations pertaining to the Launch Module
-protocol LaunchAnimating {
+protocol LaunchAnimating: ModuleAnimating {
     var didFinishLoading: Bool { get set }
 
     func animateViewDidAppear(completion: ((Bool) -> Void)?)
@@ -25,7 +25,7 @@ protocol LaunchView: Module {
 }
 
 ///Responsible for telling the view what to display and giving user input to the input file.
-protocol LaunchPresenting {
+protocol LaunchPresenting: ModulePresenting {
 
     ///Runs at the end of the LaunchView `viewDidLoad()`. The Launch module will route immediately to the
     ///Home Module.
@@ -33,24 +33,18 @@ protocol LaunchPresenting {
 }
 
 ///Responsible for digesting user input and sending responses to the output.
-protocol LaunchInput {
+protocol LaunchInput: ModuleInput {
     func loadSettings()
 }
 
-///Responsible for handle entity controlling
-protocol LaunchModelController: EntityController {}
-
-///Responsible for handling anything that might need to be persisted for this module.
-protocol LaunchModel: Entity {}
-
 ///Responsible for providing feedback to the user or telling the router to route away if necessary.
-protocol LaunchOutput {
+protocol LaunchOutput: ModuleOutput {
     func didFinishLoading()
 }
 
 ///Responsible for navigating between the screens on the app as related to this module specifically.
-protocol LaunchWireframe {
+protocol LaunchWireframe: ModuleWireframe {
 
-    ///Resolves the `SampleModule` and routes to it.
-    func routeToHomeModule()
+    ///Resolves the `HomeModule` and routes to it.
+    func routeToHomeModule() throws
 }

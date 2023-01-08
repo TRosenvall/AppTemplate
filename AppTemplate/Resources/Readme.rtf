@@ -1,0 +1,179 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red65\green204\blue69;\red0\green0\blue0;\red65\green204\blue69;
+\red255\green255\blue255;\red65\green204\blue69;\red160\green230\blue162;}
+{\*\expandedcolortbl;;\csgenericrgb\c25500\c80100\c27000\c45000;\csgenericrgb\c0\c0\c0;\csgenericrgb\c25500\c80100\c27000;
+\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c25500\c80100\c27000\c60000;\csgenericrgb\c62750\c90050\c63500;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab642
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \cb3 ///\cf4 Entities for Persistence, Coding, Encryption, DataRouting, and Networking services are all\cf5 \
+\cf2 ///\cf4 stored in a \cf6 `\cf7 KeyData\cf6 `\cf4  struct. It is always stored locally and is always encrypted. Additionally,\cf5 \
+\cf2 ///\cf4 these entities will always be loaded in instead of following the rotating entity flow.\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf4 Rotating Entity Flow - Any service that is off has it's entity saved and offloaded unless it's\cf5 \
+\cf2 ///\cf4 one of the core 5 service's entities. In this case, the service and entity will remain loaded\cf5 \
+\cf2 ///\cf4 but the service will be removed from the activeServices collect in the serviceResolver. After\cf5 \
+\cf2 ///\cf4 the entity has been offloaded, Additionally, each module will have an array detailing all modules\cf5 \
+\cf2 ///\cf4 to which the current one can transition. These modules will all have their entities loaded in\cf5 \
+\cf2 ///\cf4 and set as needed. Should a module leave this list, its entity will be offloaded.\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf4 Each service has an \cf6 `\cf7 isActive\cf6 `\cf4  bool, if this bool is set to false, then the service will be set\cf5 \
+\cf2 ///\cf4 to \cf6 `\cf7 nil\cf6 `\cf4  in the \cf6 `\cf7 activeServices\cf6 `\cf4  dictionary. Because all services are retrieved from getters\cf5 \
+\cf2 ///\cf4 calling from this dictionary, if the service is nil, then none of the service function calls\cf5 \
+\cf2 ///\cf4 will be made.\cf5 \
+\
+\cf2 ///\cf6 `\cf7 PersistenceService\cf6 `\cf4  - Handles persisting data.\cf5 \
+\cf2 ///\cf4 This utility has two settings,\cf5 \
+\cf2 ///\cf5   \cf6 - `\cf7 isActive\cf6 `\cf4  which is a bool determining if the service is active.\cf5 \
+\cf2 ///\cf5         \cf4 This value defaults to \cf6 `\cf7 true\cf6 `\cf5 \
+\cf2 ///\cf5   \cf6 - `\cf7 persistWithCloudStorage\cf6 `\cf4  which is a bool determining if cloud storage is available in\cf5 \
+\cf2 ///\cf5     \cf4 this service.\cf5 \
+\cf2 ///\cf5         \cf4 This value defaults to \cf6 `\cf7 false\cf6 `\cf5 \
+\
+\cf2 ///\cf6 `\cf7 CodableService\cf6 `\cf4  - Handles all encoding and decoding from JSON. Because all persisted data is stored\cf5 \
+\cf2 ///\cf4 in json files, without this service, no persistence can happen. Additionally, any network calls\cf5 \
+\cf2 ///\cf4 which retrieve data in a JSON format will be unable to be formatted properly.\cf5 \
+\cf2 ///\cf4 This utility has one setting.\cf5 \
+\cf2 ///\cf5   \cf6 - `\cf7 isActive\cf6 `\cf4  which is a bool determining if the service is active.\cf5 \
+\cf2 ///\cf5         \cf4 This value defaults to \cf6 `\cf7 true\cf6 `\cf5 \
+\
+\cf2 ///\cf6 `\cf7 EncryptionService\cf6 `\cf4  - Handles all encrypting and decrypting of app data. If this service is off and\cf5 \
+\cf2 ///\cf4 turned on, every entity will be briefly loaded, encrypted, and then persisted. This will occur\cf5 \
+\cf2 ///\cf4 locally whether or not the needed services are marked as active. If networking is on, it will be\cf5 \
+\cf2 ///\cf4 used to encrypt data. If it is off, only local entities will be encrypted. This same flow will\cf5 \
+\cf2 ///\cf4 occur in reverse should the service be on and turned off. \cf6 `\cf7 For the appTemplate, the symetric keys \cf6 `\cf5 \
+\cf2 ///\cf6 `\cf7 used for encrypting and decryptin will be created from a hash of the utilityType. In an acutual\cf6 `\cf5 \
+\cf2 ///\cf6 `\cf7 app, these symmetric keys should be singularly created for a user and persisted with userData.\cf6 `\cf5 \
+\cf2 ///\cf4 This utility has one setting\cf5 \
+\cf2 ///\cf5   \cf6 - `\cf7 isActive\cf6 `\cf4  which is a bool determining if the service is active.\cf5 \
+\cf2 ///\cf5         \cf4 This value defaults to \cf6 `\cf7 true\cf6 `\cf5 \
+\
+\cf2 ///\cf6 `\cf7 DataRoutingService\cf6 `\cf4  - Handles the movement of data as it passes through the app. The standard flow\cf5 \
+\cf2 ///\cf4 is as follows: The \cf6 `\cf7 DataRoutingService\cf6 `\cf4  calls upon the \cf6 `\cf7 PersistenceService\cf6 `\cf4  to retrieve data from on\cf5 \
+\cf2 ///\cf4 disk. Then the \cf6 `\cf7 DataRoutingService\cf6 `\cf4  gives the data to the \cf6 `\cf7 CodingService\cf6 `\cf4  for decoding. The data is\cf5 \
+\cf2 ///\cf4 then passed from the \cf6 `\cf7 DataRoutingService\cf6 `\cf4  to the \cf6 `\cf7 EncryptionService\cf6 `\cf4  if necessary. Finally the\cf5 \
+\cf2 ///\cf6 `\cf7 DataRoutingService\cf6 `\cf4  gives the data to the \cf6 `\cf7 ModelControlling\cf6 `\cf4  for setting. The reverse is true for persisting data.\cf5 \
+\cf2 ///\cf4 This utility has one setting\cf5 \
+\cf2 ///\cf5   \cf6 - `\cf7 isActive\cf6 `\cf4  which is a bool determining if the service is active.\cf5 \
+\cf2 ///\cf5         \cf4 This value defaults to \cf6 `\cf7 true\cf6 `\cf4 .\cf5 \
+\
+\cf2 ///\cf6 `\cf7 NetworkingService\cf6 `\cf4  - Handles any network calls needed. This can include retrieving data from a\cf5 \
+\cf2 ///\cf4 cloud storage, handling data retrieval from api network calls, or anything else needed. If this\cf5 \
+\cf2 ///\cf4 service is off, the app will not be allowed to make any network calls.\cf5 \
+\cf2 ///\cf4 This utility has one setting\cf5 \
+\cf2 ///\cf5   \cf6 - `\cf7 isActive\cf6 `\cf4  which is a bool determining if the service is active.\cf5 \
+\cf2 ///\cf5         \cf4 This value defaults to \cf6 `\cf7 false\cf6 `\cf4 .\cf5 \
+\
+\cf2 ///\cf4 1. LaunchApp\cf5 \
+\cf2 ///\cf4 2. Route to LaunchModule\cf5 \
+\cf2 ///\cf6 ---\cf5 \
+\cf2 ///\cf4 3. Init PersistenceService   //On by default - Uses NetworkingService for cloud persisting.\cf5 \
+\cf2 ///\cf4 4. Init CodingService        //On by default\cf5 \
+\cf2 ///\cf4 5. Init EncryptionService    //On by default\cf5 \
+\cf2 ///\cf4 6. Init DataRoutingService   //On by default - Uses Persistence, Coding, Encryption Services\cf5 \
+\cf2 ///\cf4 7. Init NetworkingService    //On by default\cf5 \
+\cf2 ///\cf6 ---\cf5 \
+\cf2 ///\cf4 8. Retrieve KeyData Struct\cf5 \
+\cf2 ///\cf4 9. Decode KeyData Struct\cf5 \
+\cf2 ///\cf4 10. Decrypt KeyData Struct\cf5 \
+\cf2 ///\cf4 11. Set NetworkingEntity    //Handles whether cloud load is used.\cf5 \
+\cf2 ///\cf4 12. Set PersistenceEntity   //Handles persisting data.\cf5 \
+\cf2 ///\cf4 13. Set CodingEntity        //Handles encoding/decoding data\cf5 \
+\cf2 ///\cf4 14. Set EncryptionEntity    //Handles encrypting/decrypting data\cf5 \
+\cf2 ///\cf4 15. Set DataRoutingEntity   //Handles passing data between services prior to being set or persisting.\cf5 \
+\cf2 ///\cf6 ---\cf5 \
+\cf2 ///\cf4 16. Update ActiveServices in ServiceResolver\cf5 \
+\cf2 ///\cf4 17. Update Entities for Services (if Networking has \cf6 `\cf7 isActive = true\cf6 `\cf4 ).\cf5 \
+\cf2 ///\cf4 18. Retrieve Entities for Active Modules.\cf5 \
+\cf2 ///\cf4 19. Route to HomeModule.\cf5 \
+\cf2 ///\cf4 20. Update Entities for Active Modules.\
+\
+///------\
+\
+Update Entity Values\
+\cf2 ///\cf5  \cf4 1. User interaction requests entity value change.\cf5 \
+\cf2 ///\cf5  \cf4 2. ModelControlling Actor calls updateModel function\cf5 \
+\cf2 ///\cf5  \cf4 3. Body of function calls on dataRoutingService to retrieve data for value (either unencrypted or encrypted).\cf5 \
+\cf2 ///\cf5  \cf4 4. Body of function updates the value with the data\cf5 \
+\cf2 ///\cf5  \cf4 5. Body of function calls upon dataRoutingService again to persist the data.\
+\
+///------\
+\
+Retrieve Entity Values\
+\
+\
+///------\
+\
+\cf2 ///\cf5  \cf4 The only properties a service should have are the properties that relate to which parts of the service can run\cf5 \
+\cf2 ///\cf5  \cf4 and can't run. For example, a master switch, \cf6 `\cf7 isActive\cf6 `\cf4  which controls whether the service itself is currently\cf5 \
+\cf2 ///\cf5  \cf4 available. In addition to this, a persisence service might also have \cf6 `\cf7 storeLocally\cf6 `\cf4  and \cf6 `\cf7 storeOnCloud\cf6 `\cf4  which\cf5 \
+\cf2 ///\cf5  \cf4 would determine where data can be persisted. Having both of these values set to false would be the equivalent of\cf5 \
+\cf2 ///\cf5  \cf4 setting the \cf6 `\cf7 isActive\cf6 `\cf4  setting to false. The persistence service might also have options to store data in different\cf5 \
+\cf2 ///\cf5  \cf4 ways such as \cf6 `\cf7 storeAsJSON\cf6 `\cf4  or \cf6 `\cf7 storeAsXML\cf6 `\cf4  which would handle the format the data is being persisted in. Notice\cf5 \
+\cf2 ///\cf5  \cf4 that all of these are boolean settings. Services entities should only contain boolean variables which are\cf5 \
+\cf2 ///\cf5  \cf4 adjustable in the \cf6 `\cf7 SettingsModule\cf6 `\cf4 .\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5  \cf4 What then is the relationship between the \cf6 `\cf7 SettingsModule\cf6 `\cf4  and the backend services? Currently, the\cf5 \
+\cf2 ///\cf5  \cf6 `\cf7 PersistenceService\cf6 `\cf4  handles all persistence calls using the \cf6 `\cf7 NetworkingService\cf6 `\cf4  for cloud storage as needed.\cf5 \
+\cf2 ///\cf5  \cf4 THe \cf6 `\cf7 CodingService\cf6 `\cf4  then takes the data and decodes it into usable information by swift. The \cf6 `\cf7 EncryptionService\cf6 `\cf5 \
+\cf2 ///\cf5  \cf4 will then decrypt values as needed. Data is Routed through all of these via the \cf6 `\cf7 DataRoutingService\cf6 `\cf4 . Each\cf5 \
+\cf2 ///\cf5  \cf6 `\cf7 ModelControlling\cf6 `\cf4  calls on the \cf6 `\cf7 DataRoutingService\cf6 `\cf4  when a value is updated. When a service is initialized, the\cf5 \
+\cf2 ///\cf5  \cf6 `\cf7 ModelControlling\cf6 `\cf4  is initialized as well so that the services can't verify what options are enabled/disabled.\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5  \cf4 The \cf6 `\cf7 SettingsModule\cf6 `\cf4  draws it's display list from a \cf6 `\cf7 SettingsDataSource\cf6 `\cf4  file within the \cf6 `\cf7 SettingsModule\cf6 `\cf4 .\cf5 \
+\cf2 ///\cf5  \cf4 Because there isn't any way to adjust any of the entity values for each service save from wtihin the settings\cf5 \
+\cf2 ///\cf5  \cf4 menu, then the data source can safely be built when the \cf6 `\cf7 SettingsModule\cf6 `\cf4  goes on deck. The settings menu has the\cf5 \
+\cf2 ///\cf5  \cf4 option to display data in several different ways. These options will be given by the following enum values.\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5  \cf4 Each of the cases in this enum will have associated values for a section and priority. The section will determine\cf5 \
+\cf2 ///\cf5  \cf4 which section in the table view the item will appear under. The priority will determine how the cells are arranged.\cf5 \
+\cf2 ///\cf5  \cf4 A higher priority will appear closer to the top of each section.\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5  \cf4 Sections will have a page and priority. The page will determine which page\cf5 \
+\cf2 ///\cf5  \cf4 in the table view the section will appear under. The priority will determine the order in which the sections are\cf5 \
+\cf2 ///\cf5  \cf4 displayed.\cf5 \
+\cf2 ///\cf5  \cf7 ```\cf5 \
+\cf2 ///\cf5  \cf7 enum displayType \{\cf5 \
+\cf2 ///\cf5      \cf7 // Default, this value won't be displayed in the settings menu.\cf5 \
+\cf2 ///\cf5      \cf7 case none\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5      \cf7 // This case will appear but won't be able interactable to the user.\cf5 \
+\cf2 ///\cf5      \cf7 case display (section: String = "", priority: Int = 0)\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5      \cf7 // This case will not display any data to the user, but when tapped will clear the current menu option and\cf5 \
+\cf2 ///\cf5      \cf7 // display the page of the cell's title.\cf5 \
+\cf2 ///\cf5      \cf7 case newPage (section: String = "", priority: Int = 0)\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5      \cf7 // This case will route out of the app to the user's native browser and display the url of the given variable.\cf5 \
+\cf2 ///\cf5      \cf7 case nativeBrowser (section: String = "", priority: Int = 0)\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5      \cf7 // This case will route into a webview within the app and display the url of the given variable.\cf5 \
+\cf2 ///\cf5      \cf7 case webView (section: String = "", priority: Int = 0)\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5      \cf7 // This case will route to a new view controller\cf5 \
+\cf2 ///\cf5      \cf7 case route (section: String = "", priority: Int = 0)\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5      \cf7 // This case will display a cell for a boolean value. The cell will contain a switch to reverse the current\cf5 \
+\cf2 ///\cf5      \cf7 // value\cf5 \
+\cf2 ///\cf5      \cf7 case boolean (section: String = "", priority: Int = 0)\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5      \cf7 // This case will display an integer value. The cell will contain a two buttons to raise or lower the value.\cf5 \
+\cf2 ///\cf5      \cf7 case int (section: String = "", priority: Int = 0, minValue: Int, maxValue: Int)\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5      \cf7 // This case will display an float value. The cell will contain a slider to raise or lower the value. If tapped,\cf5 \
+\cf2 ///\cf5      \cf7 // the slider will enlarge and center on the screen while dimming the background in order to give more fine\cf5 \
+\cf2 ///\cf5      \cf7 // control on the value.\cf5 \
+\cf2 ///\cf5      \cf7 case bool (section: String = "", priority: Int = 0, minValue: Float, maxValue: Float)\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5      \cf7 // This case will display a string value as a textField. The cell will contain a text field. If tapped, the\cf5 \
+\cf2 ///\cf5      \cf7 // textField will focus on the screen, enlarging and centering while the background is dimmed.\cf5 \
+\cf2 ///\cf5      \cf7 case textField (section: String = "", priority: Int = 0, placeholder: String = "<placeholder>")\cf5 \
+\cf2 ///\cf5 \
+\cf2 ///\cf5      \cf7 // This case will display a string value as a textView. The cell will lengthen to contain the whole textView.\cf5 \
+\cf2 ///\cf5      \cf7 // If tapped, the textView will focus on the screen, enlarging and centering while the background is dimmed.\cf5 \
+\cf2 ///\cf5      \cf7 case textView (section: String = "", priority: Int = 0, placeholder: String = "<placeholder>"\cf5 \
+\cf2 ///\cf5  \cf7 ```\cf5 \
+\cf2 ///\cf5  \cf4 Within the \cf6 `\cf7 SettingsDataSource\cf6 `\cf4  a section object can be built containing the needed values.\
+}

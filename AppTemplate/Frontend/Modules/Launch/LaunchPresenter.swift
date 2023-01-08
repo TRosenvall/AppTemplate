@@ -24,7 +24,11 @@ class LaunchPresenter: LaunchPresenting, LaunchOutput {
 
         animator?.animateViewDidAppear() { didFinishLoading in
             if didFinishLoading {
-                self.router?.routeToHomeModule()
+                do {
+                    try self.router?.routeToHomeModule()
+                } catch {
+                    // TODO: - Error Handling
+                }
             }
         }
     }

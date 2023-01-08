@@ -11,32 +11,28 @@ class SettingsBuilder: SettingsBuilding {
     typealias ModuleType = SettingsView
 
     let appTheme: AppTheme
-    let serviceResolver: ServiceResolving
     let moduleResolver: ModuleResolving
 
     // MARK: - Initializers
     init(appTheme: AppTheme,
-         serviceResolver: ServiceResolving,
          moduleResolver: ModuleResolving) {
         self.appTheme = appTheme
-        self.serviceResolver = serviceResolver
         self.moduleResolver = moduleResolver
     }
 
     // MARK: - SettingsBuilding Functions
-    func buildModule() -> SettingsView {
+    func buildModule(listener: ServiceDelegate) async throws -> SettingsView {
         // Get needed properties
         let settingsTheme = SettingsTheme(base: appTheme)
-        let persistenceService = serviceResolver.services.persistence
 
         // Build module parts
-        let entity = SettingsEntity()
-        let view = SettingsViewController(theme: settingsTheme)
+        let view = await SettingsViewController(theme: settingsTheme)
         let presenter = SettingsPresenter(viewController: view)
         let animator = SettingsAnimator(viewController: view,
                                         output: presenter)
-        let interactor = SettingsInteractor(persistenceService: persistenceService,
-                                            entity: entity,
+        let entityController = try await EntityController<SettingsVariables, UtilityType.Module>(listener: listener,
+                                                                                                 utility: .Settings)
+        let interactor = SettingsInteractor(entityController: entityController,
                                             output: presenter)
         let router = SettingsRouter(presentingView: view,
                                     moduleResolver: moduleResolver)
@@ -45,7 +41,7 @@ class SettingsBuilder: SettingsBuilding {
         presenter.animator = animator
         presenter.interactor = interactor
         presenter.router = router
-        view.presenter = presenter
+        await view.set(presenter)
 
         // Return the view
         return view

@@ -5,28 +5,22 @@
 //  Created by Timothy Rosenvall on 11/24/22.
 //
 
-class HomeInteractor: HomeInput, HomeModelController {
+class HomeInteractor: HomeInput {
 
     // MARK: - Properties
-    let persistenceService: PersistenceServing
-    let entity: HomeModel
+    let entityController: any ModelControlling
     let output: HomeOutput
 
     // MARK: - Initializers
-    init(persistenceService: PersistenceServing,
-         entity: HomeModel,
+    init(entityController: any ModelControlling,
          output: HomeOutput) {
-        self.persistenceService = persistenceService
-        self.entity = entity
+        self.entityController = entityController
         self.output = output
     }
 
     // MARK: - HomeInput Functions
 
     // MARK: - HomeModelController Functions
-    func save(entity: Entity) {}
-    
-    func load(entity: Entity) {}
 
     // MARK: - Helper Functions
 }

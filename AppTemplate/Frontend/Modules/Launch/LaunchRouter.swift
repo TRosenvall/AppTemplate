@@ -21,12 +21,14 @@ class LaunchRouter: LaunchWireframe {
     }
 
     // MARK: - LaunchWireframe Functions
-    func routeToHomeModule() {
-        let homeView = moduleResolver.resolveHomeModule()
-        let homeModule = UINavigationController(rootViewController: homeView)
-        homeModule.modalPresentationStyle = .overFullScreen
-        homeModule.modalTransitionStyle = .crossDissolve
-        presentingView.present(homeModule, animated: true)
+    func routeToHomeModule() throws {
+        Task {
+            let homeView = try await moduleResolver.resolveHomeModule()
+            let homeModule = await UINavigationController(rootViewController: homeView)
+            await homeModule.setModal(presentationStyle: .overFullScreen)
+            await homeModule.setModal(transitionStyle: .crossDissolve)
+            await presentingView.present(homeModule, animated: true)
+        }
     }
 
     // MARK: - Helper Functions

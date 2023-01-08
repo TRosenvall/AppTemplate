@@ -11,7 +11,7 @@ import UIKit
 protocol HomeBuilding: ModuleBuilding {}
 
 ///Responsible for any animations pertaining to the Home Module
-protocol HomeAnimating {}
+protocol HomeAnimating: ModuleAnimating {}
 
 ///Responsible for displaying information to and getting input from the user.
 protocol HomeView: Module {
@@ -21,23 +21,17 @@ protocol HomeView: Module {
 }
 
 ///Responsible for telling the view what to display and giving user input to the input file.
-protocol HomePresenting {
+protocol HomePresenting: ModulePresenting {
     func settingsButtonTapped()
 }
 
 ///Responsible for digesting user input and sending responses to the output.
-protocol HomeInput {}
-
-///Responsible for handle entity controlling
-protocol HomeModelController: EntityController {}
-
-///Responsible for handling anything that might need to be persisted for this module.
-protocol HomeModel: Entity {}
+protocol HomeInput: ModuleInput {}
 
 ///Responsible for providing feedback to the user or telling the router to route away if necessary.
-protocol HomeOutput {}
+protocol HomeOutput: ModuleOutput {}
 
 ///Responsible for navigating between the screens on the app as related to this module specifically.
-protocol HomeWireframe {
-    func routeToSettingsModule()
+protocol HomeWireframe: ModuleWireframe {
+    func routeToSettingsModule() throws
 }
