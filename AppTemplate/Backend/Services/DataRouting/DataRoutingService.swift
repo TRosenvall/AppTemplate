@@ -21,17 +21,15 @@ class DataRoutingService: DataRoutingServing {
     // MARK: - Initializers
     init() {}
 
-    func buildEntity(delegate: ServiceResolvingDelegate, listener: ServiceDelegate?) throws {
+    func buildEntity(from resolver: ServiceResolver) throws {
         Task {
-            self.entityController = try await EntityController<DataRoutingVariables, UtilityType.Service>(delegate: delegate,
-                                                                                                          listener: listener,
-                                                                                                          utility: .DataRouting)
+            self.entityController = try await EntityController<DataRoutingVariables>(resolver: resolver)
         }
     }
 
     // MARK: - DataRoutingServing Functions
     func updateEntityData<T, R>(for variable: T,
-                                withValue value: Encodable?,
+                                with value: Encodable?,
                                 on utility: R) async throws -> any Model where T : Variable, R : Utility {
         let entity = Entity<R>(utility: utility)
 
@@ -45,7 +43,7 @@ class DataRoutingService: DataRoutingServing {
         let valueData = try codingService?.encode(value)
 
         // Store encrypted data if variable is encryptable and encryption service is on.
-        if let encryptionEntity = encryptionService?.entityController as? EntityController<EncryptionVariables, UtilityType.Service>,
+        if let encryptionEntity = encryptionService?.entityController as? EntityController<EncryptionVariables>,
            let encryptionServiceIsActive: Bool = try await encryptionEntity.retrieveData(for: .isActive),
            variable.isEncryptable && encryptionServiceIsActive,
            let symmetricKey = try encryptionService?.getSymmetricKey(for: utility),
@@ -65,7 +63,7 @@ class DataRoutingService: DataRoutingServing {
     func retrieveValue<T, R>(for variable: T,
                              from entity: any Model) async throws -> R? where T : Variable, R : Decodable {
         var data: Data?
-        if let encryptionEntity = encryptionService?.entityController as? EntityController<EncryptionVariables, UtilityType.Service>,
+        if let encryptionEntity = encryptionService?.entityController as? EntityController<EncryptionVariables>,
            let encryptionServiceIsActive: Bool = try await encryptionEntity.retrieveData(for: .isActive),
            encryptionServiceIsActive && variable.isEncryptable && entity.encryptedData?[variable.label] != nil,
            let utility = entity.utility as? Utility,

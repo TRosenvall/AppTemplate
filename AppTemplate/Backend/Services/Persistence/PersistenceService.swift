@@ -17,18 +17,16 @@ class PersistenceService: PersistenceServing {
     // MARK: - Initializers
     init() {}
 
-    func buildEntity(delegate: ServiceResolvingDelegate, listener: ServiceDelegate?) throws {
+    func buildEntity(from resolver: ServiceResolver) throws {
         Task {
-            self.entityController = try await EntityController<PersistenceVariables, UtilityType.Service>(delegate: delegate,
-                                                                                                          listener: listener,
-                                                                                                          utility: .Persistence)
+            self.entityController = try await EntityController<PersistenceVariables>(resolver: resolver)
         }
     }
     
     // MARK: - PersistenceServing Functions
     func save(_ entityData: Data?, for utility: Utility) async throws {
         try locallySave(entityData, for: utility)
-        let entityController = self.entityController as? EntityController<PersistenceVariables, UtilityType.Service>
+        let entityController = self.entityController as? EntityController<PersistenceVariables>
         if let isCloudBackupEnabled: Bool = try await entityController?.retrieveData(for: .isCloudBackupEnabled),
            isCloudBackupEnabled {
             try self.cloudSave(entityData, for: utility)

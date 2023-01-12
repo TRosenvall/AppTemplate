@@ -33,11 +33,11 @@ class ServiceResolver: ServiceResolving {
             self.dataRoutingService = DataRoutingService()
             self.networkingService = NetworkingService()
 
-            try self.persistenceService.buildEntity(delegate: self, listener: self)
-            try self.codingService.buildEntity(delegate: self, listener: self)
-            try self.encryptionService.buildEntity(delegate: self, listener: self)
-            try self.dataRoutingService.buildEntity(delegate: self, listener: self)
-            try self.networkingService.buildEntity(delegate: self, listener: self)
+            try self.persistenceService.buildEntity(from: self)
+            try self.codingService.buildEntity(from: self)
+            try self.encryptionService.buildEntity(from: self)
+            try self.dataRoutingService.buildEntity(from: self)
+            try self.networkingService.buildEntity(from: self)
 
             activeServices.updateValue(persistenceService, forKey: .Persistence)
             activeServices.updateValue(codingService, forKey: .Coding)

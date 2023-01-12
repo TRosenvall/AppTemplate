@@ -1,5 +1,5 @@
 //
-//  EncryptionNamespace.swift
+//  DataRoutingVariables.swift
 //  AppTemplate
 //
 //  Created by Timothy Rosenvall on 12/19/22.
@@ -9,11 +9,14 @@ import Foundation
 
 ///------
 
-enum EncryptionVariables: Variable {
+enum DataRoutingVariables: Variable {
     case isActive
 }
 
-extension EncryptionVariables {
+extension DataRoutingVariables {
+
+    typealias ModelUtility = UtilityType.Service
+
     var defaultValue: Encodable? {
         switch self {
         case .isActive: return true
@@ -24,6 +27,10 @@ extension EncryptionVariables {
         switch self {
         case .isActive: return true
         }
+    }
+
+    static var utility: UtilityType.Service {
+        return .DataRouting
     }
 }
 

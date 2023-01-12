@@ -1,5 +1,5 @@
 //
-//  PersistenceNamespace.swift
+//  PersistenceVariables.swift
 //  AppTemplate
 //
 //  Created by Timothy Rosenvall on 12/19/22.
@@ -16,6 +16,8 @@ enum PersistenceVariables: Variable {
 
 extension PersistenceVariables {
 
+    typealias ModelUtility = UtilityType.Service
+
     // Variable Properties
     var defaultValue: Encodable? {
         switch self {
@@ -29,5 +31,9 @@ extension PersistenceVariables {
         case .isActive: return true
         case .isCloudBackupEnabled: return true
         }
+    }
+
+    static var utility: UtilityType.Service {
+        return .Persistence
     }
 }

@@ -20,7 +20,7 @@ import Foundation
 
 protocol Service {
     var entityController: (any ModelControlling)? { get set }
-    func buildEntity(delegate: ServiceResolvingDelegate, listener: ServiceDelegate?) throws
+    func buildEntity(from resolver: ServiceResolver) throws
 }
 
 ///------

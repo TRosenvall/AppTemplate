@@ -15,11 +15,9 @@ class CodingService: CodingServing {
     // MARK: - Initializers
     init() {}
 
-    func buildEntity(delegate: ServiceResolvingDelegate, listener: ServiceDelegate?) throws {
+    func buildEntity(from resolver: ServiceResolver) throws {
         Task {
-            self.entityController = try await EntityController<CodingVariables, UtilityType.Service>(delegate: delegate,
-                                                                                                     listener: listener,
-                                                                                                     utility: .Coding)
+            self.entityController = try await EntityController<CodingVariables>(resolver: resolver)
         }
     }
 

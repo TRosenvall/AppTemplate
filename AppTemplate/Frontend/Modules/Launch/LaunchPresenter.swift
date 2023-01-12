@@ -20,7 +20,7 @@ class LaunchPresenter: LaunchPresenting, LaunchOutput {
 
     // MARK: - LaunchPresenting Functions
     func viewDidAppear() {
-        self.interactor?.loadSettings()
+        self.interactor?.loadEntities()
 
         animator?.animateViewDidAppear() { didFinishLoading in
             if didFinishLoading {

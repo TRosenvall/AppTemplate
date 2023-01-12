@@ -16,11 +16,9 @@ class EncryptionService: EncryptionServing {
     // MARK: - Initializers
     init() {}
 
-    func buildEntity(delegate: ServiceResolvingDelegate, listener: ServiceDelegate?) throws {
+    func buildEntity(from resolver: ServiceResolver) throws {
         Task {
-            self.entityController = try await EntityController<EncryptionVariables, UtilityType.Service>(delegate: delegate,
-                                                                                                         listener: listener,
-                                                                                                         utility: .Encryption)
+            self.entityController = try await EntityController<EncryptionVariables>(resolver: resolver)
         }
     }
 

@@ -30,8 +30,7 @@ class SettingsBuilder: SettingsBuilding {
         let presenter = SettingsPresenter(viewController: view)
         let animator = SettingsAnimator(viewController: view,
                                         output: presenter)
-        let entityController = try await EntityController<SettingsVariables, UtilityType.Module>(listener: listener,
-                                                                                                 utility: .Settings)
+        let entityController = try await EntityController<SettingsVariables>(listener: listener)
         let interactor = SettingsInteractor(entityController: entityController,
                                             output: presenter)
         let router = SettingsRouter(presentingView: view,

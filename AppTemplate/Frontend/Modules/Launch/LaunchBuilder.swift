@@ -30,8 +30,7 @@ class LaunchBuilder: LaunchBuilding {
         let presenter = LaunchPresenter(viewController: view)
         let animator = LaunchAnimator(viewController: view,
                                       output: presenter)
-        let entityController = try await EntityController<LaunchVariables, UtilityType.Module>(listener: listener,
-                                                                                               utility: .Launch)
+        let entityController = try await EntityController<LaunchVariables>(listener: listener)
         let interactor = LaunchInteractor(entityController: entityController,
                                           output: presenter)
         let router = LaunchRouter(presentingView: view,

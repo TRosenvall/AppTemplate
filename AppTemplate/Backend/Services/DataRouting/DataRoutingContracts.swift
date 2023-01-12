@@ -16,7 +16,7 @@ protocol DataRoutingServing: Service {
 
     // Used to get the data values needed to be persisted. Uses the CodingService, EncryptionService, and PersistenceService
     func updateEntityData<T: Variable, R: Utility>(for variable: T,
-                                                   withValue value: Encodable?,
+                                                   with value: Encodable?,
                                                    on utility: R) async throws -> any Model
 
     // Used to retrieve data from an entity. Uses the CodingService and EncryptionService

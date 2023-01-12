@@ -15,11 +15,9 @@ class NetworkingService: NetworkingServing {
     // MARK: - Initializers
     init() {}
 
-    func buildEntity(delegate: ServiceResolvingDelegate, listener: ServiceDelegate?) throws {
+    func buildEntity(from resolver: ServiceResolver) throws {
         Task {
-            self.entityController = try await EntityController<NetworkingVariables, UtilityType.Service>(delegate: delegate,
-                                                                                                         listener: listener,
-                                                                                                         utility: .Networking)
+            self.entityController = try await EntityController<NetworkingVariables>(resolver: resolver)
         }
     }
 

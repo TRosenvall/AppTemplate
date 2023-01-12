@@ -1,5 +1,5 @@
 //
-//  HomeNamespace.swift
+//  HomeVariables.swift
 //  AppTemplate
 //
 //  Created by Timothy Rosenvall on 12/19/22.
@@ -15,6 +15,9 @@ enum HomeVariables: Variable {
 }
 
 extension HomeVariables {
+
+    typealias ModelUtility = UtilityType.Module
+
     var isEncryptable: Bool {
         switch self {
         case .prop1: return false
@@ -29,5 +32,9 @@ extension HomeVariables {
         case .prop2: return 5
         case .prop3: return "Hello World"
         }
+    }
+
+    static var utility: UtilityType.Module {
+        return .Home
     }
 }

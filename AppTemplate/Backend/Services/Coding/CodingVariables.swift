@@ -1,5 +1,5 @@
 //
-//  CodingNamespace.swift
+//  CodingVariables.swift
 //  AppTemplate
 //
 //  Created by Timothy Rosenvall on 12/19/22.
@@ -14,6 +14,9 @@ enum CodingVariables: Variable {
 }
 
 extension CodingVariables {
+
+    typealias ModelUtility = UtilityType.Service
+
     var defaultValue: Encodable? {
         switch self {
         case .isActive: return true
@@ -24,6 +27,10 @@ extension CodingVariables {
         switch self {
         case .isActive: return true
         }
+    }
+
+    static var utility: UtilityType.Service {
+        return .Coding
     }
 }
 
