@@ -19,7 +19,7 @@ protocol ModuleBuilding {
     associatedtype ModuleType
 
     /// Builds and returns the module's viewController
-    func buildModule(listener: ServiceDelegate) async throws -> ModuleType
+    func buildModule() async throws -> ModuleType
 }
 
 ///------

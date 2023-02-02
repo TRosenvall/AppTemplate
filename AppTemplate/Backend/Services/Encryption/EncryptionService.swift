@@ -14,12 +14,8 @@ class EncryptionService: EncryptionServing {
     var entityController: (any ModelControlling)?
 
     // MARK: - Initializers
-    init() {}
-
-    func buildEntity(from resolver: ServiceResolver) throws {
-        Task {
-            self.entityController = try await EntityController<EncryptionVariables>(resolver: resolver)
-        }
+    init() async throws {
+        self.entityController = try await EntityController<EncryptionVariables>()
     }
 
     // MARK: - EncryptionServing Functions

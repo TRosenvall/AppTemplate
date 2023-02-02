@@ -13,20 +13,13 @@ class NetworkingService: NetworkingServing {
     var entityController: (any ModelControlling)?
 
     // MARK: - Initializers
-    init() {}
-
-    func buildEntity(from resolver: ServiceResolver) throws {
-        Task {
-            self.entityController = try await EntityController<NetworkingVariables>(resolver: resolver)
-        }
+    init() async throws {
+        self.entityController = try await EntityController<NetworkingVariables>()
     }
 
     // MARK: - NetworkingServing Functions
 
     // MARK: - NetworkingModelController Functions
-    func toggleState() {
-
-    }
 
     // MARK: - Helper Functions
 }

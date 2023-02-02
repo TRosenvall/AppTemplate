@@ -9,17 +9,22 @@ import Foundation
 
 ///------
 
-protocol ModelControlling: Actor, ServiceResolvingBroadcaster {
+protocol ModelControlling: Actor, ServicesRequiring {
     /// Will define the type of model being saved.
     associatedtype ModelVariables: Variable
 
+    /// Updates the entity at the `ModelVariable` with the new value
     func updateModel(variable: ModelVariables,
                      withValue value: Encodable?) async throws
+
+    /// Gets the value from the entity`
     func retrieveData<T: Decodable>(for variable: ModelVariables) async throws -> T?
 
+    /// Gets and returns the whole entity in the controller
     func get() async -> any Model
+
+    /// Sets the entity in the controller.
     func set(entity: any Model) async
-    func buildModel() async throws
 }
 
 ///------
@@ -28,43 +33,25 @@ actor EntityController<VariableSet: Variable>: ModelControlling {
 
     // MARK: - Properties
     typealias ModelVariables = VariableSet
-    typealias ModelUtility = ModelVariables.ModelUtility
 
     var entity: any Model
-    var accessibleServices: [UtilityType.Service : Service]
-    var delegate: ServiceResolvingDelegate?
 
     // MARK: - Initializers
-    // The service resolver is acting as both the delegate and listener here.
-    init(resolver: ServiceResolver) async throws {
-        try await self.init(delegate: resolver,
-                            listener: resolver)
-    }
-
-    init(delegate: ServiceResolvingDelegate? = nil,
-         listener: ServiceDelegate?) async throws {
-        self.entity = Entity<ModelUtility>(utility: ModelVariables.utility)
-        self.accessibleServices = [:]
-        // This is a very hacky solution to the fact that only service utilities should have a delegate. This is an extra layer of protection, but I'd prefer a better solution.
-        // The delegate doesn't belong here, I think it actually belongs on the service module.
-        if ModelUtility.self is UtilityType.Service.Type {
-            self.delegate = delegate
-        }
-
-        try await self.buildModel()
-        await self.updateDependencies()
-
-        listener?.subscribe(self)
-    }
-
-    // MARK: - ServiceResolvingBroadcaster Functions
-    func updateDependencies(from serviceResolver: ServiceResolving? = nil) async {
-        requiredServices.forEach { serviceType in
-            if let service: Service = self.delegate?.resolveService(ofType: serviceType) {
-                accessibleServices.updateValue(service, forKey: serviceType)
+    init() async throws {
+        self.entity = Entity(utility: ModelVariables.utility)
+        do {
+            /// Try retrieve and set model
+            if let dataRoutingService: DataRoutingService = await getService(ofType: .DataRouting) {
+                self.entity = try await dataRoutingService.loadDataFromDisk(for: ModelVariables.utility)
+            }
+        } catch {
+            for variable in ModelVariables.allCases {
+                try await updateModel(variable: variable, withValue: variable.defaultValue)
             }
         }
     }
+
+    // MARK: - ServiceResolvingBroadcaster Functions
 
     // MARK: - ModelControlling Functions
     func get() -> any Model {
@@ -73,12 +60,6 @@ actor EntityController<VariableSet: Variable>: ModelControlling {
 
     func set(entity: any Model) {
         self.entity = entity
-    }
-
-    func buildModel() async throws {
-        for variable in ModelVariables.allCases {
-            try await updateModel(variable: variable, withValue: variable.defaultValue)
-        }
     }
 
     //DtM
@@ -99,6 +80,26 @@ actor EntityController<VariableSet: Variable>: ModelControlling {
     }
 
     // MARK: - Helper Functions
+}
+
+extension EntityController {
+
+    // Nonisolated protocol conformance for `ServicesRequiring` for actor type
+    nonisolated var requiredServices: [UtilityType.Service] {
+        return [.DataRouting]
+    }
+
+    nonisolated var accessibleServices: [UtilityType.Service : any Service] {
+        get async {
+            var dictionary: [UtilityType.Service : Service] = [:]
+            await requiredServices.asyncForEach { serviceType in
+                if let service = await ServiceResolver.shared.resolveService(ofType: serviceType) {
+                    dictionary.updateValue(service, forKey: serviceType)
+                }
+            }
+            return dictionary
+        }
+    }
 }
 
 ///------

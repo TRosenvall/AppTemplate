@@ -21,7 +21,7 @@ class LaunchBuilder: LaunchBuilding {
     }
 
     // MARK: - LaunchBuilding Functions
-    func buildModule(listener: ServiceDelegate) async throws -> LaunchView {
+    func buildModule() async throws -> LaunchView {
         // Get needed properties
         let launchTheme = LaunchTheme(base: appTheme)
 
@@ -30,7 +30,7 @@ class LaunchBuilder: LaunchBuilding {
         let presenter = LaunchPresenter(viewController: view)
         let animator = LaunchAnimator(viewController: view,
                                       output: presenter)
-        let entityController = try await EntityController<LaunchVariables>(listener: listener)
+        let entityController = try await EntityController<LaunchVariables>()
         let interactor = LaunchInteractor(entityController: entityController,
                                           output: presenter)
         let router = LaunchRouter(presentingView: view,

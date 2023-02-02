@@ -104,8 +104,7 @@
 		85D543EF2941639200AF27FF /* DataRoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D543EE2941639200AF27FF /* DataRoutingService.swift */; };
 		85D700C1296BF8EE005E53A1 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D700C0296BF8EE005E53A1 /* Entity.swift */; };
 		85D700C3296BF977005E53A1 /* EntityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D700C2296BF977005E53A1 /* EntityController.swift */; };
-		85D700C5296BFAD8005E53A1 /* ServiceBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D700C4296BFAD8005E53A1 /* ServiceBroadcaster.swift */; };
-		85D700CA296FF148005E53A1 /* ServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D700C9296FF148005E53A1 /* ServiceDelegate.swift */; };
+		85FAF059298ADED900E751B9 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAF058298ADED900E751B9 /* Sequence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,8 +218,7 @@
 		85D543EE2941639200AF27FF /* DataRoutingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRoutingService.swift; sourceTree = "<group>"; };
 		85D700C0296BF8EE005E53A1 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		85D700C2296BF977005E53A1 /* EntityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityController.swift; sourceTree = "<group>"; };
-		85D700C4296BFAD8005E53A1 /* ServiceBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBroadcaster.swift; sourceTree = "<group>"; };
-		85D700C9296FF148005E53A1 /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
+		85FAF058298ADED900E751B9 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,9 +361,7 @@
 			children = (
 				858313D5292F7DDC004977EA /* ServiceContracts.swift */,
 				85D04C3A2958EC7100873D36 /* ServiceNamespace.swift */,
-				85D700C4296BFAD8005E53A1 /* ServiceBroadcaster.swift */,
 				858313D3292F7D11004977EA /* ServiceResolver.swift */,
-				85D700C9296FF148005E53A1 /* ServiceDelegate.swift */,
 				858313B1292F6E50004977EA /* Services */,
 			);
 			path = Backend;
@@ -645,6 +641,7 @@
 				858314722938208E004977EA /* UIView.swift */,
 				8583147429382297004977EA /* Exponentiation.swift */,
 				85C0A9CC2945D771002A5E83 /* SymetricKey.swift */,
+				85FAF058298ADED900E751B9 /* Sequence.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -802,6 +799,7 @@
 			files = (
 				8579B5512950A2C200C63103 /* DataRoutingVariables.swift in Sources */,
 				858314172930FF76004977EA /* EncryptionContracts.swift in Sources */,
+				85FAF059298ADED900E751B9 /* Sequence.swift in Sources */,
 				8583144B2931742A004977EA /* Constants.swift in Sources */,
 				8583143B2931475F004977EA /* LaunchPresenter.swift in Sources */,
 				8579B5462950A19200C63103 /* SettingsVariables.swift in Sources */,
@@ -841,14 +839,12 @@
 				85D700C3296BF977005E53A1 /* EntityController.swift in Sources */,
 				8579B54F2950A29B00C63103 /* EncryptionVariables.swift in Sources */,
 				8583144329314785004977EA /* LaunchTheme.swift in Sources */,
-				85D700C5296BFAD8005E53A1 /* ServiceBroadcaster.swift in Sources */,
 				85D04C3B2958EC7100873D36 /* ServiceNamespace.swift in Sources */,
 				8583147E29393213004977EA /* SettingsViewController.swift in Sources */,
 				858313B5292F6E8C004977EA /* HomePresenter.swift in Sources */,
 				858313D4292F7D11004977EA /* ServiceResolver.swift in Sources */,
 				858313BC292F6EC1004977EA /* HomeContracts.swift in Sources */,
 				858313CC292F7445004977EA /* AppTheme.swift in Sources */,
-				85D700CA296FF148005E53A1 /* ServiceDelegate.swift in Sources */,
 				85BEB56E294B1C1900F98F89 /* CodingContracts.swift in Sources */,
 				85831423293143B0004977EA /* SettingsContracts.swift in Sources */,
 				8583143529314742004977EA /* LaunchContracts.swift in Sources */,
@@ -1047,6 +1043,7 @@
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppTemplate/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "App Template";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1074,6 +1071,7 @@
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppTemplate/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "App Template";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

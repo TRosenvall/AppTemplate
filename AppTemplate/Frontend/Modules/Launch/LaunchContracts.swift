@@ -34,7 +34,7 @@ protocol LaunchPresenting: ModulePresenting {
 
 ///Responsible for digesting user input and sending responses to the output.
 protocol LaunchInput: ModuleInput {
-    func loadEntities()
+    func launch()
 }
 
 ///Responsible for providing feedback to the user or telling the router to route away if necessary.

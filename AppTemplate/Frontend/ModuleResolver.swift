@@ -30,30 +30,27 @@ class ModuleResolver: ModuleResolving {
 
     // MARK: - ModuleResolving Functions
     func resolveLaunchModule() async throws -> LaunchView {
-        let listener = ServiceResolver.shared
         let launchBuilder = LaunchBuilder(appTheme: appTheme,
                                           moduleResolver: self)
-        let launchModule = try await launchBuilder.buildModule(listener: listener)
+        let launchModule = try await launchBuilder.buildModule()
         activeModule = launchModule
         linkedToModules = [.Home]
         return launchModule
     }
 
     func resolveSettingsModule() async throws -> SettingsView {
-        let listener = ServiceResolver.shared
         let settingsBuilder = SettingsBuilder(appTheme: appTheme,
                                               moduleResolver: self)
-        let settingsModule = try await settingsBuilder.buildModule(listener: listener)
+        let settingsModule = try await settingsBuilder.buildModule()
         activeModule = settingsModule
         linkedToModules = [.Home]
         return settingsModule
     }
 
     func resolveHomeModule() async throws -> HomeView {
-        let listener = ServiceResolver.shared
         let homeBuilder = HomeBuilder(appTheme: appTheme,
                                           moduleResolver: self)
-        let homeModule = try await homeBuilder.buildModule(listener: listener)
+        let homeModule = try await homeBuilder.buildModule()
         activeModule = homeModule
         linkedToModules = [.Settings]
         return homeModule

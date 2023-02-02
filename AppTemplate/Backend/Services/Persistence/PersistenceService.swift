@@ -8,19 +8,15 @@
 import Foundation
 
 class PersistenceService: PersistenceServing {
-
+    
     // MARK: - Properties
-    var networkingService: NetworkingServing?
-
+    var requiredServices: [UtilityType.Service] = [.Networking]
+    
     var entityController: (any ModelControlling)?
-
+    
     // MARK: - Initializers
-    init() {}
-
-    func buildEntity(from resolver: ServiceResolver) throws {
-        Task {
-            self.entityController = try await EntityController<PersistenceVariables>(resolver: resolver)
-        }
+    init() async throws {
+        self.entityController = try await EntityController<PersistenceVariables>()
     }
     
     // MARK: - PersistenceServing Functions
@@ -39,7 +35,7 @@ class PersistenceService: PersistenceServing {
                                                    in: .userDomainMask,
                                                    appropriateFor: nil,
                                                    create: false)
-        fileURL.appendPathComponent(Constants.appName)
+        fileURL.appendPathComponent(Constants.appShortName)
         fileURL.appendPathComponent("\(utility).json")
         return try? Data(contentsOf: fileURL)
     }
@@ -49,7 +45,7 @@ class PersistenceService: PersistenceServing {
                                                    in: .userDomainMask,
                                                    appropriateFor: nil,
                                                    create: false)
-        fileURL.appendPathComponent(Constants.appName)
+        fileURL.appendPathComponent(Constants.appShortName)
         fileURL.appendPathComponent("\(utility).json")
         try? data?.write(to: fileURL)
     }
@@ -58,7 +54,7 @@ class PersistenceService: PersistenceServing {
         // TODO
     }
     
-    internal func cloudLoad(_ utility: Utility) -> Data? {
+    internal func cloudLoad(_ utility: Utility) throws -> Data? {
         // TODO
         return Data()
     }

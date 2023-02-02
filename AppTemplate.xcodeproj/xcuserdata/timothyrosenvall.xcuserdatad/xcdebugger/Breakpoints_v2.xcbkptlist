@@ -20,17 +20,537 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EB22CA99-3784-4255-B669-62BC41A3C962"
+            uuid = "65047172-EB2D-4CE9-B2C7-F7291170FAD1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AppTemplate/Shared/Entity/Entity.swift"
+            filePath = "AppTemplate/Backend/ServiceResolver.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "init(utility:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "configureServices()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "65047172-EB2D-4CE9-B2C7-F7291170FAD1 - c766939b3cd09f3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "65047172-EB2D-4CE9-B2C7-F7291170FAD1 - edb784db4faa1f62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "65047172-EB2D-4CE9-B2C7-F7291170FAD1 - 57cf13dc8e8558a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8B16E57-20A0-43AA-A30E-48395D2F44F9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Backend/ServiceResolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "configureServices()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D8B16E57-20A0-43AA-A30E-48395D2F44F9 - c766939b3cd09f1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "143">
+               </Location>
+               <Location
+                  uuid = "D8B16E57-20A0-43AA-A30E-48395D2F44F9 - c51605b71aded376"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "D8B16E57-20A0-43AA-A30E-48395D2F44F9 - 286425679f0fd31f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "D8B16E57-20A0-43AA-A30E-48395D2F44F9 - edb784db4faa1f62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "393BD83A-6F33-4145-8930-7138868FB6BA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Backend/ServiceResolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "configureServices()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "393BD83A-6F33-4145-8930-7138868FB6BA - edb784db4faa1f01"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "393BD83A-6F33-4145-8930-7138868FB6BA - 74593477d3c0fbcd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) await resume partial function for closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "393BD83A-6F33-4145-8930-7138868FB6BA - 57cf13dc8e8558a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3836E5B-E2CA-4B12-8EB8-EEABEEFBA872"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Backend/ServiceResolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "configureServices()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B3836E5B-E2CA-4B12-8EB8-EEABEEFBA872 - edb784db4faa1f01"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "B3836E5B-E2CA-4B12-8EB8-EEABEEFBA872 - 74593477d3c0fbcd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) await resume partial function for closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "B3836E5B-E2CA-4B12-8EB8-EEABEEFBA872 - 57cf13dc8e8558a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ACBA8C1A-4646-4F0B-814E-F1BA6482A8DC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Backend/ServiceResolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "configureServices()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ACBA8C1A-4646-4F0B-814E-F1BA6482A8DC - 57cf13dc8e85582f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "ACBA8C1A-4646-4F0B-814E-F1BA6482A8DC - 57cf13dc8e85582f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C16F9B1-6B69-45CA-AF18-285D06C63712"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Backend/ServiceResolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "configureServices()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9CF90CB1-1F9A-4B68-AF59-DC7A5F86D826"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Backend/ServiceResolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "configureServices()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9CF90CB1-1F9A-4B68-AF59-DC7A5F86D826 - 7e65335e3d5aba4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) suspend resume partial function for closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  uuid = "9CF90CB1-1F9A-4B68-AF59-DC7A5F86D826 - 57cf13dc8e85584c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "222">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DABDE0C-6E3F-4457-A6F7-7582BB54340B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Backend/ServiceResolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "configureServices()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1DABDE0C-6E3F-4457-A6F7-7582BB54340B - 7e65335e3d5aba4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) suspend resume partial function for closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  uuid = "1DABDE0C-6E3F-4457-A6F7-7582BB54340B - 57cf13dc8e85584c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 (AppTemplate.UtilityType.Service) async -&gt; () in AppTemplate.ServiceResolver.configureServices() async -&gt; Swift.Array&lt;Swift.Error&gt;"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "222">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE3D4588-5909-4B2C-89E9-2835994A1DF9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Backend/ServiceResolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "configureServices()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B468E910-F60A-46EE-A337-1F225513918C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Backend/ServiceResolver.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "configureService(ofType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B468E910-F60A-46EE-A337-1F225513918C - eaad886aa2038564"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) suspend resume partial function for AppTemplate.ServiceResolver.configureService(ofType: AppTemplate.UtilityType.Service) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "229">
+               </Location>
+               <Location
+                  uuid = "B468E910-F60A-46EE-A337-1F225513918C - 360256a45434c162"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for AppTemplate.ServiceResolver.configureService(ofType: AppTemplate.UtilityType.Service) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "229">
+               </Location>
+               <Location
+                  uuid = "B468E910-F60A-46EE-A337-1F225513918C - 51f6fcfe4e6c1d60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for AppTemplate.ServiceResolver.configureService(ofType: AppTemplate.UtilityType.Service) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "229">
+               </Location>
+               <Location
+                  uuid = "B468E910-F60A-46EE-A337-1F225513918C - 7d6a85086085596e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) suspend resume partial function for AppTemplate.ServiceResolver.configureService(ofType: AppTemplate.UtilityType.Service) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "229">
+               </Location>
+               <Location
+                  uuid = "B468E910-F60A-46EE-A337-1F225513918C - c828dfcf1aa9ab86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(10) suspend resume partial function for AppTemplate.ServiceResolver.configureService(ofType: AppTemplate.UtilityType.Service) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Backend/ServiceResolver.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "218">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

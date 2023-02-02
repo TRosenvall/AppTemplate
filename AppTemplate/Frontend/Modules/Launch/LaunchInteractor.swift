@@ -19,12 +19,27 @@ class LaunchInteractor: LaunchInput {
     }
 
     // MARK: - LaunchInput Functions
-    func loadEntities() {
+    func launch() {
         Task {
-            // Load services settings and other data as needed
+            await ServiceResolver.shared.configureServices()
             output.didFinishLoading()
         }
     }
 
     // MARK: - Helper Functions
+    private func loadKeyServices() async {
+        
+    }
+
+    private func loadAdditionalSerivces() async {
+        
+    }
+
+    private func loadModules() async {
+        
+    }
+
+    private func unloadInactiveServices() async {
+        
+    }
 }

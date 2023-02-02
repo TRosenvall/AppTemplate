@@ -21,7 +21,7 @@ class HomeBuilder: HomeBuilding {
     }
 
     // MARK: - HomeBuilding Functions
-    func buildModule(listener: ServiceDelegate) async throws -> HomeView {
+    func buildModule() async throws -> HomeView {
         // Get needed properties
         let homeTheme = HomeTheme(base: appTheme)
 
@@ -30,7 +30,7 @@ class HomeBuilder: HomeBuilding {
         let presenter = HomePresenter(viewController: view)
         let animator = HomeAnimator(viewController: view,
                                     output: presenter)
-        let entityController = try await EntityController<HomeVariables>(listener: listener)
+        let entityController = try await EntityController<HomeVariables>()
         let interactor = HomeInteractor(entityController: entityController,
                                         output: presenter)
         let router = HomeRouter(presentingView: view,

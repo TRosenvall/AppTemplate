@@ -21,7 +21,7 @@ class SettingsBuilder: SettingsBuilding {
     }
 
     // MARK: - SettingsBuilding Functions
-    func buildModule(listener: ServiceDelegate) async throws -> SettingsView {
+    func buildModule() async throws -> SettingsView {
         // Get needed properties
         let settingsTheme = SettingsTheme(base: appTheme)
 
@@ -30,7 +30,7 @@ class SettingsBuilder: SettingsBuilding {
         let presenter = SettingsPresenter(viewController: view)
         let animator = SettingsAnimator(viewController: view,
                                         output: presenter)
-        let entityController = try await EntityController<SettingsVariables>(listener: listener)
+        let entityController = try await EntityController<SettingsVariables>()
         let interactor = SettingsInteractor(entityController: entityController,
                                             output: presenter)
         let router = SettingsRouter(presentingView: view,

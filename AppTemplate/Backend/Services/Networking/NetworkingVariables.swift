@@ -9,9 +9,7 @@ import Foundation
 
 // TODO: - Update these as needed, these are data that will be saved, enums cannot conform to other protocols to extend their cases.
 enum NetworkingVariables: Variable {
-    case prop1
-    case prop2
-    case prop3
+    case isActive
 }
 
 extension NetworkingVariables {
@@ -20,17 +18,13 @@ extension NetworkingVariables {
 
     var defaultValue: Encodable? {
         switch self {
-        case .prop1: return nil
-        case .prop2: return 5
-        case .prop3: return "Hello World"
+        case .isActive: return true
         }
     }
 
     var isEncryptable: Bool {
         switch self {
-        case .prop1: return false
-        case .prop2: return true
-        case .prop3: return false
+        case .isActive: return true
         }
     }
 

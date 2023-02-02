@@ -13,12 +13,8 @@ class CodingService: CodingServing {
     var entityController: (any ModelControlling)?
 
     // MARK: - Initializers
-    init() {}
-
-    func buildEntity(from resolver: ServiceResolver) throws {
-        Task {
-            self.entityController = try await EntityController<CodingVariables>(resolver: resolver)
-        }
+    init() async throws {
+        self.entityController = try await EntityController<CodingVariables>()
     }
 
     // MARK: - CodingServing Functions

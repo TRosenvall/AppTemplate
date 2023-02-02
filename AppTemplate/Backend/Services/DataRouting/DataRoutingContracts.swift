@@ -9,11 +9,7 @@ import Foundation
 
 ///------
 
-protocol DataRoutingServing: Service {
-    var persistenceService: PersistenceServing? { get set }
-    var codingService: CodingServing? { get set }
-    var encryptionService: EncryptionServing? { get set }
-
+protocol DataRoutingServing: Service, ServicesRequiring {
     // Used to get the data values needed to be persisted. Uses the CodingService, EncryptionService, and PersistenceService
     func updateEntityData<T: Variable, R: Utility>(for variable: T,
                                                    with value: Encodable?,
@@ -24,7 +20,7 @@ protocol DataRoutingServing: Service {
                                                   from entity: any Model) async throws -> R?
 
     // Called from modelControllers to load entity data from disk. Uses PersistenceService
-    func loadDataFromDisk<T: Utility>(for utility: T) throws -> any Model
+    func loadDataFromDisk<T: Utility>(for utility: T) async throws -> any Model
 }
 
 ///------

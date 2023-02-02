@@ -31,7 +31,6 @@ class LaunchViewController: UIViewController, LaunchView {
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-//        constraints?.build()
     }
 
     override func viewDidAppear(_ animated: Bool) {

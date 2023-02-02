@@ -14,9 +14,7 @@ import Foundation
 
 ///------
 
-protocol PersistenceServing: Service {
-
-    var networkingService: NetworkingServing? { get set }
+protocol PersistenceServing: Service, ServicesRequiring {
 
     func save(_ entityData: Data?, for utility: Utility) async throws
 
@@ -30,7 +28,7 @@ protocol PersistenceServing: Service {
     func cloudSave(_ data: Data?, for utility: Utility) throws
 
     // Loads the cloud data if cloud saves are enabled and module is loaded, this must be called from the settings menu.
-    func cloudLoad(_ utility: Utility) -> Data?
+    func cloudLoad(_ utility: Utility) throws -> Data?
 }
 
 ///------

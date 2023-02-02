@@ -20,43 +20,58 @@ import Foundation
 
 protocol Service {
     var entityController: (any ModelControlling)? { get set }
-    func buildEntity(from resolver: ServiceResolver) throws
 }
 
 ///------
 
-protocol ServiceResolvingDelegate {
-    func toggle(service: UtilityType.Service, to state: Bool)
-
-    func resolveService(ofType serviceType: UtilityType.Service) -> Service?
+/// This delegate is used by the settings module to modify the state of the service.
+protocol ToggleServiceDelegate: Actor {
+    func toggle(service: UtilityType.Service, to state: Bool) async throws
 }
 
-protocol ServiceResolving: ServiceResolvingDelegate, ServiceDelegate {
+protocol ServiceResolving: Actor, ToggleServiceDelegate {
+    /// A singleton instance to provide global access to the `ServiceResolving` instance.
+    static var shared: ServiceResolving { get }
 
-    var persistenceService: PersistenceServing { get }
-    var codingService: CodingServing { get }
-    var encryptionService: EncryptionServing { get }
-    var dataRoutingService: DataRoutingServing { get }
-    var networkingService: NetworkingServing { get }
-
-    var subscribers: [ServiceResolvingBroadcaster]? { get set }
+    /// A list of all services in the active state.
     var activeServices: [UtilityType.Service: Service] { get set }
 
-    /// Resolves a copy of `PersistenceServing`
-    func resolvePersistenceService() -> PersistenceServing?
+    /// Needs to be run in order to initialize the services within the service resolver.
+    func configureServices() async -> [Error]
 
-    /// Resolves a copy of `CodingServing`
-    func resolveCodingService() -> CodingServing?
-
-    /// Resolves a copy of `EncryptionServing`
-    func resolveEncryptionService() -> EncryptionServing?
-
-    /// Resolves a copy of `DataRoutingServing`
-    func resolveDataRoutingService() -> DataRoutingServing?
-
-    /// Resolves a copy of `NetworkingServing`
-    func resolveNetworkingService() -> NetworkingServing?
+    /// Used to resolve a copy of an individual service from the activeServices list.
+    func resolveService(ofType serviceType: UtilityType.Service) -> (any Service)?
 }
 
 ///------
 
+protocol ServicesRequiring {
+
+    /// Put any required services here. Otherwise, these services won't be accessible within the object.
+    var requiredServices: [UtilityType.Service] { get }
+
+    /// These are the services that can be used within the object. These are updated when a service is toggled on/off
+    var accessibleServices: [UtilityType.Service: any Service] { get async }
+
+    /// This function returns the service from the `accessibleServices` variable.
+    func getService<T: Service>(ofType serviceType: UtilityType.Service) async -> T?
+}
+
+// Overridable Default Implementations
+extension ServicesRequiring {
+    nonisolated var accessibleServices: [UtilityType.Service : any Service] {
+        get async {
+            var dictionary: [UtilityType.Service : Service] = [:]
+            await requiredServices.asyncForEach { serviceType in
+                if let service = await ServiceResolver.shared.resolveService(ofType: serviceType) {
+                    dictionary.updateValue(service, forKey: serviceType)
+                }
+            }
+            return dictionary
+        }
+    }
+
+    func getService<T: Service>(ofType serviceType: UtilityType.Service) async -> T? {
+        return await accessibleServices[serviceType] as? T
+    }
+}
