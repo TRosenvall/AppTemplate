@@ -30,7 +30,11 @@ class HomeBuilder: HomeBuilding {
         let presenter = HomePresenter(viewController: view)
         let animator = HomeAnimator(viewController: view,
                                     output: presenter)
-        let entityController = try await EntityController<HomeVariables>()
+
+        /// Can be configured immediately
+        let entityController = EntityController<HomeVariables>()
+        try await entityController.configure()
+
         let interactor = HomeInteractor(entityController: entityController,
                                         output: presenter)
         let router = HomeRouter(presentingView: view,

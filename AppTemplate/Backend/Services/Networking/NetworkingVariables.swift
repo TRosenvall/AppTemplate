@@ -8,8 +8,8 @@
 import Foundation
 
 // TODO: - Update these as needed, these are data that will be saved, enums cannot conform to other protocols to extend their cases.
-enum NetworkingVariables: Variable {
-    case isActive
+enum NetworkingVariables: ServiceVariable {
+    case serviceState
 }
 
 extension NetworkingVariables {
@@ -18,17 +18,21 @@ extension NetworkingVariables {
 
     var defaultValue: Encodable? {
         switch self {
-        case .isActive: return true
+        case .serviceState: return true
         }
     }
 
     var isEncryptable: Bool {
         switch self {
-        case .isActive: return true
+        case .serviceState: return true
         }
     }
 
     static var utility: UtilityType.Service {
         return .Networking
+    }
+
+    static var loadPriority: Int {
+        return 5
     }
 }

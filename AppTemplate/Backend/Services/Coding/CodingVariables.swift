@@ -9,8 +9,8 @@ import Foundation
 
 ///------
 
-enum CodingVariables: Variable {
-    case isActive
+enum CodingVariables: ServiceVariable {
+    case serviceState
 }
 
 extension CodingVariables {
@@ -19,18 +19,22 @@ extension CodingVariables {
 
     var defaultValue: Encodable? {
         switch self {
-        case .isActive: return true
+        case .serviceState: return true
         }
     }
 
     var isEncryptable: Bool {
         switch self {
-        case .isActive: return true
+        case .serviceState: return true
         }
     }
 
     static var utility: UtilityType.Service {
         return .Coding
+    }
+
+    static var loadPriority: Int {
+        return 3
     }
 }
 

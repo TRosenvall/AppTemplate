@@ -13,8 +13,8 @@ protocol Model: Codable {
     associatedtype ModelUtility: Codable
 
     var utility: ModelUtility { get set }
-    var storedData: [String: StoredData]? { get set }
-    var encryptedData: [String: EncryptedData]? { get set }
+    var storedData: [String: StoredData] { get set }
+    var encryptedData: [String: EncryptedData] { get set }
 }
 
 ///------
@@ -26,12 +26,15 @@ class Entity<ModelUtility: Utility>: Model {
     typealias ModelUtility = ModelUtility
 
     var utility: ModelUtility
-    var storedData: [String : StoredData]?
-    var encryptedData: [String : EncryptedData]?
+    var storedData: [String : StoredData]
+    var encryptedData: [String : EncryptedData]
 
     // MARK: - Initializers
     init(utility: ModelUtility) {
+        print("900. Initializing entity for \(utility)")
         self.utility = utility
+        self.storedData = [:]
+        self.encryptedData = [:]
     }
 
     // MARK: - ServiceModel Functions

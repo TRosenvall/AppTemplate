@@ -13,8 +13,8 @@ class NetworkingService: NetworkingServing {
     var entityController: (any ModelControlling)?
 
     // MARK: - Initializers
-    init() async throws {
-        self.entityController = try await EntityController<NetworkingVariables>()
+    init() {
+        self.entityController = EntityController<VariableSet>()
     }
 
     // MARK: - NetworkingServing Functions

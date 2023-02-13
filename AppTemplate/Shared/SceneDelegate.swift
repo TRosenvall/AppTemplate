@@ -13,19 +13,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         Task {
-            do {
-                let appTheme = AppTheme()
-                let moduleResolver = ModuleResolver(appTheme: appTheme)
-                
-                guard let windowScene = (scene as? UIWindowScene) else { return }
-                
-                window = UIWindow(windowScene: windowScene)
-                window?.rootViewController = try await moduleResolver.resolveLaunchModule()
-                window?.makeKeyAndVisible()
-            } catch {
-                print("Oops")
-                print(error)
-            }
+            let appTheme = AppTheme()
+            let moduleResolver = ModuleResolver(appTheme: appTheme)
+            
+            guard let windowScene = (scene as? UIWindowScene) else { return }
+            
+            window = UIWindow(windowScene: windowScene)
+            window?.rootViewController = await moduleResolver.resolveLaunchModule()
+            window?.makeKeyAndVisible()
         }
     }
 

@@ -40,7 +40,7 @@ extension AES.GCM.Nonce {
 
 ///------
 
-protocol EncryptionServing: Service {
+protocol EncryptionServing: Service where VariableSet == EncryptionVariables {
 
     func decrypt(_ encryptedData: EncryptedData?, withKey key: SymmetricKey?) throws -> Data
     func encrypt(_ data: Data?, withKey key: SymmetricKey?) throws -> EncryptedData
@@ -53,6 +53,7 @@ protocol EncryptionServing: Service {
     ///app template, this key needs to be created and tied to userData and persisted.
     func getSymmetricKey(for utility: Utility) throws -> SymmetricKey?
 
+    /// Temporary notes - To be deleted. Not the actual flow.
     /// Toggle On
     /// Checks all save data directories
     /// Pulls all app-owned .json files
@@ -69,6 +70,43 @@ protocol EncryptionServing: Service {
     /// Removes the app-owned .encr files
     /// Ensures all future saved data will be saved in a decrypted format
 
+}
+
+/// Default Implementations
+extension EncryptionServing {
+    var state: Bool {
+        get async throws {
+            let entityController = entityController as? EntityController<VariableSet>
+            guard let state: Bool = try await entityController?.retrieveData(for: .serviceState) else {
+                throw "Entity not configured"
+            }
+            return state
+        }
+    }
+
+    var isEncryptionEnabled: Bool {
+        get async throws {
+            print("1300. Retrieving encryption enabled status.")
+            let controller = self.entityController as? EntityController<VariableSet>
+            print("1301. Retrieving data from controller.")
+            guard let enabled: Bool = try await controller?.retrieveData(for: .isEncryptionEnabled) else {
+                print("1302. Returning default value of true")
+                return true
+            }
+            print("1303. Encryption Enabled: \(enabled)")
+            return enabled
+        }
+    }
+
+    func toggleState() async throws {
+        let entityController = entityController as? EntityController<VariableSet>
+        if let state: Bool = try await entityController?.retrieveData(for: .serviceState) {
+            try await entityController?.updateModel(variable: .serviceState, withValue: !state)
+        } else {
+            let defaultState = VariableSet.serviceState.defaultValue as! Bool
+            try await entityController?.updateModel(variable: .serviceState, withValue: defaultState)
+        }
+    }
 }
 
 ///------

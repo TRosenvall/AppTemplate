@@ -99,12 +99,12 @@
 		85BEB580294B1DBA00F98F89 /* AppTemplateNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BEB57F294B1DBA00F98F89 /* AppTemplateNamespace.swift */; };
 		85C0A9CD2945D771002A5E83 /* SymetricKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0A9CC2945D771002A5E83 /* SymetricKey.swift */; };
 		85D04C392958205000873D36 /* DataRoutingContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D04C382958205000873D36 /* DataRoutingContracts.swift */; };
-		85D04C3B2958EC7100873D36 /* ServiceNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D04C3A2958EC7100873D36 /* ServiceNamespace.swift */; };
 		85D04C3D295908FC00873D36 /* ModuleNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D04C3C295908FC00873D36 /* ModuleNamespace.swift */; };
 		85D543EF2941639200AF27FF /* DataRoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D543EE2941639200AF27FF /* DataRoutingService.swift */; };
 		85D700C1296BF8EE005E53A1 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D700C0296BF8EE005E53A1 /* Entity.swift */; };
 		85D700C3296BF977005E53A1 /* EntityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D700C2296BF977005E53A1 /* EntityController.swift */; };
 		85FAF059298ADED900E751B9 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAF058298ADED900E751B9 /* Sequence.swift */; };
+		85FAF05F298D758800E751B9 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAF05E298D758800E751B9 /* Bool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,12 +213,12 @@
 		85BEB57F294B1DBA00F98F89 /* AppTemplateNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTemplateNamespace.swift; sourceTree = "<group>"; };
 		85C0A9CC2945D771002A5E83 /* SymetricKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymetricKey.swift; sourceTree = "<group>"; };
 		85D04C382958205000873D36 /* DataRoutingContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRoutingContracts.swift; sourceTree = "<group>"; };
-		85D04C3A2958EC7100873D36 /* ServiceNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceNamespace.swift; sourceTree = "<group>"; };
 		85D04C3C295908FC00873D36 /* ModuleNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleNamespace.swift; sourceTree = "<group>"; };
 		85D543EE2941639200AF27FF /* DataRoutingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRoutingService.swift; sourceTree = "<group>"; };
 		85D700C0296BF8EE005E53A1 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		85D700C2296BF977005E53A1 /* EntityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityController.swift; sourceTree = "<group>"; };
 		85FAF058298ADED900E751B9 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		85FAF05E298D758800E751B9 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,8 +281,8 @@
 		858313AD292F6DBF004977EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				858313C8292F71C9004977EA /* Strings */,
 				858313E2292F9432004977EA /* Assets */,
+				858313C8292F71C9004977EA /* Strings */,
 				85831388292F6DA4004977EA /* LaunchScreen.storyboard */,
 				8583138B292F6DA4004977EA /* Info.plist */,
 				8579B5542951510B00C63103 /* Readme.rtf */,
@@ -360,7 +360,6 @@
 			isa = PBXGroup;
 			children = (
 				858313D5292F7DDC004977EA /* ServiceContracts.swift */,
-				85D04C3A2958EC7100873D36 /* ServiceNamespace.swift */,
 				858313D3292F7D11004977EA /* ServiceResolver.swift */,
 				858313B1292F6E50004977EA /* Services */,
 			);
@@ -642,6 +641,7 @@
 				8583147429382297004977EA /* Exponentiation.swift */,
 				85C0A9CC2945D771002A5E83 /* SymetricKey.swift */,
 				85FAF058298ADED900E751B9 /* Sequence.swift */,
+				85FAF05E298D758800E751B9 /* Bool.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -839,13 +839,13 @@
 				85D700C3296BF977005E53A1 /* EntityController.swift in Sources */,
 				8579B54F2950A29B00C63103 /* EncryptionVariables.swift in Sources */,
 				8583144329314785004977EA /* LaunchTheme.swift in Sources */,
-				85D04C3B2958EC7100873D36 /* ServiceNamespace.swift in Sources */,
 				8583147E29393213004977EA /* SettingsViewController.swift in Sources */,
 				858313B5292F6E8C004977EA /* HomePresenter.swift in Sources */,
 				858313D4292F7D11004977EA /* ServiceResolver.swift in Sources */,
 				858313BC292F6EC1004977EA /* HomeContracts.swift in Sources */,
 				858313CC292F7445004977EA /* AppTheme.swift in Sources */,
 				85BEB56E294B1C1900F98F89 /* CodingContracts.swift in Sources */,
+				85FAF05F298D758800E751B9 /* Bool.swift in Sources */,
 				85831423293143B0004977EA /* SettingsContracts.swift in Sources */,
 				8583143529314742004977EA /* LaunchContracts.swift in Sources */,
 				8579B5442950A0ED00C63103 /* HomeVariables.swift in Sources */,

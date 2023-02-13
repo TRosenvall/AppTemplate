@@ -1,5 +1,5 @@
 //
-//  Theme.swift
+//  AppTheme.swift
 //  AppTemplate
 //
 //  Created by Timothy Rosenvall on 11/24/22.

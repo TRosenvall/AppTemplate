@@ -12,119 +12,148 @@ import Foundation
 class DataRoutingService: DataRoutingServing {
 
     // MARK: - Properties
-    var requiredServices: [UtilityType.Service] = [.Persistence,
-                                                   .Coding,
-                                                   .Encryption]
-
     var entityController: (any ModelControlling)?
 
     // MARK: - Initializers
-    init() async throws {
-        self.entityController = try await EntityController<DataRoutingVariables>()
+    init() {
+        self.entityController = EntityController<VariableSet>()
     }
 
     // MARK: - DataRoutingServing Functions
     /// Used to update the value on an entity.
-    func updateEntityData<T, R>(for variable: T,
-                                with value: Encodable?,
-                                on utility: R) async throws -> any Model where T : Variable, R : Utility {
+    func updateEntityData<T>(for variable: T,
+                             with value: Encodable?,
+                             on entity: (any Model)) async throws -> (any Model)? where T : Variable {
+        print("1100. Updating entity")
         // Setvices
         let persistenceService: PersistenceService? = await getService(ofType: .Persistence)
+        print("1101. Retrieved persistenceService: \(persistenceService != nil)")
         let codingService: CodingService? = await getService(ofType: .Coding)
+        print("1102. Retrieved codingService: \(codingService != nil)")
         let encryptionService: EncryptionService? = await getService(ofType: .Encryption)
+        print("1103. Retrieved codingService: \(codingService != nil)")
 
-        // Create new entity
-        let entity = Entity<R>(utility: utility)
+        // Create mutable entity from the existing entity
+        var entity = entity
 
-        // Ensure we have a value
+        // Ensure we have a value, otherwise remove it from the entity
         guard let value else {
-            entity.storedData?.removeValue(forKey: variable.label)
-            entity.encryptedData?.removeValue(forKey: variable.label)
+            print("1104. Value is nil, removing value from entity")
+            entity.storedData.removeValue(forKey: variable.label)
+            entity.encryptedData.removeValue(forKey: variable.label)
             return entity
         }
+        print("1105. Value: \(value)")
 
+        
         // Get the data for a value or throw an error
         let valueData = try codingService?.encode(value)
+        print("1106. Encoded value into valueData: \(String(describing: valueData))")
 
         // Encrypt and store data if variable is encryptable and encryption service is on.
-        if try await isEncryptable(variable),
-           let symmetricKey = try encryptionService?.getSymmetricKey(for: utility),
-           let encryptedData = try encryptionService?.encrypt(valueData, withKey: symmetricKey) {
-            entity.encryptedData?.updateValue(encryptedData, forKey: variable.label)
-        } else {
+        print("1107. Checking if the value can be encrypted.")
+        do {
+            let isEnabled = try await encryptionService?.isEncryptionEnabled == true
+            let isEncryptable = variable.isEncryptable
+            var isEncryptionAvailable = isEncryptable && isEncryptable
+            print("1107.25. utility: \(T.utility)")
+            print("1107.5. isEnabled: \(isEnabled)")
+            print("1107.75. isEncryptable: \(isEncryptable)")
+            if isEncryptionAvailable {
+                print("1112.5. Encryption available")
+                if let symmetricKey = try encryptionService?.getSymmetricKey(for: utility),
+                   let encryptedData = try encryptionService?.encrypt(valueData, withKey: symmetricKey) {
+                    print("1108. Value is encrypted, encryption service is enabled")
+                    print("1109. Utility: \(utility), SymmetricKey: \(symmetricKey), ")
+                    print("1110. EncryptedData: \(encryptedData)")
+                    entity.encryptedData.updateValue(encryptedData, forKey: variable.label)
+                    print("1111. Updated entity with encrypted value")
+                }
+            } else {
+                print("1112. Encryption off and unneeded, throwing error to run catch block.")
+                throw "Encryption unused"
+            }
+        } catch {
+            print("1112. Unable to encrypt data")
             let storedData = StoredData(value: valueData)
-            entity.storedData?.updateValue(storedData, forKey: variable.label)
+            entity.storedData.updateValue(storedData, forKey: variable.label)
+            print("1113. Updated entity with value")
         }
 
         // Persist the new entity
+        print("1114. Persisting entity")
         let entityData = try codingService?.encode(entity)
-        try await persistenceService?.save(entityData, for: utility)
+        try await persistenceService?.save(entityData, for: T.utility)
+        print("1115. Persistence finished")
 
         // Return it to be set on the model.
+        print("1116. Entity Stored Data")
+        print(entity.storedData)
+        print("1117. Entity Encrypted Data")
+        print(entity.encryptedData)
+
         return entity
     }
 
     /// Used to get a value from the entity
     func retrieveValue<T, R>(for variable: T,
-                             from entity: any Model) async throws -> R? where T : Variable, R : Decodable {
+                             from entity: (any Model)) async throws -> R? where T : Variable, R : Decodable {
+        print("1500. Retrieving value")
         // Setvices
         let codingService: CodingService? = await getService(ofType: .Coding)
+        print("1501. Retrieved codingService: \(codingService != nil)")
         let encryptionService: EncryptionService? = await getService(ofType: .Encryption)
+        print("1502. Retrieved codingService: \(codingService != nil)")
 
         // Create an empty data value
         var data: Data?
+        print("1503. Getting empty data value to be returned")
 
         // If the variable is decryptable, set the data to it's decrypted state
-        if try await isEncryptable(variable) &&
-           entity.encryptedData?[variable.label] != nil,
+        print("1504. Checking if decryption is available and necessary.")
+        if variable.isEncryptable &&
+           entity.encryptedData[variable.label] != nil,
            let utility = entity.utility as? Utility,
            let symmetricKey = try encryptionService?.getSymmetricKey(for: utility),
-           let encryptedData = entity.encryptedData?[variable.label] {
+           let encryptedData = entity.encryptedData[variable.label] {
+            print("1505. Decrypting data")
             data = try encryptionService?.decrypt(encryptedData, withKey: symmetricKey)
         } else {
+            print("1506. Retrieving stored data")
             // Otherwise retrieve the decrypted value
-            data = entity.storedData?[variable.label]?.value
+            data = entity.storedData[variable.label]?.value
         }
 
         // Decode and return the decrypted data.
-        return try codingService?.decode(data: data)
+        print("1507. Decoding and returning data.")
+        do {
+            return try codingService?.decode(data: data)
+        } catch {
+            print("1508. Unable to decode value, returning default value.")
+            return variable.defaultValue as? R
+        }
     }
 
-    /// Used to get model data from the disk
-    func loadDataFromDisk<T: Utility>(for utility: T) async throws -> any Model {
+    /// Used to get model data. The var `fromBackup` will always be false unless the user has initiated otherwise.
+    func loadData<T: Utility>(for utility: T, fromBackup: Bool = false) async throws -> (any Model)? {
         // Setvices
+        print("700. Getting persistence and coding services.")
         let persistenceService: PersistenceService? = await getService(ofType: .Persistence)
+        print("701. Retrieved persistenceService \(persistenceService != nil)")
         let codingService: CodingService? = await getService(ofType: .Coding)
+        print("702. Retrieved codingService \(codingService != nil)")
 
         // Load
-        let data = try persistenceService?.locallyLoad(utility)
+        print("703. Load from cloud backup: \(fromBackup)")
+        let data = fromBackup ? try persistenceService?.cloudLoad(utility) : try persistenceService?.locallyLoad(utility)
+        print("704. Retrieved data: \(String(describing: data)), decoding data.")
         guard let entity: Entity<T> = try codingService?.decode(data: data)
-        else { throw "Unable to retrieve entity" }
-        return entity
-    }
-
-    /// Used to get model data from cloud store. This is used on a user-initiated command.
-    func loadDataFromCloud<T: Utility>(for utility: T) async throws -> any Model {
-        // Setvices
-        let persistenceService: PersistenceService? = await getService(ofType: .Persistence)
-        let codingService: CodingService? = await getService(ofType: .Coding)
-
-        let data = try persistenceService?.cloudLoad(utility)
-        guard let entity: Entity<T> = try codingService?.decode(data: data)
-        else { throw "Unable to retrieve entity" }
+        else {
+            print("705. Unable to retrieve entity")
+            throw "Unable to retrieve entity" }
+        print("706. Retrieved entity for: \(entity.utility)")
         return entity
     }
 
     // MARK: - Helper Functions
-    func isEncryptable<T: Variable>(_ variable: T) async throws -> Bool {
-        // Setvices
-        let encryptionService: EncryptionService? = await getService(ofType: .Encryption)
-
-        if let encryptionEntity = encryptionService?.entityController as? EntityController<EncryptionVariables>,
-           let encryptionServiceIsActive: Bool = try await encryptionEntity.retrieveData(for: .isActive),
-           variable.isEncryptable && encryptionServiceIsActive {
-            return true
-        }
-        return false
-    }
 }

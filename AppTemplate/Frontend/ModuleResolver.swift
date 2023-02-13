@@ -29,10 +29,10 @@ class ModuleResolver: ModuleResolving {
     }
 
     // MARK: - ModuleResolving Functions
-    func resolveLaunchModule() async throws -> LaunchView {
+    func resolveLaunchModule() async -> LaunchView {
         let launchBuilder = LaunchBuilder(appTheme: appTheme,
                                           moduleResolver: self)
-        let launchModule = try await launchBuilder.buildModule()
+        let launchModule = await launchBuilder.buildModule()
         activeModule = launchModule
         linkedToModules = [.Home]
         return launchModule

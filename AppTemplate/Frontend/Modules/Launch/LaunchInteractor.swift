@@ -21,25 +21,16 @@ class LaunchInteractor: LaunchInput {
     // MARK: - LaunchInput Functions
     func launch() {
         Task {
-            await ServiceResolver.shared.configureServices()
+            print("100. Loading Data")
+            var exceptions = await ServiceResolver.shared.configureServices()
+            do {
+                print("x00. Configuring Launch Entity Controller")
+                try await self.entityController.configure()
+            } catch {
+                exceptions.append(error)            }
             output.didFinishLoading()
         }
     }
 
     // MARK: - Helper Functions
-    private func loadKeyServices() async {
-        
-    }
-
-    private func loadAdditionalSerivces() async {
-        
-    }
-
-    private func loadModules() async {
-        
-    }
-
-    private func unloadInactiveServices() async {
-        
-    }
 }

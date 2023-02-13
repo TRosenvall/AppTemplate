@@ -9,8 +9,8 @@ import Foundation
 
 ///------
 
-enum DataRoutingVariables: Variable {
-    case isActive
+enum DataRoutingVariables: ServiceVariable {
+    case serviceState
 }
 
 extension DataRoutingVariables {
@@ -19,18 +19,22 @@ extension DataRoutingVariables {
 
     var defaultValue: Encodable? {
         switch self {
-        case .isActive: return true
+        case .serviceState: return true
         }
     }
 
     var isEncryptable: Bool {
         switch self {
-        case .isActive: return true
+        case .serviceState: return true
         }
     }
 
     static var utility: UtilityType.Service {
         return .DataRouting
+    }
+
+    static var loadPriority: Int {
+        return 4
     }
 }
 

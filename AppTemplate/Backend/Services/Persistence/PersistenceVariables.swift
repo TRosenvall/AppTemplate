@@ -9,8 +9,8 @@ import Foundation
 
 ///------
 
-enum PersistenceVariables: Variable {
-    case isActive
+enum PersistenceVariables: ServiceVariable {
+    case serviceState
     case isCloudBackupEnabled
 }
 
@@ -21,19 +21,23 @@ extension PersistenceVariables {
     // Variable Properties
     var defaultValue: Encodable? {
         switch self {
-        case .isActive: return true
+        case .serviceState: return true
         case .isCloudBackupEnabled: return false
         }
     }
 
     var isEncryptable: Bool {
         switch self {
-        case .isActive: return true
+        case .serviceState: return true
         case .isCloudBackupEnabled: return true
         }
     }
 
     static var utility: UtilityType.Service {
         return .Persistence
+    }
+
+    static var loadPriority: Int {
+        return 2
     }
 }

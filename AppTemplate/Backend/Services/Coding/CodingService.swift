@@ -13,19 +13,23 @@ class CodingService: CodingServing {
     var entityController: (any ModelControlling)?
 
     // MARK: - Initializers
-    init() async throws {
-        self.entityController = try await EntityController<CodingVariables>()
+    init() {
+        self.entityController = EntityController<VariableSet>()
     }
 
     // MARK: - CodingServing Functions
     func encode<T: Encodable>(_ object: T) throws -> Data? {
+        print("1200. Encoding data into \(object)")
         return try encoder.encode(object)
     }
 
     func decode<T: Decodable>(data: Data?) throws -> T {
+        print("1600. Decoding data")
         guard let data = data else {
+            print("1601. No data found, throwing.")
             throw "No Data Found"
         }
+        print("1602. Data retrieved, decoding.")
         return try decoder.decode(T.self, from: data)
     }
 
