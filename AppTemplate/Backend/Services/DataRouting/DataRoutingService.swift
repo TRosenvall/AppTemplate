@@ -31,7 +31,7 @@ class DataRoutingService: DataRoutingServing {
         let codingService: CodingService? = await getService(ofType: .Coding)
         print("1102. Retrieved codingService: \(codingService != nil)")
         let encryptionService: EncryptionService? = await getService(ofType: .Encryption)
-        print("1103. Retrieved codingService: \(codingService != nil)")
+        print("1103. Retrieved encryptionService: \(encryptionService != nil)")
 
         // Create mutable entity from the existing entity
         var entity = entity
@@ -55,13 +55,14 @@ class DataRoutingService: DataRoutingServing {
         do {
             let isEnabled = try await encryptionService?.isEncryptionEnabled == true
             let isEncryptable = variable.isEncryptable
-            var isEncryptionAvailable = isEncryptable && isEncryptable
+            let isEncryptionAvailable = isEncryptable && isEncryptable
             print("1107.25. utility: \(T.utility)")
             print("1107.5. isEnabled: \(isEnabled)")
             print("1107.75. isEncryptable: \(isEncryptable)")
             if isEncryptionAvailable {
                 print("1112.5. Encryption available")
-                if let symmetricKey = try encryptionService?.getSymmetricKey(for: utility),
+                print("1504.5. Will retrieving symmetric key for utility: \(T.utility)")
+                if let symmetricKey = try encryptionService?.getSymmetricKey(for: T.utility),
                    let encryptedData = try encryptionService?.encrypt(valueData, withKey: symmetricKey) {
                     print("1108. Value is encrypted, encryption service is enabled")
                     print("1109. Utility: \(utility), SymmetricKey: \(symmetricKey), ")
@@ -103,7 +104,7 @@ class DataRoutingService: DataRoutingServing {
         let codingService: CodingService? = await getService(ofType: .Coding)
         print("1501. Retrieved codingService: \(codingService != nil)")
         let encryptionService: EncryptionService? = await getService(ofType: .Encryption)
-        print("1502. Retrieved codingService: \(codingService != nil)")
+        print("1502. Retrieved encryptionService: \(encryptionService != nil)")
 
         // Create an empty data value
         var data: Data?
@@ -111,12 +112,13 @@ class DataRoutingService: DataRoutingServing {
 
         // If the variable is decryptable, set the data to it's decrypted state
         print("1504. Checking if decryption is available and necessary.")
+        print("1504.5. Will retrieving symmetric key for utility: \(entity.utility)")
         if variable.isEncryptable &&
            entity.encryptedData[variable.label] != nil,
            let utility = entity.utility as? Utility,
            let symmetricKey = try encryptionService?.getSymmetricKey(for: utility),
            let encryptedData = entity.encryptedData[variable.label] {
-            print("1505. Decrypting data")
+            print("1505. Decrypting Data")
             data = try encryptionService?.decrypt(encryptedData, withKey: symmetricKey)
         } else {
             print("1506. Retrieving stored data")

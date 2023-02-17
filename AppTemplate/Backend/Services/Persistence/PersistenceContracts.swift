@@ -34,6 +34,10 @@ protocol PersistenceServing: Service, ServicesRequiring where VariableSet == Per
 
 /// Default Implementations
 extension PersistenceServing {
+    var fileManager: FileManager {
+        return FileManager.default
+    }
+
     var state: Bool {
         get async throws {
             let entityController = entityController as? EntityController<VariableSet>

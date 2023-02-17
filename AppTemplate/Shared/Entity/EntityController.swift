@@ -86,7 +86,7 @@ actor EntityController<VariableSet: Variable>: ModelControlling {
     func retrieveData<T: Decodable>(for variable: ModelVariables) async throws -> T? {
         print("1400. Retrieving entity variable: \(variable)")
         guard let entity else {
-            print("1401. Entity not initialized yet. Throwing error")
+            print("1401. Entity not initialized yet. Throwing")
             throw "Entity not configured, unable to retrieve data"
         }
         print("1402. Getting dataRoutingService")

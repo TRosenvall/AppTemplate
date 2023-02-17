@@ -38,7 +38,7 @@ class HomeBuilder: HomeBuilding {
         let interactor = HomeInteractor(entityController: entityController,
                                         output: presenter)
         let router = HomeRouter(presentingView: view,
-                                  moduleResolver: moduleResolver)
+                                moduleResolver: moduleResolver)
 
         // Set the missing parts where needed
         presenter.animator = animator

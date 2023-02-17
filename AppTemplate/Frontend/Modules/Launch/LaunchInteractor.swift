@@ -27,7 +27,8 @@ class LaunchInteractor: LaunchInput {
                 print("x00. Configuring Launch Entity Controller")
                 try await self.entityController.configure()
             } catch {
-                exceptions.append(error)            }
+                exceptions.append(error)
+            }
             output.didFinishLoading()
         }
     }

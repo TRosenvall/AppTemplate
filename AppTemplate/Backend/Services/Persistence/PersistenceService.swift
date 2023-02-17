@@ -32,41 +32,63 @@ class PersistenceService: PersistenceServing {
     ///Attempt to retrieve models from device. If none are found, push new or empty model instead.
     internal func locallyLoad(_ utility: Utility) throws -> Data? {
         print("800. Locally loading \(utility)")
-        var fileURL = try FileManager.default.url(for: .applicationSupportDirectory,
-                                                   in: .userDomainMask,
-                                                   appropriateFor: nil,
-                                                   create: false)
-        print("801. Root url: \(fileURL)")
-        fileURL.appendPathComponent(Constants.appShortName)
-        print("802. Root url with appName: \(fileURL)")
-        fileURL.appendPathComponent("\(utility).json")
-        print("803. Root url with utility: \(fileURL)")
-        let data = try? Data(contentsOf: fileURL)
-        print("804. Retrieved data: \(data != nil)")
-        return data
+
+        var appSupportURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+        print("1701. Root url: \(appSupportURL)")
+
+        var appURL = appSupportURL.appendingPathComponent(Constants.appShortName)
+        print("1702. App url: \(appURL)")
+
+        var fileURL = appURL.appendingPathComponent("\(utility).json")
+        print("1703. file url: \(fileURL)")
+
+        do {
+            let data = try Data(contentsOf: fileURL)
+            print("804. Retrieved data: \(data)")
+            return data
+        } catch {
+            print("805. Unable to retrieve data from \(fileURL)")
+            print("806. Error: \(error)")
+            throw error
+        }
     }
 
     internal func locallySave(_ data: Data?, for utility: Utility) throws {
         print("1700. Locally Saving")
-        var fileURL = try FileManager.default.url(for: .applicationSupportDirectory,
-                                                   in: .userDomainMask,
-                                                   appropriateFor: nil,
-                                                   create: false)
-        print("1701. Root url: \(fileURL)")
-        fileURL.appendPathComponent(Constants.appShortName)
-        print("1702. Root url with utility: \(fileURL)")
-        fileURL.appendPathComponent("\(utility).json")
-        print("1703. Root url with utility: \(fileURL)")
-        try? data?.write(to: fileURL)
-        print("1704. Data written to disk")
+
+        var appSupportURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+        try fileManager.createDirectory(at: appSupportURL,
+                                        withIntermediateDirectories: true)
+        print("1701. Root url: \(appSupportURL)")
+
+        var appURL = appSupportURL.appendingPathComponent(Constants.appShortName)
+        print("1701.5 Create directories at which to save the file if it doesn't exist.")
+        try FileManager.default.createDirectory(at: appURL,
+                                                withIntermediateDirectories: true)
+        print("1702. App url: \(appURL)")
+
+        var fileURL = appURL.appendingPathComponent("\(utility).json")
+        print("1703. file url: \(fileURL)")
+
+        do {
+            try data?.write(to: fileURL)
+            print("1704. Data written to disk")
+        } catch {
+            print("1705. Unable to write data to \(fileURL)")
+            print("1706. Error: \(error)")
+            throw error
+        }
     }
     
     internal func cloudSave(_ data: Data?, for utility: Utility) throws {
         print("1900. Backing up to cloud.")
+        print("1901. TODO")
         // TODO
     }
     
     internal func cloudLoad(_ utility: Utility) throws -> Data? {
+        print("2300. Loading backup from cloud")
+        print("2301. TODO")
         // TODO
         return Data()
     }

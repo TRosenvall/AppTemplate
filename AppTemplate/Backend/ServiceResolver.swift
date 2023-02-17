@@ -50,7 +50,7 @@ actor ServiceResolver: ServiceResolving {
         }
         print("114. Load Priorities: \(loadPriorities)")
         loadPriorities.sort()
-        print("115. Sortyed Load Priorities: \(loadPriorities)")
+        print("115. Sorted Load Priorities: \(loadPriorities)")
 
         // Configure Service Entities
         print("120. Configuring Service Entities")

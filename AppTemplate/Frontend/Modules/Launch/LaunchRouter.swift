@@ -23,11 +23,19 @@ class LaunchRouter: LaunchWireframe {
     // MARK: - LaunchWireframe Functions
     func routeToHomeModule() throws {
         Task {
-            let homeView = try await moduleResolver.resolveHomeModule()
-            let homeModule = await UINavigationController(rootViewController: homeView)
-            await homeModule.setModal(presentationStyle: .overFullScreen)
-            await homeModule.setModal(transitionStyle: .crossDissolve)
-            await presentingView.present(homeModule, animated: true)
+            do {
+                let homeView = try await moduleResolver.resolveHomeModule()
+                let homeModule = await UINavigationController(rootViewController: homeView)
+                await homeModule.setModal(presentationStyle: .overFullScreen)
+                await homeModule.setModal(transitionStyle: .crossDissolve)
+                await presentingView.present(homeModule, animated: true)
+            } catch {
+                print("1111111111111111111111111")
+                print("1111111111111111111111111")
+                print(error)
+                print("1111111111111111111111111")
+                print("1111111111111111111111111")
+            }
         }
     }
 

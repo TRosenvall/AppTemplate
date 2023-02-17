@@ -20,7 +20,7 @@ class EncryptionService: EncryptionServing {
 
     // MARK: - EncryptionServing Functions
     func getSymmetricKey(for utility: Utility) throws -> SymmetricKey? {
-        print("2000. Retrieving symmetricKey")
+        print("2000. Retrieving symmetricKey for utility: \(utility)")
         guard let data = "\(utility)".data(using: .utf8) else {
             print("2001. Unable to retrieve symmetricKey")
             throw "Unable to retrieve data for symmetricKey"
@@ -31,6 +31,24 @@ class EncryptionService: EncryptionServing {
 
     func decrypt(_ encryptedData: EncryptedData?, withKey key: SymmetricKey?) throws -> Data {
         print("2200. Decrypting Data")
+        print("-----------============")
+        print("-----------============")
+        print("-----------============")
+        var util: Utility?
+        for serviceType in UtilityType.Service.allCases {
+            if try getSymmetricKey(for: serviceType) == key {
+                util = serviceType
+            }
+        }
+        for moduleType in UtilityType.Module.allCases {
+            if try getSymmetricKey(for: moduleType) == key {
+                util = moduleType
+            }
+        }
+        print("Decryption Symmetric Key Utility: \(String(describing: util))")
+        print("============-----------")
+        print("============-----------")
+        print("============-----------")
         guard let key = key,
               let nonceData = encryptedData?.nonce,
               let cipherText = encryptedData?.cipherText,
