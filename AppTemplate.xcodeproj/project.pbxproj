@@ -94,6 +94,10 @@
 		85831486293A8747004977EA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831484293A8747004977EA /* SettingsTableViewCell.swift */; };
 		85831487293A8747004977EA /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85831485293A8747004977EA /* SettingsTableViewCell.xib */; };
 		85831492293D46C6004977EA /* AppTemplateContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85831491293D46C6004977EA /* AppTemplateContracts.swift */; };
+		85ABE6AB29A1FCCA008A0095 /* AnalyticsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABE6AA29A1FCCA008A0095 /* AnalyticsContracts.swift */; };
+		85ABE6AD29A1FCDC008A0095 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABE6AC29A1FCDC008A0095 /* AnalyticsService.swift */; };
+		85ABE6AF29A1FCE7008A0095 /* AnalyticsVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABE6AE29A1FCE7008A0095 /* AnalyticsVariables.swift */; };
+		85ABE6B129A202DF008A0095 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABE6B029A202DF008A0095 /* Errors.swift */; };
 		85BEB56E294B1C1900F98F89 /* CodingContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BEB56D294B1C1900F98F89 /* CodingContracts.swift */; };
 		85BEB572294B1C3300F98F89 /* CodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BEB571294B1C3300F98F89 /* CodingService.swift */; };
 		85BEB580294B1DBA00F98F89 /* AppTemplateNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BEB57F294B1DBA00F98F89 /* AppTemplateNamespace.swift */; };
@@ -208,6 +212,10 @@
 		85831484293A8747004977EA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		85831485293A8747004977EA /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		85831491293D46C6004977EA /* AppTemplateContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTemplateContracts.swift; sourceTree = "<group>"; };
+		85ABE6AA29A1FCCA008A0095 /* AnalyticsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsContracts.swift; sourceTree = "<group>"; };
+		85ABE6AC29A1FCDC008A0095 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		85ABE6AE29A1FCE7008A0095 /* AnalyticsVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsVariables.swift; sourceTree = "<group>"; };
+		85ABE6B029A202DF008A0095 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		85BEB56D294B1C1900F98F89 /* CodingContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingContracts.swift; sourceTree = "<group>"; };
 		85BEB571294B1C3300F98F89 /* CodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingService.swift; sourceTree = "<group>"; };
 		85BEB57F294B1DBA00F98F89 /* AppTemplateNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTemplateNamespace.swift; sourceTree = "<group>"; };
@@ -308,6 +316,7 @@
 				858314152930FF49004977EA /* Encryption */,
 				85D543E92941634000AF27FF /* DataRouting */,
 				858313DB292F8638004977EA /* Networking */,
+				85ABE6A929A1FCA6008A0095 /* Analytics */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -661,6 +670,17 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		85ABE6A929A1FCA6008A0095 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				85ABE6B029A202DF008A0095 /* Errors.swift */,
+				85ABE6AA29A1FCCA008A0095 /* AnalyticsContracts.swift */,
+				85ABE6AE29A1FCE7008A0095 /* AnalyticsVariables.swift */,
+				85ABE6AC29A1FCDC008A0095 /* AnalyticsService.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		85BEB56C294B1BF000F98F89 /* Coding */ = {
 			isa = PBXGroup;
 			children = (
@@ -797,7 +817,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85ABE6B129A202DF008A0095 /* Errors.swift in Sources */,
 				8579B5512950A2C200C63103 /* DataRoutingVariables.swift in Sources */,
+				85ABE6AD29A1FCDC008A0095 /* AnalyticsService.swift in Sources */,
 				858314172930FF76004977EA /* EncryptionContracts.swift in Sources */,
 				85FAF059298ADED900E751B9 /* Sequence.swift in Sources */,
 				8583144B2931742A004977EA /* Constants.swift in Sources */,
@@ -809,6 +831,7 @@
 				8579B5482950A1C900C63103 /* LaunchVariables.swift in Sources */,
 				85831380292F6D9F004977EA /* SceneDelegate.swift in Sources */,
 				8583147129380699004977EA /* UINavigationController.swift in Sources */,
+				85ABE6AB29A1FCCA008A0095 /* AnalyticsContracts.swift in Sources */,
 				858313D6292F7DDC004977EA /* ServiceContracts.swift in Sources */,
 				858313CA292F742A004977EA /* HomeTheme.swift in Sources */,
 				858313E1292F8C42004977EA /* Colors.swift in Sources */,
@@ -837,6 +860,7 @@
 				85D04C3D295908FC00873D36 /* ModuleNamespace.swift in Sources */,
 				85831425293143BF004977EA /* SettingsBuilder.swift in Sources */,
 				85D700C3296BF977005E53A1 /* EntityController.swift in Sources */,
+				85ABE6AF29A1FCE7008A0095 /* AnalyticsVariables.swift in Sources */,
 				8579B54F2950A29B00C63103 /* EncryptionVariables.swift in Sources */,
 				8583144329314785004977EA /* LaunchTheme.swift in Sources */,
 				8583147E29393213004977EA /* SettingsViewController.swift in Sources */,

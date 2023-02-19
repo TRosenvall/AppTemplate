@@ -75,7 +75,7 @@ actor ServiceResolver: ServiceResolving {
         await loadPriorities.asyncForEach { loadPriority in
             do {
                 guard let service = servicesWithLoadOrder[loadPriority] else {
-                    throw "Service not found"
+                    throw AppErrors.Service.ServiceNotFound.logError()
                 }
                 print("-=-=-=-=-=-=-=-=-=-=-=-=-=")
                 print("=-=-=-=-=-=-=-=-=-=-=-=-=-")
@@ -150,6 +150,9 @@ actor ServiceResolver: ServiceResolving {
         case .Networking:
             service = NetworkingService()
             loadPriority = NetworkingService.VariableSet.loadPriority
+        case .Analytics:
+            service = AnalyticsService()
+            loadPriority = AnalyticsService.VariableSet.loadPriority
         }
         print("201. Initialized \(service.utility)")
         activeServices.updateValue(service, forKey: serviceType)

@@ -1,18 +1,20 @@
 //
-//  NetworkingContracts.swift
+//  AnalyticsContracts.swift
 //  AppTemplate
 //
-//  Created by Timothy Rosenvall on 11/24/22.
+//  Created by Timothy Rosenvall on 2/18/23.
 //
 
 import Foundation
 
 ///------
 
-protocol NetworkingServing: Service where VariableSet == NetworkingVariables {}
+protocol AnalyticsServing: Service where VariableSet == AnalyticsVariables {
+    func log(message: String, date: Date)
+}
 
 /// Default Implementation
-extension NetworkingServing {
+extension AnalyticsServing {
     var state: Bool {
         get async throws {
             let entityController = entityController as? EntityController<VariableSet>
@@ -31,6 +33,23 @@ extension NetworkingServing {
             let defaultState = VariableSet.serviceState.defaultValue as! Bool
             try await entityController?.updateModel(variable: .serviceState, withValue: defaultState)
         }
+    }
+}
+
+///------
+
+protocol CanLogErrors: ServicesRequiring {
+    /// Logs the error on the analytics service and then returns the error logged.
+    func logError() -> Error
+}
+
+extension CanLogErrors {
+    func logError() -> Error {
+        Task {
+            let analyticsService: AnalyticsService? = await getService(ofType: .Analytics)
+            analyticsService?.log(message: "\(self)", date: Date())
+        }
+        return self as! Error
     }
 }
 

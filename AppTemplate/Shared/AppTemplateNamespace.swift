@@ -17,6 +17,7 @@ public enum UtilityType {
         case Encryption
         case DataRouting
         case Networking
+        case Analytics
     }
 
     // Modules

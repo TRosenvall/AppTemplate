@@ -49,7 +49,7 @@ class PersistenceService: PersistenceServing {
         } catch {
             print("805. Unable to retrieve data from \(fileURL)")
             print("806. Error: \(error)")
-            throw error
+            throw AppErrors.Service.Persistence.UnableToRetrieveData.logError()
         }
     }
 
@@ -76,7 +76,7 @@ class PersistenceService: PersistenceServing {
         } catch {
             print("1705. Unable to write data to \(fileURL)")
             print("1706. Error: \(error)")
-            throw error
+            throw AppErrors.Service.Persistence.UnableToWriteData.logError()
         }
     }
     
