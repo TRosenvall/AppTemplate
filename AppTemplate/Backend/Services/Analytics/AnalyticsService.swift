@@ -18,9 +18,10 @@ class AnalyticsService: AnalyticsServing {
     }
 
     // MARK: - AnalyticsServing Functions
-    func log(message: String, date: Date) {
+    func log(message: String, in function: String, date: Date) {
         print("==========================")
         print("Message: \(message)")
+        print("Function: \(function)")
         print("Date+Time: \(date)")
     }
 

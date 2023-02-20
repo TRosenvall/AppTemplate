@@ -7,6 +7,14 @@
 
 import UIKit
 
+///------
+
+protocol ModuleVariable: Variable {
+    static var onDeck: [UtilityType.Module] { get set }
+}
+
+///------
+
 protocol Module: UIViewController {
     func set(_ presenter: any ModulePresenting) async
 }

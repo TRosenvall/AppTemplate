@@ -72,7 +72,7 @@ class DataRoutingService: DataRoutingServing {
                 }
             } else {
                 print("1112. Encryption off and unneeded, throwing error to run catch block.")
-                throw "Encryption unused"
+                throw AppErrors.Service.DataRouting.EncryptionNotNeeded.logError()
             }
         } catch {
             print("1112. Unable to encrypt data")
@@ -152,7 +152,8 @@ class DataRoutingService: DataRoutingServing {
         guard let entity: Entity<T> = try codingService?.decode(data: data)
         else {
             print("705. Unable to retrieve entity")
-            throw "Unable to retrieve entity" }
+            throw AppErrors.Service.DataRouting.UnableToDecodeEntity.logError()
+        }
         print("706. Retrieved entity for: \(entity.utility)")
         return entity
     }

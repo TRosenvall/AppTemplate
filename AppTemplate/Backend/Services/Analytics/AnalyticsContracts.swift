@@ -7,10 +7,15 @@
 
 import Foundation
 
+///TODO:
+/// - Swizzling UIControl to log user interactions
+/// - Overload the _swift_willThrow handler in order to eliminate the need for the canLogErrors protocol - (Requires swift 5.8 included in xcode 14.3) https://stackoverflow.com/questions/75490214/is-it-possible-to-swizzle-the-keyword-throw/75496498#75496498
+///
+
 ///------
 
 protocol AnalyticsServing: Service where VariableSet == AnalyticsVariables {
-    func log(message: String, date: Date)
+    func log(message: String, in function: String, date: Date)
 }
 
 /// Default Implementation
@@ -19,7 +24,7 @@ extension AnalyticsServing {
         get async throws {
             let entityController = entityController as? EntityController<VariableSet>
             guard let state: Bool = try await entityController?.retrieveData(for: .serviceState) else {
-                throw "Entity not configured"
+                throw AppErrors.Shared.EntityNotConfigured.logError()
             }
             return state
         }
@@ -40,14 +45,14 @@ extension AnalyticsServing {
 
 protocol CanLogErrors: ServicesRequiring {
     /// Logs the error on the analytics service and then returns the error logged.
-    func logError() -> Error
+    func logError(in function: String) -> Error
 }
 
 extension CanLogErrors {
-    func logError() -> Error {
+    func logError(in function: String = #function) -> Error {
         Task {
             let analyticsService: AnalyticsService? = await getService(ofType: .Analytics)
-            analyticsService?.log(message: "\(self)", date: Date())
+            analyticsService?.log(message: "\(self)", in: function, date: Date())
         }
         return self as! Error
     }

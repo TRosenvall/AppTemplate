@@ -15,7 +15,6 @@
 		8579B54F2950A29B00C63103 /* EncryptionVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B54E2950A29B00C63103 /* EncryptionVariables.swift */; };
 		8579B5512950A2C200C63103 /* DataRoutingVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B5502950A2C200C63103 /* DataRoutingVariables.swift */; };
 		8579B5532950A2E300C63103 /* NetworkingVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B5522950A2E300C63103 /* NetworkingVariables.swift */; };
-		8579B5552951510B00C63103 /* Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8579B5542951510B00C63103 /* Readme.rtf */; };
 		8583137E292F6D9F004977EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583137D292F6D9F004977EA /* AppDelegate.swift */; };
 		85831380292F6D9F004977EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583137F292F6D9F004977EA /* SceneDelegate.swift */; };
 		85831387292F6DA4004977EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85831386292F6DA4004977EA /* Assets.xcassets */; };
@@ -98,6 +97,7 @@
 		85ABE6AD29A1FCDC008A0095 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABE6AC29A1FCDC008A0095 /* AnalyticsService.swift */; };
 		85ABE6AF29A1FCE7008A0095 /* AnalyticsVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABE6AE29A1FCE7008A0095 /* AnalyticsVariables.swift */; };
 		85ABE6B129A202DF008A0095 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABE6B029A202DF008A0095 /* Errors.swift */; };
+		85ABE6B629A2899C008A0095 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 85ABE6B529A2899C008A0095 /* Readme.md */; };
 		85BEB56E294B1C1900F98F89 /* CodingContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BEB56D294B1C1900F98F89 /* CodingContracts.swift */; };
 		85BEB572294B1C3300F98F89 /* CodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BEB571294B1C3300F98F89 /* CodingService.swift */; };
 		85BEB580294B1DBA00F98F89 /* AppTemplateNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BEB57F294B1DBA00F98F89 /* AppTemplateNamespace.swift */; };
@@ -130,7 +130,6 @@
 		8579B54E2950A29B00C63103 /* EncryptionVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionVariables.swift; sourceTree = "<group>"; };
 		8579B5502950A2C200C63103 /* DataRoutingVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRoutingVariables.swift; sourceTree = "<group>"; };
 		8579B5522950A2E300C63103 /* NetworkingVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingVariables.swift; sourceTree = "<group>"; };
-		8579B5542951510B00C63103 /* Readme.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Readme.rtf; sourceTree = "<group>"; };
 		8583137A292F6D9F004977EA /* AppTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8583137D292F6D9F004977EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8583137F292F6D9F004977EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +215,7 @@
 		85ABE6AC29A1FCDC008A0095 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		85ABE6AE29A1FCE7008A0095 /* AnalyticsVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsVariables.swift; sourceTree = "<group>"; };
 		85ABE6B029A202DF008A0095 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		85ABE6B529A2899C008A0095 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = SOURCE_ROOT; };
 		85BEB56D294B1C1900F98F89 /* CodingContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingContracts.swift; sourceTree = "<group>"; };
 		85BEB571294B1C3300F98F89 /* CodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingService.swift; sourceTree = "<group>"; };
 		85BEB57F294B1DBA00F98F89 /* AppTemplateNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTemplateNamespace.swift; sourceTree = "<group>"; };
@@ -250,6 +250,7 @@
 		85831371292F6D9F004977EA = {
 			isa = PBXGroup;
 			children = (
+				85ABE6B529A2899C008A0095 /* Readme.md */,
 				8583137C292F6D9F004977EA /* AppTemplate */,
 				85831393292F6DA5004977EA /* AppTemplateTests */,
 				8583137B292F6D9F004977EA /* Products */,
@@ -293,7 +294,6 @@
 				858313C8292F71C9004977EA /* Strings */,
 				85831388292F6DA4004977EA /* LaunchScreen.storyboard */,
 				8583138B292F6DA4004977EA /* Info.plist */,
-				8579B5542951510B00C63103 /* Readme.rtf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -301,6 +301,7 @@
 		858313B0292F6E48004977EA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				85ABE6B229A21643008A0095 /* ActivityIndicator */,
 				8583142029314386004977EA /* Launch */,
 				8583142129314394004977EA /* Settings */,
 				858313B6292F6E9B004977EA /* Home */,
@@ -681,6 +682,13 @@
 			path = Analytics;
 			sourceTree = "<group>";
 		};
+		85ABE6B229A21643008A0095 /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
 		85BEB56C294B1BF000F98F89 /* Coding */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,11 +802,11 @@
 			files = (
 				85831487293A8747004977EA /* SettingsTableViewCell.xib in Resources */,
 				858313AF292F6DE7004977EA /* Colors.xcassets in Resources */,
-				8579B5552951510B00C63103 /* Readme.rtf in Resources */,
 				8583138A292F6DA4004977EA /* LaunchScreen.storyboard in Resources */,
 				85831387292F6DA4004977EA /* Assets.xcassets in Resources */,
 				8583147B29392DB8004977EA /* LaunchViewController.xib in Resources */,
 				8583147F29393213004977EA /* SettingsViewController.xib in Resources */,
+				85ABE6B629A2899C008A0095 /* Readme.md in Resources */,
 				858314832939370B004977EA /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -87,7 +87,7 @@ actor EntityController<VariableSet: Variable>: ModelControlling {
         print("1400. Retrieving entity variable: \(variable)")
         guard let entity else {
             print("1401. Entity not initialized yet. Throwing")
-            throw "Entity not configured, unable to retrieve data"
+            throw AppErrors.Shared.EntityNotConfigured.logError()
         }
         print("1402. Getting dataRoutingService")
         let dataRoutingService: DataRoutingService? = await getService(ofType: .DataRouting)

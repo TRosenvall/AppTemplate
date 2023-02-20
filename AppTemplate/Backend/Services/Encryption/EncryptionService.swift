@@ -23,7 +23,7 @@ class EncryptionService: EncryptionServing {
         print("2000. Retrieving symmetricKey for utility: \(utility)")
         guard let data = "\(utility)".data(using: .utf8) else {
             print("2001. Unable to retrieve symmetricKey")
-            throw "Unable to retrieve data for symmetricKey"
+            throw AppErrors.Service.Encryption.UnableToRetrieveSymmetricKey.logError()
         }
         print("2001. SymmetricKey retrieved successfully.")
         return retrieveSymmetricKey(with: data)
@@ -55,7 +55,7 @@ class EncryptionService: EncryptionServing {
               let tag = encryptedData?.tag
         else {
             print("2201. Unable to unwrap key and datas.")
-            throw "Unable to verify encrypted data and key."
+            throw AppErrors.Service.Encryption.UnableToVerifyDataAndKey.logError()
         }
         print("2202. Successfully unwrapped key and data values.")
         print("2203. Key: \(key), nonceData: \(nonceData), cipherText: \(cipherText), tag: \(tag)")
@@ -73,7 +73,7 @@ class EncryptionService: EncryptionServing {
               let key = key
         else {
             print("2101. Unable to unwrap data and key")
-            throw "No data or key"
+            throw AppErrors.Service.Encryption.UnableToVerifyDataAndKey.logError()
         }
         print("2102. Key: \(key), Data: \(data)")
         let sealedBox = try AES.GCM.seal(data, using: key)

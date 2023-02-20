@@ -17,7 +17,7 @@ extension NetworkingServing {
         get async throws {
             let entityController = entityController as? EntityController<VariableSet>
             guard let state: Bool = try await entityController?.retrieveData(for: .serviceState) else {
-                throw "Entity not configured"
+                throw AppErrors.Shared.EntityNotConfigured.logError()
             }
             return state
         }
