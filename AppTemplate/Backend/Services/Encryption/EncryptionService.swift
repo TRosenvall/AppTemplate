@@ -20,20 +20,13 @@ class EncryptionService: EncryptionServing {
 
     // MARK: - EncryptionServing Functions
     func getSymmetricKey(for utility: Utility) throws -> SymmetricKey? {
-        print("2000. Retrieving symmetricKey for utility: \(utility)")
         guard let data = "\(utility)".data(using: .utf8) else {
-            print("2001. Unable to retrieve symmetricKey")
             throw AppErrors.Service.Encryption.UnableToRetrieveSymmetricKey.logError()
         }
-        print("2001. SymmetricKey retrieved successfully.")
         return retrieveSymmetricKey(with: data)
     }
 
     func decrypt(_ encryptedData: EncryptedData?, withKey key: SymmetricKey?) throws -> Data {
-        print("2200. Decrypting Data")
-        print("-----------============")
-        print("-----------============")
-        print("-----------============")
         var util: Utility?
         for serviceType in UtilityType.Service.allCases {
             if try getSymmetricKey(for: serviceType) == key {
@@ -45,40 +38,27 @@ class EncryptionService: EncryptionServing {
                 util = moduleType
             }
         }
-        print("Decryption Symmetric Key Utility: \(String(describing: util))")
-        print("============-----------")
-        print("============-----------")
-        print("============-----------")
         guard let key = key,
               let nonceData = encryptedData?.nonce,
               let cipherText = encryptedData?.cipherText,
               let tag = encryptedData?.tag
         else {
-            print("2201. Unable to unwrap key and datas.")
             throw AppErrors.Service.Encryption.UnableToVerifyDataAndKey.logError()
         }
-        print("2202. Successfully unwrapped key and data values.")
-        print("2203. Key: \(key), nonceData: \(nonceData), cipherText: \(cipherText), tag: \(tag)")
         let nonce = try AES.GCM.Nonce(data: nonceData)
         let sealedBox = try AES.GCM.SealedBox(nonce: nonce,
                                               ciphertext: cipherText,
                                               tag: tag)
-        print("2204. Successfully recreated sealed box.")
         return try AES.GCM.open(sealedBox, using: key)
     }
     
     func encrypt(_ data: Data?, withKey key: SymmetricKey?) throws -> EncryptedData {
-        print("2100. Encrypting Data")
         guard let data = data,
               let key = key
         else {
-            print("2101. Unable to unwrap data and key")
             throw AppErrors.Service.Encryption.UnableToVerifyDataAndKey.logError()
         }
-        print("2102. Key: \(key), Data: \(data)")
         let sealedBox = try AES.GCM.seal(data, using: key)
-        print("2103. Successfully encrypted data with key.")
-        print("2104. Sealed Box: \(sealedBox)")
         return EncryptedData(nonce: sealedBox.nonce.data,
                              cipherText: sealedBox.ciphertext,
                              tag: sealedBox.tag)

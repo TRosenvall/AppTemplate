@@ -18,7 +18,6 @@ extension UINavigationController {
 
     func pushFromLeft(controller: UIViewController) {
         guard let window = view.window else {
-            print("pushFromLeft() failed")
             return
         }
 
@@ -33,7 +32,6 @@ extension UINavigationController {
 
     func popToLeft() {
         guard let window = view.window else {
-            print("popToLeft() failed")
             return
         }
 

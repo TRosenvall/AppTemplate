@@ -1016,7 +1016,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EF444A36-DB09-4668-9A84-089E7AB798E1"
+            uuid = "71C54D37-07BF-44ED-B63D-C7FF4B7691BB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -1027,25 +1027,9 @@
             endingLineNumber = "50"
             landmarkName = "configure(fromBackup:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "71C54D37-07BF-44ED-B63D-C7FF4B7691BB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "configure(fromBackup:)"
-            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "71C54D37-07BF-44ED-B63D-C7FF4B7691BB - ce547ee1a733af07"
+                  uuid = "71C54D37-07BF-44ED-B63D-C7FF4B7691BB - ce547ee1a733af66"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1055,12 +1039,27 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "411">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "94">
                </Location>
                <Location
-                  uuid = "71C54D37-07BF-44ED-B63D-C7FF4B7691BB - 3f5b247e051ae309"
+                  uuid = "71C54D37-07BF-44ED-B63D-C7FF4B7691BB - 747f1ede92aa377e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "71C54D37-07BF-44ED-B63D-C7FF4B7691BB - 3f5b247e051ae368"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1070,9 +1069,54 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "202">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "82">
+               </Location>
+               <Location
+                  uuid = "71C54D37-07BF-44ED-B63D-C7FF4B7691BB - 3f5b247e051ae368"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "466">
+               </Location>
+               <Location
+                  uuid = "71C54D37-07BF-44ED-B63D-C7FF4B7691BB - ac5993dae37d276a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  uuid = "71C54D37-07BF-44ED-B63D-C7FF4B7691BB - e4df36e51050856b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "113">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1087,13 +1131,13 @@
             filePath = "AppTemplate/Shared/Entity/EntityController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "configure(fromBackup:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "440175AE-71E5-457B-9DFF-E2FFDA76A51A - ce547ee1a733af07"
+                  uuid = "440175AE-71E5-457B-9DFF-E2FFDA76A51A - ce547ee1a733af66"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1103,12 +1147,27 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "411">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "94">
                </Location>
                <Location
-                  uuid = "440175AE-71E5-457B-9DFF-E2FFDA76A51A - 3f5b247e051ae309"
+                  uuid = "440175AE-71E5-457B-9DFF-E2FFDA76A51A - 747f1ede92aa377e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "440175AE-71E5-457B-9DFF-E2FFDA76A51A - 3f5b247e051ae368"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1118,45 +1177,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "202">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "20824633-0CD7-4F5E-AB29-B4513FE90674"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "configure(fromBackup:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "20824633-0CD7-4F5E-AB29-B4513FE90674 - ce547ee1a733af07"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
-                  moduleName = "AppTemplate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "411">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "82">
                </Location>
                <Location
-                  uuid = "20824633-0CD7-4F5E-AB29-B4513FE90674 - 3f5b247e051ae309"
+                  uuid = "440175AE-71E5-457B-9DFF-E2FFDA76A51A - 3f5b247e051ae368"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1166,27 +1192,41 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "202">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "466">
+               </Location>
+               <Location
+                  uuid = "440175AE-71E5-457B-9DFF-E2FFDA76A51A - ac5993dae37d276a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  uuid = "440175AE-71E5-457B-9DFF-E2FFDA76A51A - e4df36e51050856b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "113">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CC5E0F36-5FB4-4D0F-A8FD-6481970BB91A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "configure(fromBackup:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1199,13 +1239,13 @@
             filePath = "AppTemplate/Shared/Entity/EntityController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "configure(fromBackup:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - ce547ee1a733af24"
+                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - ce547ee1a733af66"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1215,12 +1255,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "886">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "94">
                </Location>
                <Location
-                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - 747f1ede92aa373c"
+                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - 747f1ede92aa377e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1230,12 +1270,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
                   offsetFromSymbolStart = "34">
                </Location>
                <Location
-                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - 3f5b247e051ae32a"
+                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - 3f5b247e051ae368"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1245,12 +1285,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "116">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "82">
                </Location>
                <Location
-                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - 3f5b247e051ae32a"
+                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - 3f5b247e051ae368"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1260,12 +1300,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "1077">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "466">
                </Location>
                <Location
-                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - ac5993dae37d2728"
+                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - ac5993dae37d276a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1275,12 +1315,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "101">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "69">
                </Location>
                <Location
-                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - e4df36e510508529"
+                  uuid = "4BAB957B-76B0-4A43-A7DB-6711088B55EF - e4df36e51050856b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1290,9 +1330,9 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "161">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "113">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1307,8 +1347,8 @@
             filePath = "AppTemplate/Shared/Entity/EntityController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "configure(fromBackup:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1323,13 +1363,13 @@
             filePath = "AppTemplate/Shared/Entity/EntityController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "configure(fromBackup:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4EEC122D-D8EC-4E71-BD60-507166E840D7 - 3f5b247e051ae3ec"
+                  uuid = "4EEC122D-D8EC-4E71-BD60-507166E840D7 - 3f5b247e051ae309"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1339,12 +1379,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "814">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "227">
                </Location>
                <Location
-                  uuid = "4EEC122D-D8EC-4E71-BD60-507166E840D7 - ae650e5d6f8d4be4"
+                  uuid = "4EEC122D-D8EC-4E71-BD60-507166E840D7 - ae650e5d6f8d4b01"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1354,12 +1394,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "52">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "49">
                </Location>
                <Location
-                  uuid = "4EEC122D-D8EC-4E71-BD60-507166E840D7 - ac5993dae37d27ee"
+                  uuid = "4EEC122D-D8EC-4E71-BD60-507166E840D7 - ac5993dae37d270b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1369,12 +1409,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "226">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "195">
                </Location>
                <Location
-                  uuid = "4EEC122D-D8EC-4E71-BD60-507166E840D7 - e4df36e510508529"
+                  uuid = "4EEC122D-D8EC-4E71-BD60-507166E840D7 - e4df36e51050856b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1384,12 +1424,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "161">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "113">
                </Location>
                <Location
-                  uuid = "4EEC122D-D8EC-4E71-BD60-507166E840D7 - e4df36e5105085ef"
+                  uuid = "4EEC122D-D8EC-4E71-BD60-507166E840D7 - e4df36e51050850a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1399,9 +1439,9 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "385">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "337">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1416,13 +1456,13 @@
             filePath = "AppTemplate/Shared/Entity/EntityController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "configure(fromBackup:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4BF9DF63-38C5-4CD1-91B7-68013F4C449E - 3f5b247e051ae3ae"
+                  uuid = "4BF9DF63-38C5-4CD1-91B7-68013F4C449E - 3f5b247e051ae3cb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1432,12 +1472,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "1093">
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "479">
                </Location>
                <Location
-                  uuid = "4BF9DF63-38C5-4CD1-91B7-68013F4C449E - ac5993dae37d27ac"
+                  uuid = "4BF9DF63-38C5-4CD1-91B7-68013F4C449E - ac5993dae37d27c9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1447,12 +1487,139 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "281">
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "236">
                </Location>
                <Location
-                  uuid = "4BF9DF63-38C5-4CD1-91B7-68013F4C449E - e4df36e5105085ad"
+                  uuid = "4BF9DF63-38C5-4CD1-91B7-68013F4C449E - e4df36e5105085c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "395">
+               </Location>
+               <Location
+                  uuid = "4BF9DF63-38C5-4CD1-91B7-68013F4C449E - e4df36e5105085c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1223">
+               </Location>
+               <Location
+                  uuid = "4BF9DF63-38C5-4CD1-91B7-68013F4C449E - 55ddfc41f1bbd9ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "811">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE51DE31-2053-4C42-8AB6-37F7D4C2EC9B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "configure(fromBackup:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D77EB24-B4C1-4B66-847D-28508B96C0FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "configure(fromBackup:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5D77EB24-B4C1-4B66-847D-28508B96C0FF - e4df36e51050858e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "587">
+               </Location>
+               <Location
+                  uuid = "5D77EB24-B4C1-4B66-847D-28508B96C0FF - 55ddfc41f1bbd988"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "382">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78EA4126-FD53-4B9C-BA6A-2A368C7F1D31"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "configure(fromBackup:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "78EA4126-FD53-4B9C-BA6A-2A368C7F1D31 - e4df36e5105085ad"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1464,14 +1631,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
                   endingLineNumber = "58"
-                  offsetFromSymbolStart = "445">
+                  offsetFromSymbolStart = "936">
                </Location>
                <Location
-                  uuid = "4BF9DF63-38C5-4CD1-91B7-68013F4C449E - e4df36e5105085ad"
+                  uuid = "78EA4126-FD53-4B9C-BA6A-2A368C7F1D31 - 75427e3774b6da5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(6) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  symbolName = "(7) await resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
                   moduleName = "AppTemplate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
@@ -1479,10 +1646,10 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
                   endingLineNumber = "58"
-                  offsetFromSymbolStart = "2214">
+                  offsetFromSymbolStart = "49">
                </Location>
                <Location
-                  uuid = "4BF9DF63-38C5-4CD1-91B7-68013F4C449E - 55ddfc41f1bbd9ab"
+                  uuid = "78EA4126-FD53-4B9C-BA6A-2A368C7F1D31 - 55ddfc41f1bbd9ab"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1494,7 +1661,22 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
                   endingLineNumber = "58"
-                  offsetFromSymbolStart = "1593">
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  uuid = "78EA4126-FD53-4B9C-BA6A-2A368C7F1D31 - 8a43008c1e8ebfa8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(9) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
+                  moduleName = "AppTemplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "87">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1502,7 +1684,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "04084FBE-7A99-4018-A99F-D2E4D2610D98"
+            uuid = "D0E4CE78-4A52-4D31-83EA-17DB43F8909C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -1518,7 +1700,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CE51DE31-2053-4C42-8AB6-37F7D4C2EC9B"
+            uuid = "46DCBA66-D909-4AA9-8B85-28E809A0D3E2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -1529,263 +1711,9 @@
             endingLineNumber = "60"
             landmarkName = "configure(fromBackup:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5D77EB24-B4C1-4B66-847D-28508B96C0FF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "configure(fromBackup:)"
-            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "5D77EB24-B4C1-4B66-847D-28508B96C0FF - e4df36e510508432"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(6) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
-                  moduleName = "AppTemplate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "854">
-               </Location>
-               <Location
-                  uuid = "5D77EB24-B4C1-4B66-847D-28508B96C0FF - 55ddfc41f1bbd834"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(8) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
-                  moduleName = "AppTemplate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "461">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4DDD7B59-2E8A-434C-B6F6-6D7A621DACBF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "configure(fromBackup:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4DDD7B59-2E8A-434C-B6F6-6D7A621DACBF - e4df36e5105084d1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(6) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
-                  moduleName = "AppTemplate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "1210">
-               </Location>
-               <Location
-                  uuid = "4DDD7B59-2E8A-434C-B6F6-6D7A621DACBF - 55ddfc41f1bbd8d7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(8) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
-                  moduleName = "AppTemplate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "589">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4566396A-830C-4925-9BBC-3DC1FBC7EACE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "configure(fromBackup:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4566396A-830C-4925-9BBC-3DC1FBC7EACE - e4df36e5105084f0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(6) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
-                  moduleName = "AppTemplate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "1464">
-               </Location>
-               <Location
-                  uuid = "4566396A-830C-4925-9BBC-3DC1FBC7EACE - 55ddfc41f1bbd8f6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(8) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
-                  moduleName = "AppTemplate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "843">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "78EA4126-FD53-4B9C-BA6A-2A368C7F1D31"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "configure(fromBackup:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "78EA4126-FD53-4B9C-BA6A-2A368C7F1D31 - e4df36e510508497"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(6) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
-                  moduleName = "AppTemplate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "1912">
-               </Location>
-               <Location
-                  uuid = "78EA4126-FD53-4B9C-BA6A-2A368C7F1D31 - 75427e3774b6c9f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) await resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
-                  moduleName = "AppTemplate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "78EA4126-FD53-4B9C-BA6A-2A368C7F1D31 - 55ddfc41f1bbd891"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(8) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
-                  moduleName = "AppTemplate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "161">
-               </Location>
-               <Location
-                  uuid = "78EA4126-FD53-4B9C-BA6A-2A368C7F1D31 - 8a43008c1e8ebe92"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(9) suspend resume partial function for AppTemplate.EntityController.configure(fromBackup: Swift.Bool) async throws -&gt; ()"
-                  moduleName = "AppTemplate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "126">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D0E4CE78-4A52-4D31-83EA-17DB43F8909C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "configure(fromBackup:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "46DCBA66-D909-4AA9-8B85-28E809A0D3E2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AppTemplate/Shared/Entity/EntityController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "configure(fromBackup:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "46DCBA66-D909-4AA9-8B85-28E809A0D3E2 - 3f5b247e051ae177"
+                  uuid = "46DCBA66-D909-4AA9-8B85-28E809A0D3E2 - 3f5b247e051ae231"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1795,12 +1723,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "1191">
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "577">
                </Location>
                <Location
-                  uuid = "46DCBA66-D909-4AA9-8B85-28E809A0D3E2 - ac5993dae37d2575"
+                  uuid = "46DCBA66-D909-4AA9-8B85-28E809A0D3E2 - ac5993dae37d2633"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1810,12 +1738,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "361">
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "316">
                </Location>
                <Location
-                  uuid = "46DCBA66-D909-4AA9-8B85-28E809A0D3E2 - e4df36e510508774"
+                  uuid = "46DCBA66-D909-4AA9-8B85-28E809A0D3E2 - e4df36e510508432"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1825,12 +1753,12 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "2373">
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1374">
                </Location>
                <Location
-                  uuid = "46DCBA66-D909-4AA9-8B85-28E809A0D3E2 - 55ddfc41f1bbdb72"
+                  uuid = "46DCBA66-D909-4AA9-8B85-28E809A0D3E2 - 55ddfc41f1bbd834"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1840,9 +1768,9 @@
                   urlString = "file:///Users/timothyrosenvall/Swift/AppTemplate/AppTemplate/Shared/Entity/EntityController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "1752">
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "962">
                </Location>
             </Locations>
          </BreakpointContent>

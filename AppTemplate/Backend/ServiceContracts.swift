@@ -108,7 +108,6 @@ protocol ServicesRequiring {
 /// Overridable Default Implementations
 extension ServicesRequiring {
     func getService<T: Service>(ofType serviceType: UtilityType.Service) async -> T? {
-        print("500. Resolving \(serviceType)")
         return await ServiceResolver.shared.resolveService(ofType: serviceType) as? T
     }
 }

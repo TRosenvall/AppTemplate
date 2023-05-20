@@ -86,14 +86,10 @@ extension EncryptionServing {
 
     var isEncryptionEnabled: Bool {
         get async throws {
-            print("1300. Retrieving encryption enabled status.")
             let controller = self.entityController as? EntityController<VariableSet>
-            print("1301. Retrieving data from controller.")
             guard let enabled: Bool = try await controller?.retrieveData(for: .isEncryptionEnabled) else {
-                print("1302. Returning default value of true")
                 return true
             }
-            print("1303. Encryption Enabled: \(enabled)")
             return enabled
         }
     }

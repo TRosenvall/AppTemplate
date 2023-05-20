@@ -19,10 +19,9 @@ class AnalyticsService: AnalyticsServing {
 
     // MARK: - AnalyticsServing Functions
     func log(message: String, in function: String, date: Date) {
-        print("==========================")
-        print("Message: \(message)")
-        print("Function: \(function)")
-        print("Date+Time: \(date)")
+        NSLog("Message: \(message)")
+        NSLog("Function: \(function)")
+        NSLog("Date+Time: \(date)")
     }
 
     // MARK: - AnalyticsModelController Functions

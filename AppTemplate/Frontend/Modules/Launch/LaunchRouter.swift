@@ -30,11 +30,7 @@ class LaunchRouter: LaunchWireframe {
                 await homeModule.setModal(transitionStyle: .crossDissolve)
                 await presentingView.present(homeModule, animated: true)
             } catch {
-                print("1111111111111111111111111")
-                print("1111111111111111111111111")
-                print(error)
-                print("1111111111111111111111111")
-                print("1111111111111111111111111")
+                // TODO
             }
         }
     }

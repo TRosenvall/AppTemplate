@@ -31,7 +31,6 @@ class Entity<ModelUtility: Utility>: Model {
 
     // MARK: - Initializers
     init(utility: ModelUtility) {
-        print("900. Initializing entity for \(utility)")
         self.utility = utility
         self.storedData = [:]
         self.encryptedData = [:]

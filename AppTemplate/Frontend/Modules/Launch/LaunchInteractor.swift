@@ -21,10 +21,8 @@ class LaunchInteractor: LaunchInput {
     // MARK: - LaunchInput Functions
     func launch() {
         Task {
-            print("100. Loading Data")
             var exceptions = await ServiceResolver.shared.configureServices()
             do {
-                print("x00. Configuring Launch Entity Controller")
                 try await self.entityController.configure()
             } catch {
                 exceptions.append(error)
