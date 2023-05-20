@@ -10,19 +10,17 @@ import UIKit
 ///This module is exists to act as a buffer between the main app and the app opening. Any necessary functions
 ///for the app to run properly can be loaded in hear. Also, it let's us have a much more robust splash screen :)
 ///Responsible for creating and assembling all the parts of the module.
-protocol LaunchBuilding: ModuleBuilding {}
+protocol LaunchBuilding: ModuleBuilding where ModuleType == any LaunchView, ThemeType == LaunchTheme {}
 
 ///Responsible for any animations pertaining to the Launch Module
 protocol LaunchAnimating: ModuleAnimating {
-    var didFinishLoading: Bool { get set }
-
-    func animateViewDidAppear(completion: ((Bool) -> Void)?)
+//    var didFinishLoading: Bool { get set }
+//
+//    func animateViewDidAppear(completion: ((Bool) -> Void)?)
 }
 
 ///Responsible for displaying information to and getting input from the user.
-protocol LaunchView: Module {
-    var logoImageView: UIImageView! { get }
-}
+protocol LaunchView: Module where ViewTheme == LaunchTheme {}
 
 ///Responsible for telling the view what to display and giving user input to the input file.
 protocol LaunchPresenting: ModulePresenting {

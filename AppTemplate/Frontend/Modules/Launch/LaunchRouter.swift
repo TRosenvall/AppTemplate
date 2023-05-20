@@ -10,32 +10,22 @@ import UIKit
 class LaunchRouter: LaunchWireframe {
 
     // MARK: - Properties
-    let presentingView: UIViewController
-    let moduleResolver: ModuleResolving
+    let presentingView: any Module
 
     // MARK: - Initializers
-    init(presentingView: UIViewController,
-         moduleResolver: ModuleResolving) {
+    init(presentingView: any Module) {
         self.presentingView = presentingView
-        self.moduleResolver = moduleResolver
     }
 
     // MARK: - LaunchWireframe Functions
     func routeToHomeModule() throws {
         Task {
-            do {
-                let homeView = try await moduleResolver.resolveHomeModule()
-                let homeModule = await UINavigationController(rootViewController: homeView)
-                await homeModule.setModal(presentationStyle: .overFullScreen)
-                await homeModule.setModal(transitionStyle: .crossDissolve)
-                await presentingView.present(homeModule, animated: true)
-            } catch {
-                print("1111111111111111111111111")
-                print("1111111111111111111111111")
-                print(error)
-                print("1111111111111111111111111")
-                print("1111111111111111111111111")
-            }
+            let homeModule: Module = await ModuleResolver.shared.resolveModule(ofType: .Home,
+                                                                               shouldPresent: true,
+                                                                               shouldAnimateIfPresenting: true,
+                                                                               navBarOption: .inheritNavBar,
+                                                                               tabBarOption: .inheritTabBar,
+                                                                               presentationStyle: nil)
         }
     }
 

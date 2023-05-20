@@ -10,13 +10,13 @@ import UIKit
 class HomePresenter: HomePresenting, HomeOutput {
 
     // MARK: - Properties
-    var viewController: HomeView
+    var viewController: any HomeView
     var animator: HomeAnimating? = nil
     var router: HomeWireframe? = nil
     var interactor: HomeInput? = nil
 
     // MARK: - Initializers
-    init(viewController: HomeView) {
+    init(viewController: any HomeView) {
         self.viewController = viewController
     }
 

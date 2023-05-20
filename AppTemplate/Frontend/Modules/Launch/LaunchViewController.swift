@@ -10,15 +10,20 @@ import UIKit
 class LaunchViewController: UIViewController, LaunchView {
 
     // MARK: - Properties
-    var theme: LaunchTheme
-    var presenter: LaunchPresenting? = nil
+
+    var theme: LaunchTheme {
+        didSet {
+            theme.apply()
+        }
+    }
+
+    var presenter: LaunchPresenting?
 
     // MARK: - Views
-    @IBOutlet var logoImageView: UIImageView!
-
+    
     // MARK: - Initializers
 
-    public init(theme: LaunchTheme) {
+    required init(theme: LaunchTheme) {
         self.theme = theme
         super.init(nibName: nil, bundle: nil)
     }
@@ -31,6 +36,7 @@ class LaunchViewController: UIViewController, LaunchView {
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .brown
     }
 
     override func viewDidAppear(_ animated: Bool) {

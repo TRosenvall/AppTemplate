@@ -10,13 +10,13 @@ import UIKit
 class SettingsPresenter: SettingsPresenting, SettingsOutput {
 
     // MARK: - Properties
-    var viewController: SettingsView
+    var viewController: any SettingsView
     var animator: SettingsAnimating? = nil
     var router: SettingsWireframe? = nil
     var interactor: SettingsInput? = nil
 
     // MARK: - Initializers
-    init(viewController: SettingsView) {
+    init(viewController: any SettingsView) {
         self.viewController = viewController
     }
 

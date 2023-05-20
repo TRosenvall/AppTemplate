@@ -7,7 +7,9 @@
 
 import UIKit
 
-class SettingsTheme {
+class SettingsTheme: ModuleTheme {
+    typealias Controller = SettingsViewController
+    var viewController: Controller?
 
     // MARK: - Properties
     let viewBackgroundColor: UIColor?
@@ -19,6 +21,11 @@ class SettingsTheme {
          navBarViewColor: UIColor? = nil) {
         self.viewBackgroundColor = viewBackgroundColor ?? base.colors.viewBackgroundColor
         self.navBarViewColor = navBarViewColor ?? base.colors.navBarViewColor
+    }
+
+    // MARK: - Module Theme Functions
+    func apply() {
+        // TODO
     }
 
     // MARK: - Helper Functions

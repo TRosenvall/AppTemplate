@@ -8,26 +8,27 @@
 class LaunchPresenter: LaunchPresenting, LaunchOutput {
 
     // MARK: - Properties
-    var viewController: LaunchView
-    var animator: LaunchAnimating? = nil
-    var router: LaunchWireframe? = nil
-    var interactor: LaunchInput? = nil
+    var viewController: any LaunchView
+    var animator: LaunchAnimating?
+    var router: LaunchWireframe?
+    var interactor: LaunchInput?
 
     // MARK: - Initializers
-    init(viewController: LaunchView) {
+    init(viewController: any LaunchView) {
         self.viewController = viewController
     }
 
     // MARK: - LaunchPresenting Functions
     func viewDidAppear() {
-        self.interactor?.launch()
-
-        animator?.animateViewDidAppear() { didFinishLoading in
-            if didFinishLoading {
-                do {
-                    try self.router?.routeToHomeModule()
-                } catch {
-                    // TODO: - Error Handling
+        Task {
+            self.interactor?.launch()
+            await viewController.activityIndicator?.animateViewDidAppear { didFinishLoading in
+                if didFinishLoading {
+                    do {
+                        try self.router?.routeToHomeModule()
+                    } catch {
+                        // TODO: - Error Handling
+                    }
                 }
             }
         }
@@ -35,7 +36,9 @@ class LaunchPresenter: LaunchPresenting, LaunchOutput {
 
     // MARK: - LaunchOutput Functions
     func didFinishLoading() {
-        animator?.didFinishLoading = true
+        Task {
+            await viewController.activityIndicator?.setDidFinishLoading(to: true)
+        }
     }
 
     // MARK: - Helper Functions

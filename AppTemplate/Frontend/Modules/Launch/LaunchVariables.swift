@@ -8,7 +8,7 @@
 import Foundation
 
 // TODO: - Update these as needed, these are data that will be saved, enums cannot conform to other protocols to extend their cases.
-enum LaunchVariables: Variable {
+enum LaunchVariables: ModuleVariable {
     case prop1
     case prop2
     case prop3
@@ -37,4 +37,8 @@ extension LaunchVariables {
     static var utility: UtilityType.Module {
         return .Launch
     }
+
+    static var onDeck: [UtilityType.Module] = {
+        return [.Home]
+    }()
 }

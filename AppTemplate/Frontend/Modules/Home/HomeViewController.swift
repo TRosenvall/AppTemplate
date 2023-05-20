@@ -10,11 +10,12 @@ import UIKit
 class HomeViewController: UIViewController, HomeView {
 
     // MARK: - Properties
+    typealias ViewTheme = HomeTheme
     var theme: HomeTheme
     var presenter: HomePresenting? = nil
 
     // MARK: - Initializers
-    public init(theme: HomeTheme) {
+    required init(theme: HomeTheme) {
         self.theme = theme
         super.init(nibName: nil, bundle: nil)
     }
@@ -28,6 +29,7 @@ class HomeViewController: UIViewController, HomeView {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.buildBarButtonItems()
+        self.view.backgroundColor = .purple
     }
 
     // MARK: - UIViewController Functions

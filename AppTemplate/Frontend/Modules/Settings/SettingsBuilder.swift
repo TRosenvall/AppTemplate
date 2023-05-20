@@ -6,41 +6,31 @@
 //
 
 class SettingsBuilder: SettingsBuilding {
-
     // MARK: - Properties
-    typealias ModuleType = SettingsView
-
-    let appTheme: AppTheme
-    let moduleResolver: ModuleResolving
+    let theme: SettingsTheme
 
     // MARK: - Initializers
-    init(appTheme: AppTheme,
-         moduleResolver: ModuleResolving) {
-        self.appTheme = appTheme
-        self.moduleResolver = moduleResolver
+    init(theme: SettingsTheme) {
+        self.theme = theme
     }
 
     // MARK: - SettingsBuilding Functions
-    func buildModule() async throws -> SettingsView {
-        // Get needed properties
-        let settingsTheme = SettingsTheme(base: appTheme)
-
+    func buildModule() -> any SettingsView {
         // Build module parts
-        let view = await SettingsViewController(theme: settingsTheme)
+        let view = SettingsViewController(theme: theme)
         let presenter = SettingsPresenter(viewController: view)
         let animator = SettingsAnimator(viewController: view,
                                         output: presenter)
         let entityController = EntityController<SettingsVariables>()
         let interactor = SettingsInteractor(entityController: entityController,
                                             output: presenter)
-        let router = SettingsRouter(presentingView: view,
-                                    moduleResolver: moduleResolver)
+        let router = SettingsRouter(presentingView: view)
 
         // Set the missing parts where needed
         presenter.animator = animator
         presenter.interactor = interactor
         presenter.router = router
-        await view.set(presenter)
+        view.presenter = presenter
 
         // Return the view
         return view

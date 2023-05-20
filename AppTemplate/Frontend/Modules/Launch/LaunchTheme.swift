@@ -7,7 +7,9 @@
 
 import UIKit
 
-class LaunchTheme {
+class LaunchTheme: ModuleTheme {
+    typealias Controller = LaunchViewController
+    weak var viewController: Controller?
 
     // MARK: - Properties
     let viewBackgroundColor: UIColor?
@@ -16,6 +18,10 @@ class LaunchTheme {
     init(base: AppTheme,
          viewBackgroundColor: UIColor? = nil) {
         self.viewBackgroundColor = viewBackgroundColor ?? base.colors.viewBackgroundColor
+    }
+
+    // MARK: - Module Theme Functions
+    func apply() {
     }
 
     // MARK: - Helper Functions

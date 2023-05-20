@@ -11,14 +11,10 @@ class SettingsRouter: SettingsWireframe {
 
     // MARK: - Properties
     let presentingView: UIViewController
-    let moduleResolver: ModuleResolving
 
     // MARK: - Initializers
-    init(presentingView: UIViewController,
-         moduleResolver: ModuleResolving) {
-        self.presentingView = presentingView
-        self.moduleResolver = moduleResolver
-    }
+    init(presentingView: UIViewController) {
+        self.presentingView = presentingView    }
 
     // MARK: - SettingsWireframe Functions
     func routeBack() {

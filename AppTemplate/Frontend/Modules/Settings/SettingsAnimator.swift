@@ -10,11 +10,11 @@ import UIKit
 class SettingsAnimator: SettingsAnimating {
 
     // MARK: - Properties
-    let viewController: SettingsView
+    let viewController: any SettingsView
     let output: SettingsOutput
 
     // MARK: - Initializers
-    init(viewController: SettingsView,
+    init(viewController: any SettingsView,
          output: SettingsOutput) {
         self.viewController = viewController
         self.output = output

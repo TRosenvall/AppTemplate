@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,23 +20,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWQ-Ae-bcn">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
                     <color key="backgroundColor" name="NavBarViewColor"/>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.44" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Eoo-8U-gtv">
-                    <rect key="frame" x="11" y="257" width="392" height="392"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="Eoo-8U-gtv" secondAttribute="height" id="G5D-Qk-6fg"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="ViewBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="BWQ-Ae-bcn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DEc-Jb-BJg"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Eoo-8U-gtv" secondAttribute="trailing" constant="11" id="OM0-wJ-5Fa"/>
-                <constraint firstItem="Eoo-8U-gtv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="11" id="PoL-3Q-PfJ"/>
-                <constraint firstItem="Eoo-8U-gtv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="5" id="Ppm-MJ-BWm"/>
                 <constraint firstItem="BWQ-Ae-bcn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tiv-0i-5g4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BWQ-Ae-bcn" secondAttribute="trailing" id="Zve-D0-MgJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="BWQ-Ae-bcn" secondAttribute="bottom" id="dKV-MG-Upu"/>
@@ -44,12 +36,8 @@
         </view>
     </objects>
     <resources>
-        <image name="AppLogo" width="732" height="732"/>
         <namedColor name="NavBarViewColor">
             <color red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ViewBackgroundColor">
-            <color red="0.62352941176470589" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

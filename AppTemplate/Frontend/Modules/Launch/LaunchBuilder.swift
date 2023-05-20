@@ -8,42 +8,29 @@
 class LaunchBuilder: LaunchBuilding {
 
     // MARK: - Properties
-    typealias ModuleType = LaunchView
-
-    let appTheme: AppTheme
-    let moduleResolver: ModuleResolving
+    let theme: LaunchTheme
 
     // MARK: - Initializers
-    init(appTheme: AppTheme,
-         moduleResolver: ModuleResolving) {
-        self.appTheme = appTheme
-        self.moduleResolver = moduleResolver
+    init(theme: LaunchTheme) {
+        self.theme = theme
     }
 
     // MARK: - LaunchBuilding Functions
-    func buildModule() async -> LaunchView {
-        // Get needed properties
-        let launchTheme = LaunchTheme(base: appTheme)
-
+    func buildModule() -> any LaunchView {
         // Build module parts
-        let view = await LaunchViewController(theme: launchTheme)
+        let view = LaunchViewController(theme: theme)
         let presenter = LaunchPresenter(viewController: view)
-        let animator = LaunchAnimator(viewController: view,
-                                      output: presenter)
 
         /// Needs to be configured after services load.
         let entityController = EntityController<LaunchVariables>()
-
         let interactor = LaunchInteractor(entityController: entityController,
                                           output: presenter)
-        let router = LaunchRouter(presentingView: view,
-                                  moduleResolver: moduleResolver)
+        let router = LaunchRouter(presentingView: view)
 
         // Set the missing parts where needed
-        presenter.animator = animator
         presenter.interactor = interactor
         presenter.router = router
-        await view.set(presenter)
+        view.presenter = presenter
 
         // Return the view
         return view

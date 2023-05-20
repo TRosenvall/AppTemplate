@@ -10,21 +10,17 @@ import UIKit
 class HomeRouter: HomeWireframe {
 
     // MARK: - Properties
-    let presentingView: UIViewController
-    let moduleResolver: ModuleResolving
+    let presentingView: any Module
 
     // MARK: - Initializers
-    init(presentingView: UIViewController,
-         moduleResolver: ModuleResolving) {
+    init(presentingView: any Module) {
         self.presentingView = presentingView
-        self.moduleResolver = moduleResolver
     }
 
     // MARK: - HomeWireframe Functions
     func routeToSettingsModule() throws {
         Task {
-            let settingsModule = try await moduleResolver.resolveSettingsModule()
-            await presentingView.navigationController?.pushFromLeft(controller: settingsModule)
+            await ModuleResolver.shared.resolveModule(ofType: .Settings)
         }
     }
 

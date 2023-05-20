@@ -8,7 +8,7 @@
 import UIKit
 
 ///Responsible for creating and assembling all the parts of the module.
-protocol SettingsBuilding: ModuleBuilding {}
+protocol SettingsBuilding: ModuleBuilding where ModuleType == any SettingsView, ThemeType == SettingsTheme {}
 
 ///Responsible for any animations pertaining to the Settings Module
 protocol SettingsAnimating: ModuleAnimating {}

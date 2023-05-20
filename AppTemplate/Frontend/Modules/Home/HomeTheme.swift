@@ -7,7 +7,9 @@
 
 import UIKit
 
-class HomeTheme {
+class HomeTheme: ModuleTheme {
+    typealias Controller = HomeViewController
+    var viewController: Controller?
 
     // MARK: - Properties
     let viewBackgroundColor: UIColor?
@@ -19,6 +21,11 @@ class HomeTheme {
          navBarViewColor: UIColor? = nil) {
         self.viewBackgroundColor = viewBackgroundColor ?? base.colors.viewBackgroundColor
         self.navBarViewColor = navBarViewColor ?? base.colors.navBarViewColor
+    }
+
+    // MARK: - Theme Functions
+    func apply() {
+        // TODO
     }
 
     // MARK: - Helper Functions

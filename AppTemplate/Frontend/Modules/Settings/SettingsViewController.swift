@@ -8,6 +8,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController, SettingsView {
+    
 
     // MARK: - Properties
     var theme: SettingsTheme
@@ -18,7 +19,7 @@ class SettingsViewController: UIViewController, SettingsView {
     var rowHeight: CGFloat = 40
     
     // MARK: - Initializers
-    public init(theme: SettingsTheme) {
+    required init(theme: SettingsTheme) {
         self.theme = theme
         super.init(nibName: nil, bundle: nil)
     }

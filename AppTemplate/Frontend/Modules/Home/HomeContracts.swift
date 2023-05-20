@@ -8,7 +8,7 @@
 import UIKit
 
 ///Responsible for creating and assembling all the parts of the module.
-protocol HomeBuilding: ModuleBuilding {}
+protocol HomeBuilding: ModuleBuilding where ModuleType == any HomeView, ThemeType == HomeTheme {}
 
 ///Responsible for any animations pertaining to the Home Module
 protocol HomeAnimating: ModuleAnimating {}
